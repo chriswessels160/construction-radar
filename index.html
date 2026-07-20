@@ -14,6 +14,14 @@
             color:#d35400;
         }
 
+        .card{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:8px;
+            box-shadow:0 2px 5px rgba(0,0,0,.1);
+        }
+
         table{
             width:100%;
             border-collapse:collapse;
@@ -35,7 +43,12 @@
 
 <h1>Greater Cincinnati Construction Radar</h1>
 
-<p>Tracking construction opportunities for CED.</p>
+<div class="card">
+    <h2>Market Summary</h2>
+    <p>Total Projects: 3</p>
+    <p>Currently Bidding: 2</p>
+    <p>High Electrical Opportunity: 2</p>
+</div>
 
 <table>
     <tr>
@@ -43,14 +56,33 @@
         <th>County</th>
         <th>Status</th>
         <th>Value</th>
+        <th>Opportunity</th>
     </tr>
 
     <tr>
-        <td>Sample Warehouse</td>
+        <td>Boone County Warehouse</td>
         <td>Boone</td>
         <td>Bidding</td>
-        <td>$15M</td>
+        <td>$18M</td>
+        <td>High</td>
     </tr>
+
+    <tr>
+        <td>Covington Apartments</td>
+        <td>Kenton</td>
+        <td>Planning</td>
+        <td>$35M</td>
+        <td>High</td>
+    </tr>
+
+    <tr>
+        <td>School Renovation</td>
+        <td>Campbell</td>
+        <td>Pre-Bid</td>
+        <td>$7M</td>
+        <td>Medium</td>
+    </tr>
+
 </table>
 
 </body>
