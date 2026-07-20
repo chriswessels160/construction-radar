@@ -4,53 +4,52 @@
     <title>Construction Radar</title>
 
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
-            margin:40px;
-            background:#f4f4f4;
+            margin: 40px;
+            background: #f4f4f4;
         }
 
-        h1{
-            color:#d35400;
+        h1 {
+            color: #d35400;
         }
 
-        .card{
-            background:white;
-            padding:20px;
-            margin-bottom:20px;
-            border-radius:8px;
-            box-shadow:0 2px 5px rgba(0,0,0,.1);
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
         }
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-            background:white;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
         }
 
-        th, td{
-            padding:12px;
-            border:1px solid #ddd;
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
         }
 
-        th{
-            background:#d35400;
-            color:white;
+        th {
+            background: #d35400;
+            color: white;
         }
     </style>
 </head>
+
 <body>
 
 <h1>Greater Cincinnati Construction Radar</h1>
 
 <div class="card">
     <h2>Market Summary</h2>
-    <p>Total Projects: 3</p>
-    <p>Currently Bidding: 2</p>
-    <p>High Electrical Opportunity: 2</p>
+    <p>Total Projects: <span id="totalProjects">0</span></p>
 </div>
 
-<table>
+<table id="projectsTable">
     <tr>
         <th>Project</th>
         <th>County</th>
@@ -58,32 +57,30 @@
         <th>Value</th>
         <th>Opportunity</th>
     </tr>
-
-    <tr>
-        <td>Boone County Warehouse</td>
-        <td>Boone</td>
-        <td>Bidding</td>
-        <td>$18M</td>
-        <td>High</td>
-    </tr>
-
-    <tr>
-        <td>Covington Apartments</td>
-        <td>Kenton</td>
-        <td>Planning</td>
-        <td>$35M</td>
-        <td>High</td>
-    </tr>
-
-    <tr>
-        <td>School Renovation</td>
-        <td>Campbell</td>
-        <td>Pre-Bid</td>
-        <td>$7M</td>
-        <td>Medium</td>
-    </tr>
-
 </table>
+
+<script>
+fetch("projects.json")
+    .then(response => response.json())
+    .then(data => {
+
+        document.getElementById("totalProjects").innerText = data.length;
+
+        const table = document.getElementById("projectsTable");
+
+        data.forEach(project => {
+
+            const row = table.insertRow();
+
+            row.insertCell(0).innerText = project.project;
+            row.insertCell(1).innerText = project.county;
+            row.insertCell(2).innerText = project.status;
+            row.insertCell(3).innerText = project.value;
+            row.insertCell(4).innerText = project.opportunity;
+
+        });
+    });
+</script>
 
 </body>
 </html>
