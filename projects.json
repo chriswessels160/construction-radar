@@ -1,0 +1,16 @@
+[
+  {
+    "project":"Boone County Warehouse",
+    "county":"Boone",
+    "status":"Bidding",
+    "value":"$18M",
+    "opportunity":"High"
+  },
+  {
+    "project":"Covington Apartments",
+    "county":"Kenton",
+    "status":"Planning",
+    "value":"$35M",
+    "opportunity":"High"
+  }
+]
