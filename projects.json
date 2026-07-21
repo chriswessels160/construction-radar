@@ -16,8 +16,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Addition",
     "company": "\"TURNER CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TURNER CONSTRUCTION CO",
+    "contractors": [
+      "TURNER CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -26,7 +28,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04109",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -46,8 +48,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "New Building",
     "company": "\"MARK L INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MARK L INC",
+    "contractors": [
+      "MARK L INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -56,7 +60,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02410",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -76,8 +80,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "New Building",
     "company": "\"SUNESIS CONSTRUCTION COMPANY\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SUNESIS CONSTRUCTION COMPANY",
+    "contractors": [
+      "SUNESIS CONSTRUCTION COMPANY"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -86,7 +92,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03578",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -106,8 +112,10 @@
     "issued_date": "2026-07-06T00:00:00.000",
     "description": "New Building",
     "company": "\"CLASSIC LIVING HOMES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CLASSIC LIVING HOMES LLC",
+    "contractors": [
+      "CLASSIC LIVING HOMES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -116,7 +124,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04471",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -136,8 +144,10 @@
     "issued_date": "2026-06-24T00:00:00.000",
     "description": "Addition",
     "company": "\"FORM BUILDING SOLUTIONS LTD\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "FORM BUILDING SOLUTIONS LTD",
+    "contractors": [
+      "FORM BUILDING SOLUTIONS LTD"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -146,7 +156,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2024P09228",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -166,8 +176,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "New Building",
     "company": "\"JUSTIN DOYLE HOMES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JUSTIN DOYLE HOMES",
+    "contractors": [
+      "JUSTIN DOYLE HOMES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -176,7 +188,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02935",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -196,8 +208,10 @@
     "issued_date": "2026-06-01T00:00:00.000",
     "description": "New Building",
     "company": "\"JOSHUA ONE LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JOSHUA ONE LLC",
+    "contractors": [
+      "JOSHUA ONE LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -206,7 +220,7 @@
     "opportunity_reason": "significant construction value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02405",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -226,8 +240,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"SKANSKA USA BUILDING INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SKANSKA USA BUILDING INC",
+    "contractors": [
+      "SKANSKA USA BUILDING INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -236,7 +252,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P08788",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -256,8 +272,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "Alteration",
     "company": "\"TURNER CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TURNER CONSTRUCTION CO",
+    "contractors": [
+      "TURNER CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -266,7 +284,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02673",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -286,8 +304,10 @@
     "issued_date": "2026-06-04T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"THE MOTZ GROUP\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "THE MOTZ GROUP",
+    "contractors": [
+      "THE MOTZ GROUP"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -296,7 +316,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10031",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -316,8 +336,10 @@
     "issued_date": "2026-06-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"OTT EQUIPMENT SERVICE INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "OTT EQUIPMENT SERVICE INC",
+    "contractors": [
+      "OTT EQUIPMENT SERVICE INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -326,7 +348,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05060",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -346,8 +368,10 @@
     "issued_date": "2026-06-16T00:00:00.000",
     "description": "HVAC",
     "company": "\"GRAYBACH, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "GRAYBACH, LLC",
+    "contractors": [
+      "GRAYBACH, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -356,7 +380,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02597",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -376,8 +400,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Parking Lots",
     "company": "\"MARK L INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MARK L INC",
+    "contractors": [
+      "MARK L INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -386,7 +412,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03340",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -406,8 +432,10 @@
     "issued_date": "2026-06-11T00:00:00.000",
     "description": "Alteration",
     "company": "\"HENKELS AND MCCOY\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HENKELS AND MCCOY",
+    "contractors": [
+      "HENKELS AND MCCOY"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -416,7 +444,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02457",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -436,8 +464,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Alteration",
     "company": "\"R J BEISCHEL BUILDING CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "R J BEISCHEL BUILDING CO",
+    "contractors": [
+      "R J BEISCHEL BUILDING CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -446,7 +476,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03353",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -466,8 +496,10 @@
     "issued_date": "2026-06-12T00:00:00.000",
     "description": "Alteration",
     "company": "\"BAMBECK & VEST ASSOCIATES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BAMBECK & VEST ASSOCIATES INC",
+    "contractors": [
+      "BAMBECK & VEST ASSOCIATES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -476,7 +508,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04473",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -496,8 +528,10 @@
     "issued_date": "2026-06-11T00:00:00.000",
     "description": "Alteration",
     "company": "\"PRUS CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "PRUS CONSTRUCTION CO",
+    "contractors": [
+      "PRUS CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -506,7 +540,7 @@
     "opportunity_reason": "significant construction value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P07136",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -526,8 +560,10 @@
     "issued_date": "2026-06-01T00:00:00.000",
     "description": "Addition",
     "company": "\"SMP WELDING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SMP WELDING LLC",
+    "contractors": [
+      "SMP WELDING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -536,7 +572,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02679",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -556,8 +592,10 @@
     "issued_date": "2026-05-22T00:00:00.000",
     "description": "HVAC",
     "company": "\"8K CONSTRUCTION COMPANY LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "8K CONSTRUCTION COMPANY LLC",
+    "contractors": [
+      "8K CONSTRUCTION COMPANY LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -566,7 +604,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P11143",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -586,8 +624,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "Addition",
     "company": "\"BASCON, INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BASCON, INC",
+    "contractors": [
+      "BASCON, INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -596,7 +636,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03018",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -616,8 +656,10 @@
     "issued_date": "2026-05-22T00:00:00.000",
     "description": "Plumbing Permits",
     "company": "\"OHIO BASEMENT AUTHORITY\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "OHIO BASEMENT AUTHORITY",
+    "contractors": [
+      "OHIO BASEMENT AUTHORITY"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -626,7 +668,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03973",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -646,8 +688,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "New Building",
     "company": "\"SCHUMACHER HOMES OF CINCINNATI\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SCHUMACHER HOMES OF CINCINNATI",
+    "contractors": [
+      "SCHUMACHER HOMES OF CINCINNATI"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -656,7 +700,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02932",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -676,8 +720,10 @@
     "issued_date": "2026-07-17T00:00:00.000",
     "description": "HVAC",
     "company": "\"MODEL CONSTRUCTION LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MODEL CONSTRUCTION LLC",
+    "contractors": [
+      "MODEL CONSTRUCTION LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -686,7 +732,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P01334",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -706,8 +752,10 @@
     "issued_date": "2026-06-01T00:00:00.000",
     "description": "New Building",
     "company": "\"BMF 99 LLC DBA JCB HOMES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BMF 99 LLC DBA JCB HOMES",
+    "contractors": [
+      "BMF 99 LLC DBA JCB HOMES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -716,7 +764,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P01777",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -736,8 +784,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Addition",
     "company": "\"QUEEN CITY CONSTRUCTION, INC.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "QUEEN CITY CONSTRUCTION, INC.",
+    "contractors": [
+      "QUEEN CITY CONSTRUCTION, INC."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -746,7 +796,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04027",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -766,8 +816,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Plumbing Permits",
     "company": "\"RED HAWK PLUMBING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RED HAWK PLUMBING LLC",
+    "contractors": [
+      "RED HAWK PLUMBING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -776,7 +828,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04644",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -796,8 +848,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Plumbing Permits",
     "company": "\"PRUS CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "PRUS CONSTRUCTION CO",
+    "contractors": [
+      "PRUS CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -806,7 +860,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04296",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -826,8 +880,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Plumbing Permits",
     "company": "\"RED HAWK PLUMBING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RED HAWK PLUMBING LLC",
+    "contractors": [
+      "RED HAWK PLUMBING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -836,7 +892,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04645",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -856,8 +912,10 @@
     "issued_date": "2026-05-28T00:00:00.000",
     "description": "Addition",
     "company": "\"METROPOLITAN DESIGN & DEVELOPMENT\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "METROPOLITAN DESIGN & DEVELOPMENT",
+    "contractors": [
+      "METROPOLITAN DESIGN & DEVELOPMENT"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -866,7 +924,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03211",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -886,8 +944,10 @@
     "issued_date": "2026-05-26T00:00:00.000",
     "description": "New Building",
     "company": "\"URLING CONTRACTING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "URLING CONTRACTING LLC",
+    "contractors": [
+      "URLING CONTRACTING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -896,7 +956,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10745",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -916,8 +976,10 @@
     "issued_date": "2026-07-17T00:00:00.000",
     "description": "Fire Protection Systems",
     "company": "\"DENIER ELECTRIC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DENIER ELECTRIC",
+    "contractors": [
+      "DENIER ELECTRIC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -926,7 +988,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04196",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -946,8 +1008,10 @@
     "issued_date": "2026-05-26T00:00:00.000",
     "description": "New Building",
     "company": "\"HTS PROPERTIES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HTS PROPERTIES",
+    "contractors": [
+      "HTS PROPERTIES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -956,7 +1020,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P05248",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -976,8 +1040,10 @@
     "issued_date": "2026-05-26T00:00:00.000",
     "description": "New Building",
     "company": "\"HTS PROPERTIES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HTS PROPERTIES",
+    "contractors": [
+      "HTS PROPERTIES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -986,7 +1052,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P05250",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1006,8 +1072,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "New Building",
     "company": "\"JOSHUA ONE LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JOSHUA ONE LLC",
+    "contractors": [
+      "JOSHUA ONE LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1016,7 +1084,7 @@
     "opportunity_reason": "meaningful commercial project value; new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04020",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1036,8 +1104,10 @@
     "issued_date": "2026-06-04T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUNT BUILDERS CORP.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUNT BUILDERS CORP.",
+    "contractors": [
+      "HUNT BUILDERS CORP."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1046,7 +1116,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05089",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1066,8 +1136,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Repair",
     "company": "\"TEASDALE FENTON CARPET CLEANING & RESTORATION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TEASDALE FENTON CARPET CLEANING & RESTORATION",
+    "contractors": [
+      "TEASDALE FENTON CARPET CLEANING & RESTORATION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1076,7 +1148,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05101",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1096,8 +1168,10 @@
     "issued_date": "2026-06-11T00:00:00.000",
     "description": "Repair",
     "company": "\"PINAIRE ROOFING INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "PINAIRE ROOFING INC",
+    "contractors": [
+      "PINAIRE ROOFING INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1106,7 +1180,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05278",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1126,8 +1200,10 @@
     "issued_date": "2026-07-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"GWS FF&E LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "GWS FF&E LLC",
+    "contractors": [
+      "GWS FF&E LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1136,7 +1212,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04211",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1156,8 +1232,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"MIDWEST CONSTRUCTION COMPANY\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MIDWEST CONSTRUCTION COMPANY",
+    "contractors": [
+      "MIDWEST CONSTRUCTION COMPANY"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1166,7 +1244,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03198",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1186,8 +1264,10 @@
     "issued_date": "2026-05-27T00:00:00.000",
     "description": "Alteration",
     "company": "\"BLACK CONSTRUCTION SOLUTIONS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BLACK CONSTRUCTION SOLUTIONS LLC",
+    "contractors": [
+      "BLACK CONSTRUCTION SOLUTIONS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1196,7 +1276,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P06293",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1216,8 +1296,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"BASCON, INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BASCON, INC",
+    "contractors": [
+      "BASCON, INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1226,7 +1308,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03695",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1246,8 +1328,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Alteration",
     "company": "\"HGC CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HGC CONSTRUCTION",
+    "contractors": [
+      "HGC CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1256,7 +1340,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02202",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1276,8 +1360,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Fire Protection Systems",
     "company": "\"ROMANOFF ELECTRICAL RESIDENTIAL\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ROMANOFF ELECTRICAL RESIDENTIAL",
+    "contractors": [
+      "ROMANOFF ELECTRICAL RESIDENTIAL"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1286,7 +1372,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04722",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1306,8 +1392,10 @@
     "issued_date": "2026-06-10T00:00:00.000",
     "description": "Alteration",
     "company": "\"DMG CONTRACTORS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DMG CONTRACTORS INC",
+    "contractors": [
+      "DMG CONTRACTORS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1316,7 +1404,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03357",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1336,8 +1424,10 @@
     "issued_date": "2026-07-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUNT BUILDERS CORP.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUNT BUILDERS CORP.",
+    "contractors": [
+      "HUNT BUILDERS CORP."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1346,7 +1436,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10437",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1366,8 +1456,10 @@
     "issued_date": "2026-07-09T00:00:00.000",
     "description": "HVAC",
     "company": "\"FREIJE ENGINEERED SOLUTIONS CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "FREIJE ENGINEERED SOLUTIONS CO",
+    "contractors": [
+      "FREIJE ENGINEERED SOLUTIONS CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1376,7 +1468,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04358",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1396,8 +1488,10 @@
     "issued_date": "2026-06-08T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"CINCINNATI REDS\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CINCINNATI REDS",
+    "contractors": [
+      "CINCINNATI REDS"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1406,7 +1500,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04469",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1426,8 +1520,10 @@
     "issued_date": "2026-07-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"NEAL'S CONSTRUCTION CO.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "NEAL'S CONSTRUCTION CO.",
+    "contractors": [
+      "NEAL'S CONSTRUCTION CO."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1436,7 +1532,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05013",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1456,8 +1552,10 @@
     "issued_date": "2026-07-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"R J BEISCHEL BUILDING CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "R J BEISCHEL BUILDING CO",
+    "contractors": [
+      "R J BEISCHEL BUILDING CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1466,7 +1564,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05425",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1486,8 +1584,10 @@
     "issued_date": "2026-07-06T00:00:00.000",
     "description": "Elevator Permit",
     "company": "\"TK ELEVATOR CORPORATION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TK ELEVATOR CORPORATION",
+    "contractors": [
+      "TK ELEVATOR CORPORATION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1496,7 +1596,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05474",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1516,8 +1616,10 @@
     "issued_date": "2026-07-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"DMG CONTRACTORS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DMG CONTRACTORS INC",
+    "contractors": [
+      "DMG CONTRACTORS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1526,7 +1628,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03536",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1546,8 +1648,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Fire Protection Systems",
     "company": "\"DIGITAL WATCHMAN LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DIGITAL WATCHMAN LLC",
+    "contractors": [
+      "DIGITAL WATCHMAN LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1556,7 +1660,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04105",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1576,8 +1680,10 @@
     "issued_date": "2026-07-10T00:00:00.000",
     "description": "Alteration",
     "company": "\"CMSQUARED\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CMSQUARED",
+    "contractors": [
+      "CMSQUARED"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1586,7 +1692,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04851",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1606,8 +1712,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"CINCINNATI REDS\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CINCINNATI REDS",
+    "contractors": [
+      "CINCINNATI REDS"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1616,7 +1724,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04468",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1636,8 +1744,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Fire Protection Systems",
     "company": "\"UNITED ELECTRIC CO INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "UNITED ELECTRIC CO INC",
+    "contractors": [
+      "UNITED ELECTRIC CO INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1646,7 +1756,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10521",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1666,8 +1776,10 @@
     "issued_date": "2026-07-15T00:00:00.000",
     "description": "Elevator Permit",
     "company": "\"KONE INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "KONE INC",
+    "contractors": [
+      "KONE INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1676,7 +1788,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06440",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1696,8 +1808,10 @@
     "issued_date": "2026-07-15T00:00:00.000",
     "description": "Elevator Permit",
     "company": "\"KONE INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "KONE INC",
+    "contractors": [
+      "KONE INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1706,7 +1820,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06441",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1726,8 +1840,10 @@
     "issued_date": "2026-05-22T00:00:00.000",
     "description": "HVAC",
     "company": "\"DEBRA-KUEMPEL\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DEBRA-KUEMPEL",
+    "contractors": [
+      "DEBRA-KUEMPEL"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1736,7 +1852,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03725",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1756,8 +1872,10 @@
     "issued_date": "2026-07-07T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"AGAR LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "AGAR LLC",
+    "contractors": [
+      "AGAR LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1766,7 +1884,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06375",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1786,8 +1904,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "HVAC",
     "company": "\"DEBRA-KUEMPEL\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DEBRA-KUEMPEL",
+    "contractors": [
+      "DEBRA-KUEMPEL"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1796,7 +1916,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02450",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1816,8 +1936,10 @@
     "issued_date": "2026-06-10T00:00:00.000",
     "description": "Alteration",
     "company": "\"GROUNDED SYSTEMS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "GROUNDED SYSTEMS LLC",
+    "contractors": [
+      "GROUNDED SYSTEMS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1826,7 +1948,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10920",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1846,8 +1968,10 @@
     "issued_date": "2026-06-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"GROUNDED SYSTEMS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "GROUNDED SYSTEMS LLC",
+    "contractors": [
+      "GROUNDED SYSTEMS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1856,7 +1980,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02825",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1876,8 +2000,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "HVAC",
     "company": "\"JACOBS MECHANICAL INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JACOBS MECHANICAL INC",
+    "contractors": [
+      "JACOBS MECHANICAL INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1886,7 +2012,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P05919",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1906,8 +2032,10 @@
     "issued_date": "2026-07-15T00:00:00.000",
     "description": "Repair",
     "company": "\"ANY WEATHER RESTORATION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ANY WEATHER RESTORATION",
+    "contractors": [
+      "ANY WEATHER RESTORATION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1916,7 +2044,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05315",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1936,8 +2064,10 @@
     "issued_date": "2026-07-17T00:00:00.000",
     "description": "Alteration",
     "company": "\"DEER PARK ROOFING INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DEER PARK ROOFING INC",
+    "contractors": [
+      "DEER PARK ROOFING INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1946,7 +2076,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06738",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1966,8 +2096,10 @@
     "issued_date": "2026-07-13T00:00:00.000",
     "description": "Alteration",
     "company": "\"SCHUMACHER CONSTRUCTION MANAGEMENT INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SCHUMACHER CONSTRUCTION MANAGEMENT INC",
+    "contractors": [
+      "SCHUMACHER CONSTRUCTION MANAGEMENT INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -1976,7 +2108,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02840",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -1996,8 +2128,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Fire Protection Systems",
     "company": "\"SAFETY FIRST FIRE PROTECTION INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SAFETY FIRST FIRE PROTECTION INC",
+    "contractors": [
+      "SAFETY FIRST FIRE PROTECTION INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2006,7 +2140,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04837",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2026,8 +2160,10 @@
     "issued_date": "2026-06-08T00:00:00.000",
     "description": "Misc. Structures",
     "company": "\"CINCINNATI REDS\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CINCINNATI REDS",
+    "contractors": [
+      "CINCINNATI REDS"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2036,7 +2172,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04470",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2056,8 +2192,10 @@
     "issued_date": "2026-06-05T00:00:00.000",
     "description": "Alteration",
     "company": "\"TRIVERSITY CONSTRUCTION CO LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TRIVERSITY CONSTRUCTION CO LLC",
+    "contractors": [
+      "TRIVERSITY CONSTRUCTION CO LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2066,7 +2204,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04099",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2086,8 +2224,10 @@
     "issued_date": "2026-05-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"8K CONSTRUCTION COMPANY LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "8K CONSTRUCTION COMPANY LLC",
+    "contractors": [
+      "8K CONSTRUCTION COMPANY LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2096,7 +2236,7 @@
     "opportunity_reason": "meaningful commercial project value",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P11103",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2116,8 +2256,10 @@
     "issued_date": "2026-07-15T00:00:00.000",
     "description": "New Building",
     "company": "\"ONYX AND EAST OHIO, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ONYX AND EAST OHIO, LLC",
+    "contractors": [
+      "ONYX AND EAST OHIO, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2126,7 +2268,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05284",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2146,8 +2288,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Addition",
     "company": "\"KKS SERVICES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "KKS SERVICES LLC",
+    "contractors": [
+      "KKS SERVICES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2156,7 +2300,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P08937",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2176,8 +2320,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Addition",
     "company": "\"EAGLE CUSTOM HOMES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "EAGLE CUSTOM HOMES INC",
+    "contractors": [
+      "EAGLE CUSTOM HOMES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2186,7 +2332,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02571",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2206,8 +2352,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "New Building",
     "company": "\"SUSAN ANGEL\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SUSAN ANGEL",
+    "contractors": [
+      "SUSAN ANGEL"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2216,7 +2364,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P01283",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2236,8 +2384,10 @@
     "issued_date": "2026-06-01T00:00:00.000",
     "description": "Addition",
     "company": "\"SMP WELDING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SMP WELDING LLC",
+    "contractors": [
+      "SMP WELDING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2246,7 +2396,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03882",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2266,8 +2416,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Addition",
     "company": "\"MODERN KRAFT\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MODERN KRAFT",
+    "contractors": [
+      "MODERN KRAFT"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2276,7 +2428,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04896",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2296,8 +2448,10 @@
     "issued_date": "2026-06-08T00:00:00.000",
     "description": "Addition",
     "company": "\"HUDEPOHL CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUDEPOHL CONSTRUCTION CO",
+    "contractors": [
+      "HUDEPOHL CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2306,7 +2460,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04344",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2326,8 +2480,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Addition",
     "company": "\"RWB PROPERTIES AND CONSTRUCTION, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RWB PROPERTIES AND CONSTRUCTION, LLC",
+    "contractors": [
+      "RWB PROPERTIES AND CONSTRUCTION, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2336,7 +2492,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03874",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2356,8 +2512,10 @@
     "issued_date": "2026-06-25T00:00:00.000",
     "description": "New Building",
     "company": "\"CRISTO HOMES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CRISTO HOMES INC",
+    "contractors": [
+      "CRISTO HOMES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2366,7 +2524,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04432",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2386,8 +2544,10 @@
     "issued_date": "2026-06-24T00:00:00.000",
     "description": "New Building",
     "company": "\"CRISTO HOMES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CRISTO HOMES INC",
+    "contractors": [
+      "CRISTO HOMES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2396,7 +2556,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04426",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2416,8 +2576,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Addition",
     "company": "\"KCR CONSTRUCTION LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "KCR CONSTRUCTION LLC",
+    "contractors": [
+      "KCR CONSTRUCTION LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2426,7 +2588,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04021",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2446,8 +2608,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "Addition",
     "company": "\"ALLEN & FREY BUILDERS & REMODELERS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ALLEN & FREY BUILDERS & REMODELERS INC",
+    "contractors": [
+      "ALLEN & FREY BUILDERS & REMODELERS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2456,7 +2620,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P01893",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2476,8 +2640,10 @@
     "issued_date": "2026-06-04T00:00:00.000",
     "description": "Addition",
     "company": "\"AD AND A CONSTRUCTION LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "AD AND A CONSTRUCTION LLC",
+    "contractors": [
+      "AD AND A CONSTRUCTION LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2486,7 +2652,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P04312",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2506,8 +2672,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Addition",
     "company": "\"CHAMPION PATIO ROOMS OF CINCINNATI LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CHAMPION PATIO ROOMS OF CINCINNATI LLC",
+    "contractors": [
+      "CHAMPION PATIO ROOMS OF CINCINNATI LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2516,7 +2684,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04233",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2536,8 +2704,10 @@
     "issued_date": "2026-06-26T00:00:00.000",
     "description": "Addition",
     "company": "\"FRAMEWORK REMODELING\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "FRAMEWORK REMODELING",
+    "contractors": [
+      "FRAMEWORK REMODELING"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2546,7 +2716,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02027",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2566,8 +2736,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Addition",
     "company": "\"ERSAL\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ERSAL",
+    "contractors": [
+      "ERSAL"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2576,7 +2748,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P08781",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2596,8 +2768,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Addition",
     "company": "\"SYMPHONY HOTEL INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SYMPHONY HOTEL INC",
+    "contractors": [
+      "SYMPHONY HOTEL INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2606,7 +2780,7 @@
     "opportunity_reason": "new construction or expansion",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02647",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2626,8 +2800,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"SKANSKA USA BUILDING INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SKANSKA USA BUILDING INC",
+    "contractors": [
+      "SKANSKA USA BUILDING INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2636,7 +2812,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P00895",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2656,8 +2832,10 @@
     "issued_date": "2026-06-25T00:00:00.000",
     "description": "Alteration",
     "company": "\"CORE REDEVELOPMENT LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CORE REDEVELOPMENT LLC",
+    "contractors": [
+      "CORE REDEVELOPMENT LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2666,7 +2844,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03205",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2686,8 +2864,10 @@
     "issued_date": "2026-06-10T00:00:00.000",
     "description": "Alteration",
     "company": "\"CMSQUARED\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CMSQUARED",
+    "contractors": [
+      "CMSQUARED"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2696,7 +2876,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04129",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2716,8 +2896,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Alteration",
     "company": "\"TRIVERSITY CONSTRUCTION CO LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TRIVERSITY CONSTRUCTION CO LLC",
+    "contractors": [
+      "TRIVERSITY CONSTRUCTION CO LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2726,7 +2908,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05074",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2746,8 +2928,10 @@
     "issued_date": "2026-07-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"HGC CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HGC CONSTRUCTION",
+    "contractors": [
+      "HGC CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2756,7 +2940,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04423",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2776,8 +2960,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"MICHAELSON HOMES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MICHAELSON HOMES LLC",
+    "contractors": [
+      "MICHAELSON HOMES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2786,7 +2972,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03535",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2806,8 +2992,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "Alteration",
     "company": "\"KEN BRYAN CONSTRUCTION INC (KBC)\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "KEN BRYAN CONSTRUCTION INC (KBC)",
+    "contractors": [
+      "KEN BRYAN CONSTRUCTION INC (KBC)"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2816,7 +3004,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04825",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2836,8 +3024,10 @@
     "issued_date": "2026-06-10T00:00:00.000",
     "description": "Alteration",
     "company": "\"RFDC LTD\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RFDC LTD",
+    "contractors": [
+      "RFDC LTD"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2846,7 +3036,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04857",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2866,8 +3056,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUDAWN FACILITY SOLUTIONS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUDAWN FACILITY SOLUTIONS LLC",
+    "contractors": [
+      "HUDAWN FACILITY SOLUTIONS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2876,7 +3068,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04439",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2896,8 +3088,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"OSBORNE RECONSTRUCTION SERVICE\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "OSBORNE RECONSTRUCTION SERVICE",
+    "contractors": [
+      "OSBORNE RECONSTRUCTION SERVICE"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2906,7 +3100,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05527",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2926,8 +3120,10 @@
     "issued_date": "2026-07-14T00:00:00.000",
     "description": "Alteration",
     "company": "\"R J BEISCHEL BUILDING CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "R J BEISCHEL BUILDING CO",
+    "contractors": [
+      "R J BEISCHEL BUILDING CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2936,7 +3132,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05571",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2956,8 +3152,10 @@
     "issued_date": "2026-05-27T00:00:00.000",
     "description": "Alteration",
     "company": "\"TURNER CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TURNER CONSTRUCTION CO",
+    "contractors": [
+      "TURNER CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2966,7 +3164,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03368",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -2986,8 +3184,10 @@
     "issued_date": "2026-05-26T00:00:00.000",
     "description": "Alteration",
     "company": "\"CORE RESOURCES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CORE RESOURCES INC",
+    "contractors": [
+      "CORE RESOURCES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -2996,7 +3196,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04496",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3016,8 +3216,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Alteration",
     "company": "\"ARRAND DEVELOPMENT LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ARRAND DEVELOPMENT LLC",
+    "contractors": [
+      "ARRAND DEVELOPMENT LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3026,7 +3228,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05040",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3046,8 +3248,10 @@
     "issued_date": "2026-07-02T00:00:00.000",
     "description": "Alteration",
     "company": "\"SNH CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SNH CONSTRUCTION",
+    "contractors": [
+      "SNH CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3056,7 +3260,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03873",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3076,8 +3280,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUDEPOHL CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUDEPOHL CONSTRUCTION CO",
+    "contractors": [
+      "HUDEPOHL CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3086,7 +3292,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04450",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3106,8 +3312,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUNT BUILDERS CORP.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUNT BUILDERS CORP.",
+    "contractors": [
+      "HUNT BUILDERS CORP."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3116,7 +3324,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03859",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3136,8 +3344,10 @@
     "issued_date": "2026-06-04T00:00:00.000",
     "description": "Alteration",
     "company": "\"WAVER ELECTRIC SERVICES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "WAVER ELECTRIC SERVICES LLC",
+    "contractors": [
+      "WAVER ELECTRIC SERVICES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3146,7 +3356,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03694",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3166,8 +3376,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Alteration",
     "company": "\"MAILE BUILD REMODEL & DESIGN\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MAILE BUILD REMODEL & DESIGN",
+    "contractors": [
+      "MAILE BUILD REMODEL & DESIGN"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3176,7 +3388,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05164",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3196,8 +3408,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"TURNER CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TURNER CONSTRUCTION CO",
+    "contractors": [
+      "TURNER CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3206,7 +3420,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04110",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3226,8 +3440,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "Alteration",
     "company": "\"PDP1 LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "PDP1 LLC",
+    "contractors": [
+      "PDP1 LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3236,7 +3452,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04141",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3256,8 +3472,10 @@
     "issued_date": "2026-05-28T00:00:00.000",
     "description": "Alteration",
     "company": "\"ALPHA CONSTRUCTION INDIANA INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ALPHA CONSTRUCTION INDIANA INC",
+    "contractors": [
+      "ALPHA CONSTRUCTION INDIANA INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3266,7 +3484,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10772",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3286,8 +3504,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"ASHLEY CONSTRUCTION INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ASHLEY CONSTRUCTION INC",
+    "contractors": [
+      "ASHLEY CONSTRUCTION INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3296,7 +3516,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05068",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3316,8 +3536,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "Alteration",
     "company": "\"CVG RENTALS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CVG RENTALS LLC",
+    "contractors": [
+      "CVG RENTALS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3326,7 +3548,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03896",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3346,8 +3568,10 @@
     "issued_date": "2026-05-26T00:00:00.000",
     "description": "Alteration",
     "company": "\"M&M CONSTRUCTION & REMODELING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "M&M CONSTRUCTION & REMODELING LLC",
+    "contractors": [
+      "M&M CONSTRUCTION & REMODELING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3356,7 +3580,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04479",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3376,8 +3600,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"GRIDIRON CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "GRIDIRON CONSTRUCTION",
+    "contractors": [
+      "GRIDIRON CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3386,7 +3612,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05543",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3406,8 +3632,10 @@
     "issued_date": "2026-05-28T00:00:00.000",
     "description": "Alteration",
     "company": "\"NNI CONSTRUCTION CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "NNI CONSTRUCTION CO",
+    "contractors": [
+      "NNI CONSTRUCTION CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3416,7 +3644,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03017",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3436,8 +3664,10 @@
     "issued_date": "2026-06-01T00:00:00.000",
     "description": "Alteration",
     "company": "\"CENTIMARK CORP\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CENTIMARK CORP",
+    "contractors": [
+      "CENTIMARK CORP"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3446,7 +3676,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04165",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3466,8 +3696,10 @@
     "issued_date": "2026-06-26T00:00:00.000",
     "description": "Alteration",
     "company": "\"ELI'S GENERAL CONTRACTING\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ELI'S GENERAL CONTRACTING",
+    "contractors": [
+      "ELI'S GENERAL CONTRACTING"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3476,7 +3708,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P08815",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3496,8 +3728,10 @@
     "issued_date": "2026-06-12T00:00:00.000",
     "description": "Alteration",
     "company": "\"FURLONG BUILDING ENTERPRISES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "FURLONG BUILDING ENTERPRISES LLC",
+    "contractors": [
+      "FURLONG BUILDING ENTERPRISES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3506,7 +3740,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P01532",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3526,8 +3760,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"S&T CONTRACTING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "S&T CONTRACTING LLC",
+    "contractors": [
+      "S&T CONTRACTING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3536,7 +3772,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04827",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3556,8 +3792,10 @@
     "issued_date": "2026-06-24T00:00:00.000",
     "description": "Alteration",
     "company": "\"BAMBECK & VEST ASSOCIATES INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BAMBECK & VEST ASSOCIATES INC",
+    "contractors": [
+      "BAMBECK & VEST ASSOCIATES INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3566,7 +3804,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04536",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3586,8 +3824,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "Alteration",
     "company": "\"D-N-M CONSTRUCTION, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "D-N-M CONSTRUCTION, LLC",
+    "contractors": [
+      "D-N-M CONSTRUCTION, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3596,7 +3836,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05526",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3616,8 +3856,10 @@
     "issued_date": "2026-06-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"EASTSIDE BUILDERS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "EASTSIDE BUILDERS INC",
+    "contractors": [
+      "EASTSIDE BUILDERS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3626,7 +3868,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05162",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3646,8 +3888,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Alteration",
     "company": "\"UPTOWN RENTAL PROPERTIES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "UPTOWN RENTAL PROPERTIES",
+    "contractors": [
+      "UPTOWN RENTAL PROPERTIES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3656,7 +3900,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04157",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3676,8 +3920,10 @@
     "issued_date": "2026-07-06T00:00:00.000",
     "description": "Alteration",
     "company": "\"R J BEISCHEL BUILDING CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "R J BEISCHEL BUILDING CO",
+    "contractors": [
+      "R J BEISCHEL BUILDING CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3686,7 +3932,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02917",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3706,8 +3952,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"R J BEISCHEL BUILDING CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "R J BEISCHEL BUILDING CO",
+    "contractors": [
+      "R J BEISCHEL BUILDING CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3716,7 +3964,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05082",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3736,8 +3984,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"BRYAN SANNEMAN\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BRYAN SANNEMAN",
+    "contractors": [
+      "BRYAN SANNEMAN"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3746,7 +3996,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05285",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3766,8 +4016,10 @@
     "issued_date": "2026-06-15T00:00:00.000",
     "description": "Alteration",
     "company": "\"RONIN INFORMATION TECHNOLOGY SERVICES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RONIN INFORMATION TECHNOLOGY SERVICES LLC",
+    "contractors": [
+      "RONIN INFORMATION TECHNOLOGY SERVICES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3776,7 +4028,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P04839",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3796,8 +4048,10 @@
     "issued_date": "2026-06-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"MUELLER REMODELING\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MUELLER REMODELING",
+    "contractors": [
+      "MUELLER REMODELING"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3806,7 +4060,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P00510",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3826,8 +4080,10 @@
     "issued_date": "2026-06-02T00:00:00.000",
     "description": "Alteration",
     "company": "\"ZOBRIST DESIGN GROUP INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ZOBRIST DESIGN GROUP INC",
+    "contractors": [
+      "ZOBRIST DESIGN GROUP INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3836,7 +4092,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04158",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3856,8 +4112,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"LAUCK DEVELOPMENT LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "LAUCK DEVELOPMENT LLC",
+    "contractors": [
+      "LAUCK DEVELOPMENT LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3866,7 +4124,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05042",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3886,8 +4144,10 @@
     "issued_date": "2026-06-18T00:00:00.000",
     "description": "Alteration",
     "company": "\"TERREX CONSTRUCTION, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TERREX CONSTRUCTION, LLC",
+    "contractors": [
+      "TERREX CONSTRUCTION, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3896,7 +4156,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04467",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3916,8 +4176,10 @@
     "issued_date": "2026-06-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"RWB PROPERTIES AND CONSTRUCTION, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RWB PROPERTIES AND CONSTRUCTION, LLC",
+    "contractors": [
+      "RWB PROPERTIES AND CONSTRUCTION, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3926,7 +4188,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P07982",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3946,8 +4208,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"DISTINCTIVE PATIOS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "DISTINCTIVE PATIOS LLC",
+    "contractors": [
+      "DISTINCTIVE PATIOS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3956,7 +4220,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04146",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -3976,8 +4240,10 @@
     "issued_date": "2026-07-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"TRITON SERVICES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TRITON SERVICES",
+    "contractors": [
+      "TRITON SERVICES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -3986,7 +4252,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P09880",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4006,8 +4272,10 @@
     "issued_date": "2026-07-01T00:00:00.000",
     "description": "Alteration",
     "company": "\"JDS HOLDING IX\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JDS HOLDING IX",
+    "contractors": [
+      "JDS HOLDING IX"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4016,7 +4284,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05119",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4036,8 +4304,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"HOMES PLUS CONTRACTING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HOMES PLUS CONTRACTING LLC",
+    "contractors": [
+      "HOMES PLUS CONTRACTING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4046,7 +4316,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03362",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4066,8 +4336,10 @@
     "issued_date": "2026-06-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"45NINETY CONSTRUCTION , INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "45NINETY CONSTRUCTION , INC",
+    "contractors": [
+      "45NINETY CONSTRUCTION , INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4076,7 +4348,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03885",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4096,8 +4368,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"JRC, INCORPORATED\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JRC, INCORPORATED",
+    "contractors": [
+      "JRC, INCORPORATED"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4106,7 +4380,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03520",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4126,8 +4400,10 @@
     "issued_date": "2026-06-25T00:00:00.000",
     "description": "Alteration",
     "company": "\"RVS HOLDINGS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "RVS HOLDINGS LLC",
+    "contractors": [
+      "RVS HOLDINGS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4136,7 +4412,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05697",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4156,8 +4432,10 @@
     "issued_date": "2026-07-13T00:00:00.000",
     "description": "Alteration",
     "company": "\"ROCK ISLAND REALTY\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ROCK ISLAND REALTY",
+    "contractors": [
+      "ROCK ISLAND REALTY"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4166,7 +4444,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06261",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4186,8 +4464,10 @@
     "issued_date": "2026-07-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"TRADE 31 LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TRADE 31 LLC",
+    "contractors": [
+      "TRADE 31 LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4196,7 +4476,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P04843",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4216,8 +4496,10 @@
     "issued_date": "2026-07-07T00:00:00.000",
     "description": "Alteration",
     "company": "\"LINKED SOLUTIONS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "LINKED SOLUTIONS INC",
+    "contractors": [
+      "LINKED SOLUTIONS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4226,7 +4508,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04884",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4246,8 +4528,10 @@
     "issued_date": "2026-06-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"A&B CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "A&B CONSTRUCTION",
+    "contractors": [
+      "A&B CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4256,7 +4540,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04562",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4276,8 +4560,10 @@
     "issued_date": "2026-06-26T00:00:00.000",
     "description": "Alteration",
     "company": "\"THE GARDEN PATH AND LANDSCAPING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "THE GARDEN PATH AND LANDSCAPING LLC",
+    "contractors": [
+      "THE GARDEN PATH AND LANDSCAPING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4286,7 +4572,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04231",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4306,8 +4592,10 @@
     "issued_date": "2026-06-05T00:00:00.000",
     "description": "Alteration",
     "company": "\"AMERICAN HEATING & AIR COND CO\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "AMERICAN HEATING & AIR COND CO",
+    "contractors": [
+      "AMERICAN HEATING & AIR COND CO"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4316,7 +4604,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03312",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4336,8 +4624,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Alteration",
     "company": "\"HGC CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HGC CONSTRUCTION",
+    "contractors": [
+      "HGC CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4346,7 +4636,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03521",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4366,8 +4656,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Alteration",
     "company": "\"APT CM LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "APT CM LLC",
+    "contractors": [
+      "APT CM LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4376,7 +4668,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10773",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4396,8 +4688,10 @@
     "issued_date": "2026-06-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"MAX CONSTRUCTION GROUP LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "MAX CONSTRUCTION GROUP LLC",
+    "contractors": [
+      "MAX CONSTRUCTION GROUP LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4406,7 +4700,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02677",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4426,8 +4720,10 @@
     "issued_date": "2026-07-06T00:00:00.000",
     "description": "Alteration",
     "company": "\"ADAMS CONSTRUCTION & REMODELING\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ADAMS CONSTRUCTION & REMODELING",
+    "contractors": [
+      "ADAMS CONSTRUCTION & REMODELING"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4436,7 +4732,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P10065",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4456,8 +4752,10 @@
     "issued_date": "2026-06-26T00:00:00.000",
     "description": "Alteration",
     "company": "\"HUNT BUILDERS CORP.\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HUNT BUILDERS CORP.",
+    "contractors": [
+      "HUNT BUILDERS CORP."
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4466,7 +4764,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P02207",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4486,8 +4784,10 @@
     "issued_date": "2026-06-23T00:00:00.000",
     "description": "Alteration",
     "company": "\"CRAFT CONSTRUCTION SERVICES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CRAFT CONSTRUCTION SERVICES LLC",
+    "contractors": [
+      "CRAFT CONSTRUCTION SERVICES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4496,7 +4796,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03494",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4516,8 +4816,10 @@
     "issued_date": "2026-06-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"TRIVERSITY CONSTRUCTION CO LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "TRIVERSITY CONSTRUCTION CO LLC",
+    "contractors": [
+      "TRIVERSITY CONSTRUCTION CO LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4526,7 +4828,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05243",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4546,8 +4848,10 @@
     "issued_date": "2026-06-05T00:00:00.000",
     "description": "Alteration",
     "company": "\"JRG INVESTMENT LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "JRG INVESTMENT LLC",
+    "contractors": [
+      "JRG INVESTMENT LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4556,7 +4860,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04161",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4576,8 +4880,10 @@
     "issued_date": "2026-05-28T00:00:00.000",
     "description": "Alteration",
     "company": "\"SHUCKTIS REMODELING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "SHUCKTIS REMODELING LLC",
+    "contractors": [
+      "SHUCKTIS REMODELING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4586,7 +4892,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03664",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4606,8 +4912,10 @@
     "issued_date": "2026-07-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"AMAROK LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "AMAROK LLC",
+    "contractors": [
+      "AMAROK LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4616,7 +4924,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05770",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4636,8 +4944,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Alteration",
     "company": "\"45NINETY CONSTRUCTION , INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "45NINETY CONSTRUCTION , INC",
+    "contractors": [
+      "45NINETY CONSTRUCTION , INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4646,7 +4956,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04564",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4666,8 +4976,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Alteration",
     "company": "\"OVERBERG CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "OVERBERG CONSTRUCTION",
+    "contractors": [
+      "OVERBERG CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4676,7 +4988,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05484",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4696,8 +5008,10 @@
     "issued_date": "2026-06-17T00:00:00.000",
     "description": "Alteration",
     "company": "\"FOUR BROTHERS REMODELING LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "FOUR BROTHERS REMODELING LLC",
+    "contractors": [
+      "FOUR BROTHERS REMODELING LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4706,7 +5020,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04445",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4726,8 +5040,10 @@
     "issued_date": "2026-06-11T00:00:00.000",
     "description": "Alteration",
     "company": "\"WEST HAVEN HOMES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "WEST HAVEN HOMES LLC",
+    "contractors": [
+      "WEST HAVEN HOMES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4736,7 +5052,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05280",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4756,8 +5072,10 @@
     "issued_date": "2026-05-27T00:00:00.000",
     "description": "Alteration",
     "company": "\"U & R CONSTRUCTION LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "U & R CONSTRUCTION LLC",
+    "contractors": [
+      "U & R CONSTRUCTION LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4766,7 +5084,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04500",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4786,8 +5104,10 @@
     "issued_date": "2026-07-06T00:00:00.000",
     "description": "Alteration",
     "company": "\"NIEHAUS PROPERTY SOLUTIONS LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "NIEHAUS PROPERTY SOLUTIONS LLC",
+    "contractors": [
+      "NIEHAUS PROPERTY SOLUTIONS LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4796,7 +5116,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04717",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4816,8 +5136,10 @@
     "issued_date": "2026-07-02T00:00:00.000",
     "description": "Alteration",
     "company": "\"NEW SEASON HOMES DBA PURE CONSTRUCTION SERVICES\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "NEW SEASON HOMES DBA PURE CONSTRUCTION SERVICES",
+    "contractors": [
+      "NEW SEASON HOMES DBA PURE CONSTRUCTION SERVICES"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4826,7 +5148,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04185",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4846,8 +5168,10 @@
     "issued_date": "2026-06-30T00:00:00.000",
     "description": "Alteration",
     "company": "\"HAYS & SONS CONSTRUCTION INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "HAYS & SONS CONSTRUCTION INC",
+    "contractors": [
+      "HAYS & SONS CONSTRUCTION INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4856,7 +5180,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05763",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4876,8 +5200,10 @@
     "issued_date": "2026-06-03T00:00:00.000",
     "description": "Alteration",
     "company": "\"CENTENNIAL PRESERVATION GROUP, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "CENTENNIAL PRESERVATION GROUP, LLC",
+    "contractors": [
+      "CENTENNIAL PRESERVATION GROUP, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4886,7 +5212,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05058",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4906,8 +5232,10 @@
     "issued_date": "2026-05-22T00:00:00.000",
     "description": "Alteration",
     "company": "\"ALLGEIER AND SON INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ALLGEIER AND SON INC",
+    "contractors": [
+      "ALLGEIER AND SON INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4916,7 +5244,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04728",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4936,8 +5264,10 @@
     "issued_date": "2026-07-09T00:00:00.000",
     "description": "Alteration",
     "company": "\"POHLAR CONSTRUCTION\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "POHLAR CONSTRUCTION",
+    "contractors": [
+      "POHLAR CONSTRUCTION"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4946,7 +5276,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2025P04488",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4966,8 +5296,10 @@
     "issued_date": "2026-05-29T00:00:00.000",
     "description": "Alteration",
     "company": "\"ICON SOLAR POWER, LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ICON SOLAR POWER, LLC",
+    "contractors": [
+      "ICON SOLAR POWER, LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -4976,7 +5308,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04882",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -4996,8 +5328,10 @@
     "issued_date": "2026-07-08T00:00:00.000",
     "description": "Alteration",
     "company": "\"BASEMENT DOCTOR OF CINCINNATI\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "BASEMENT DOCTOR OF CINCINNATI",
+    "contractors": [
+      "BASEMENT DOCTOR OF CINCINNATI"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -5006,7 +5340,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P05493",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -5026,8 +5360,10 @@
     "issued_date": "2026-07-07T00:00:00.000",
     "description": "Alteration",
     "company": "\"ION DEVELOPER\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ION DEVELOPER",
+    "contractors": [
+      "ION DEVELOPER"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -5036,7 +5372,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P04848",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -5056,8 +5392,10 @@
     "issued_date": "2026-07-16T00:00:00.000",
     "description": "Alteration",
     "company": "\"ALLEN & FREY BUILDERS & REMODELERS INC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "ALLEN & FREY BUILDERS & REMODELERS INC",
+    "contractors": [
+      "ALLEN & FREY BUILDERS & REMODELERS INC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -5066,7 +5404,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P06708",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   },
   {
@@ -5086,8 +5424,10 @@
     "issued_date": "2026-07-14T00:00:00.000",
     "description": "Alteration",
     "company": "\"OHANA PROPERTIES LLC\"",
-    "contractor": "Unknown",
-    "contractors": [],
+    "contractor": "OHANA PROPERTIES LLC",
+    "contractors": [
+      "OHANA PROPERTIES LLC"
+    ],
     "general_contractor": "Unknown",
     "electrical_contractor": "Unknown",
     "bid_date": "Unknown",
@@ -5096,7 +5436,7 @@
     "opportunity_reason": "potential commercial electrical material opportunity",
     "source": "City of Cincinnati Building Permits",
     "source_url": "http://cagis.hamilton-co.org/opal/apd.aspx?QSPerm=2026P03906",
-    "contractor_source": "Unknown",
+    "contractor_source": "Cincinnati Building Permits",
     "date_discovered": "2026-07-21"
   }
 ]
