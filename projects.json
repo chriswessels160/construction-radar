@@ -1,23 +1,18 @@
 [
   {
-    "project": "Boone County Warehouse",
+    "project": "Automatic Test Project",
     "county": "Boone",
     "status": "Bidding",
-    "value": "$18M",
-    "opportunity": "High"
+    "value": "$20M",
+    "opportunity": "High",
+    "last_updated": "2026-07-21"
   },
   {
-    "project": "Covington Apartments",
-    "county": "Kenton",
+    "project": "Cincinnati Test Development",
+    "county": "Hamilton",
     "status": "Planning",
-    "value": "$35M",
-    "opportunity": "High"
-  },
-  {
-    "project": "School Renovation",
-    "county": "Campbell",
-    "status": "Pre-Bid",
-    "value": "$7M",
-    "opportunity": "Medium"
+    "value": "$12M",
+    "opportunity": "Medium",
+    "last_updated": "2026-07-21"
   }
 ]
