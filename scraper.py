@@ -994,120 +994,120 @@ else:
     )
 
 
-        if not source_link:
+    if not source_link:
+
+        source_link = (
+            "https://data.cincinnati-oh.gov/"
+            "Thriving-Neighborhoods/"
+            "Cincinnati-Building-Permits/"
+            "uhjb-xac9"
+        )
     
-            source_link = (
-                "https://data.cincinnati-oh.gov/"
-                "Thriving-Neighborhoods/"
-                "Cincinnati-Building-Permits/"
-                "uhjb-xac9"
+    
+    return {
+
+        "project":
+            project_name,
+
+        "address":
+            address,
+
+        "city":
+            city,
+
+        "county":
+            "Hamilton",
+
+        "state":
+            state,
+
+        "type":
+            permit_type,
+
+        "market":
+            market,
+
+        "work_class":
+            workclass,
+
+        "proposed_use":
+            proposed_use,
+
+        "status":
+            status,
+
+        "value":
+            format_money(value),
+
+        "value_numeric":
+            value,
+
+        "permit_number":
+            permit_number,
+
+        "issued_date":
+            issued_date,
+
+        "description":
+            description,
+
+
+        # Original company field from permit data
+        "company":
+            source_company,
+
+
+        # Verified contractor contacts from
+        # Cincinnati Permit Contacts dataset
+        "contractor":
+            contractor_display,
+
+        "contractors":
+    [contractor_display] if contractor_display != "Unknown" else [],
+
+
+        # Reserved for future, more specific sources
+        "general_contractor":
+            "Unknown",
+
+        "electrical_contractor":
+            "Unknown",
+
+        "bid_date":
+            "Unknown",
+
+
+        "opportunity":
+            f"{score}/10",
+
+        "opportunity_score":
+            score,
+
+        "opportunity_reason":
+            reason,
+
+
+        "source":
+            "City of Cincinnati Building Permits",
+
+        "source_url":
+            source_link,
+
+        "contractor_source":
+            (
+                "Cincinnati Building Permits"
+                if contractor_display != "Unknown"
+                else "Unknown"
+            ),
+    
+        "date_discovered":
+            datetime.now(
+                timezone.utc
+            ).strftime(
+                "%Y-%m-%d"
             )
-    
-    
-        return {
-    
-            "project":
-                project_name,
-    
-            "address":
-                address,
-    
-            "city":
-                city,
-    
-            "county":
-                "Hamilton",
-    
-            "state":
-                state,
-    
-            "type":
-                permit_type,
-    
-            "market":
-                market,
-    
-            "work_class":
-                workclass,
-    
-            "proposed_use":
-                proposed_use,
-    
-            "status":
-                status,
-    
-            "value":
-                format_money(value),
-    
-            "value_numeric":
-                value,
-    
-            "permit_number":
-                permit_number,
-    
-            "issued_date":
-                issued_date,
-    
-            "description":
-                description,
-    
-    
-            # Original company field from permit data
-            "company":
-                source_company,
-    
-    
-            # Verified contractor contacts from
-            # Cincinnati Permit Contacts dataset
-            "contractor":
-                contractor_display,
-    
-            "contractors":
-        [contractor_display] if contractor_display != "Unknown" else [],
-    
-    
-            # Reserved for future, more specific sources
-            "general_contractor":
-                "Unknown",
-    
-            "electrical_contractor":
-                "Unknown",
-    
-            "bid_date":
-                "Unknown",
-    
-    
-            "opportunity":
-                f"{score}/10",
-    
-            "opportunity_score":
-                score,
-    
-            "opportunity_reason":
-                reason,
-    
-    
-            "source":
-                "City of Cincinnati Building Permits",
-    
-            "source_url":
-                source_link,
-    
-            "contractor_source":
-                (
-                    "Cincinnati Building Permits"
-                    if contractor_display != "Unknown"
-                    else "Unknown"
-                ),
-        
-            "date_discovered":
-                datetime.now(
-                    timezone.utc
-                ).strftime(
-                    "%Y-%m-%d"
-                )
-    
-        }
+
+    }
 
 
 # ============================================================
