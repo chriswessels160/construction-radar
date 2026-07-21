@@ -146,6 +146,10 @@ function renderProjects(projects) {
                 ${escapeHtml(project.value || "Unknown")}
             </td>
 
+            <td>
+                ${escapeHtml(project.contractor || "Unknown")}
+            </td>
+            
             <td class="${Number(project.opportunity_score || 0) >= 8 ? "score-high" : ""}">
                 ${escapeHtml(project.opportunity || "Unknown")}
             </td>
@@ -181,6 +185,7 @@ function applyFilters() {
             ${project.address || ""}
             ${project.city || ""}
             ${project.description || ""}
+            ${project.contractor || ""}
         `.toLowerCase();
 
         const matchesSearch =
