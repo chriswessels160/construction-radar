@@ -82,6 +82,152 @@ def format_money(number):
     return f"${number:,.0f}"
 
 
+def classify_market(description, proposed_use, permit_type, workclass):
+    text = " ".join([
+        clean_text(description),
+        clean_text(proposed_use),
+        clean_text(permit_type),
+        clean_text(workclass),
+    ]).lower()
+
+    # Industrial
+    if any(word in text for word in [
+        "manufacturing",
+        "factory",
+        "industrial",
+        "plant",
+        "production facility",
+        "processing facility",
+        "assembly facility",
+        "f-1",
+        "f-2",
+    ]):
+        return "Industrial"
+
+    # Warehouse / Logistics
+    if any(word in text for word in [
+        "warehouse",
+        "distribution center",
+        "distribution facility",
+        "logistics",
+        "fulfillment",
+        "storage facility",
+        "s-1",
+        "s-2",
+    ]):
+        return "Warehouse / Logistics"
+
+    # Healthcare
+    if any(word in text for word in [
+        "hospital",
+        "medical",
+        "clinic",
+        "healthcare",
+        "health care",
+        "surgery center",
+        "urgent care",
+        "nursing",
+    ]):
+        return "Healthcare"
+
+    # Education
+    if any(word in text for word in [
+        "school",
+        "university",
+        "college",
+        "education",
+        "classroom",
+        "campus",
+        "daycare",
+        "day care",
+    ]):
+        return "Education"
+
+    # Multifamily / Residential
+    if any(word in text for word in [
+        "apartment",
+        "apartments",
+        "multifamily",
+        "multi-family",
+        "condominium",
+        "condominiums",
+        "student housing",
+        "senior living",
+        "r-1",
+        "r-2",
+        "r-3",
+        "1-2-3 fm",
+    ]):
+        return "Multifamily / Residential"
+
+    # Hospitality
+    if any(word in text for word in [
+        "hotel",
+        "motel",
+        "hospitality",
+        "lodging",
+        "resort",
+    ]):
+        return "Hospitality"
+
+    # Government / Public
+    if any(word in text for word in [
+        "government",
+        "municipal",
+        "city hall",
+        "fire station",
+        "police station",
+        "courthouse",
+        "public works",
+        "library",
+        "community center",
+    ]):
+        return "Government / Public"
+
+    # Infrastructure / Utility
+    if any(word in text for word in [
+        "utility",
+        "water treatment",
+        "wastewater",
+        "sewer",
+        "substation",
+        "infrastructure",
+        "transit",
+        "pump station",
+    ]):
+        return "Infrastructure / Utility"
+
+    # Mixed-Use
+    if any(word in text for word in [
+        "mixed use",
+        "mixed-use",
+    ]):
+        return "Mixed-Use"
+
+    # Commercial
+    if any(word in text for word in [
+        "commercial",
+        "office",
+        "retail",
+        "restaurant",
+        "store",
+        "tenant",
+        "shopping",
+        "business",
+        "bank",
+        "grocery",
+        "supermarket",
+        "bar",
+        "a-1",
+        "a-2",
+        "a-3",
+        "a-4",
+        "a-5",
+    ]):
+        return "Commercial"
+
+    return "Other"
+
 def electrical_score(description, proposed_use, workclass, value):
     text = " ".join([
         clean_text(description),
@@ -281,6 +427,12 @@ def normalize(record):
         or "Unknown"
     )
 
+    market = classify_market(
+        description,
+        proposed_use,
+        permit_type,
+        workclass
+)
     score, reason = electrical_score(
         description,
         proposed_use,
@@ -314,6 +466,7 @@ def normalize(record):
         "type": permit_type,
         "work_class": workclass,
         "proposed_use": proposed_use,
+        "market": market,
 
         "status": status,
 
