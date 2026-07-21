@@ -959,16 +959,16 @@ def normalize(
     )
     clean_company = source_company.strip('"').strip()
 
-if clean_company.upper() in [
-    "OWNER",
-    "UNKNOWN",
-    "N/A",
-    "NONE",
-    ""
-]:
-    contractor_display = "Unknown"
-else:
-    contractor_display = clean_company
+    if clean_company.upper() in [
+        "OWNER",
+        "UNKNOWN",
+        "N/A",
+        "NONE",
+        ""
+    ]:
+        contractor_display = "Unknown"
+    else:
+        contractor_display = clean_company
 
 
     # ========================================================
