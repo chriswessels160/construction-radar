@@ -1406,6 +1406,54 @@ def main():
 
     )
 
+# ============================================================
+# TEMPORARY CONTACT / PERMIT DIAGNOSTIC
+# ============================================================
 
+def diagnostic_check():
+
+    print("\n========== DIAGNOSTIC: RECENT PERMITS ==========\n")
+
+    permit_query = urllib.parse.urlencode({
+        "$limit": "5",
+        "$order": "issueddate DESC"
+    })
+
+    permit_url = PERMITS_URL + "?" + permit_query
+
+    request = urllib.request.Request(
+        permit_url,
+        headers={"User-Agent": "ConstructionRadar/1.0"}
+    )
+
+    with urllib.request.urlopen(request, timeout=60) as response:
+        permits = json.loads(response.read().decode("utf-8"))
+
+    for i, record in enumerate(permits, 1):
+        print(f"\n--- PERMIT {i} ---")
+        print(json.dumps(record, indent=2))
+
+
+    print("\n========== DIAGNOSTIC: RECENT CONTACTS ==========\n")
+
+    contact_query = urllib.parse.urlencode({
+        "$limit": "10",
+        "$order": "applied_date DESC"
+    })
+
+    contact_url = CONTACTS_URL + "?" + contact_query
+
+    request = urllib.request.Request(
+        contact_url,
+        headers={"User-Agent": "ConstructionRadar/1.0"}
+    )
+
+    with urllib.request.urlopen(request, timeout=60) as response:
+        contacts = json.loads(response.read().decode("utf-8"))
+
+    for i, record in enumerate(contacts, 1):
+        print(f"\n--- CONTACT {i} ---")
+        print(json.dumps(record, indent=2))
 if __name__ == "__main__":
     main()
+    diagnostic_check()
