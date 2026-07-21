@@ -1,86 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Construction Radar</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
             background: #f4f4f4;
+            color: #222;
+        }
+
+        .container {
+            width: 95%;
+            margin: 30px auto;
         }
 
         h1 {
             color: #d35400;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
         .card {
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .card .number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        input {
+            min-width: 280px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,.08);
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px;
             border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
         }
 
         th {
             background: #d35400;
             color: white;
         }
+
+        tr:hover {
+            background: #fafafa;
+        }
+
+        .score-high {
+            font-weight: bold;
+        }
+
+        .empty-message {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            table {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            input {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .table-wrapper {
+                overflow-x: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<h1>Greater Cincinnati Construction Radar</h1>
+<div class="container">
 
-<div class="card">
-    <h2>Market Summary</h2>
-    <p>Total Projects: <span id="totalProjects">0</span></p>
+    <h1>Greater Cincinnati Construction Radar</h1>
+
+    <div class="subtitle">
+        Construction opportunities across Cincinnati & Northern Kentucky
+    </div>
+
+    <div class="summary-grid">
+
+        <div class="card">
+            <h3>Total Projects</h3>
+            <div class="number" id="totalProjects">0</div>
+        </div>
+
+        <div class="card">
+            <h3>Industrial</h3>
+            <div class="number" id="industrialProjects">0</div>
+        </div>
+
+        <div class="card">
+            <h3>Commercial</h3>
+            <div class="number" id="commercialProjects">0</div>
+        </div>
+
+        <div class="card">
+            <h3>High Opportunity</h3>
+            <div class="number" id="highOpportunityProjects">0</div>
+        </div>
+
+    </div>
+
+    <div class="filters">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search project, address, city..."
+        >
+
+        <select id="marketFilter">
+            <option value="">All Markets</option>
+        </select>
+
+        <select id="countyFilter">
+            <option value="">All Counties</option>
+        </select>
+
+        <select id="statusFilter">
+            <option value="">All Statuses</option>
+        </select>
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Market</th>
+                    <th>County</th>
+                    <th>Status</th>
+                    <th>Value</th>
+                    <th>Opportunity</th>
+                </tr>
+            </thead>
+
+            <tbody id="projectsTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div
+        id="emptyMessage"
+        class="empty-message"
+    >
+        No projects match your filters.
+    </div>
+
 </div>
 
-<table id="projectsTable">
-    <tr>
-        <th>Project</th>
-        <th>County</th>
-        <th>Status</th>
-        <th>Value</th>
-        <th>Opportunity</th>
-    </tr>
-</table>
-
-<script>
-fetch("projects.json")
-    .then(response => response.json())
-    .then(data => {
-
-        document.getElementById("totalProjects").innerText = data.length;
-
-        const table = document.getElementById("projectsTable");
-
-        data.forEach(project => {
-
-            const row = table.insertRow();
-
-            row.insertCell(0).innerText = project.project;
-            row.insertCell(1).innerText = project.county;
-            row.insertCell(2).innerText = project.status;
-            row.insertCell(3).innerText = project.value;
-            row.insertCell(4).innerText = project.opportunity;
-
-        });
-    });
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
