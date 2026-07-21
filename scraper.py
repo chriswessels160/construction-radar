@@ -475,66 +475,108 @@ def get_recent_permits():
 # DOWNLOAD CONTRACTOR CONTACTS
 # ============================================================
 
-def get_recent_contacts():
+def get_contacts_for_permits(permit_records):
 
-    cutoff = (
-        datetime.now(timezone.utc)
-        - timedelta(
-            days=CONTACT_DAYS_BACK
+    permit_numbers = []
+
+    for record in permit_records:
+        permit_number = clean_text(
+            record.get("permitnum")
         )
-    ).strftime(
-        "%Y-%m-%dT00:00:00"
-    )
 
+        if permit_number:
+            permit_numbers.append(permit_number)
 
-    query = {
-
-        "$limit": "50000",
-
-        "$order":
-            "applied_date DESC",
-
-        "$where":
-            (
-                f"applied_date >= '{cutoff}' "
-                "AND upper(relationship) = 'CONTRACTOR'"
-            ),
-    }
-
-
-    url = (
-        CONTACTS_URL
-        + "?"
-        + urllib.parse.urlencode(query)
-    )
-
+    # Remove duplicate permit numbers
+    permit_numbers = list(set(permit_numbers))
 
     print(
-        "Downloading Cincinnati contractor contacts..."
+        f"Looking up contacts for "
+        f"{len(permit_numbers)} permit numbers..."
     )
 
+    all_contacts = []
 
-    request = urllib.request.Request(
+    # Query Cincinnati in small batches
+    # so the API URL does not become too long.
+    batch_size = 50
 
-        url,
+    for i in range(
+        0,
+        len(permit_numbers),
+        batch_size
+    ):
 
-        headers={
-            "User-Agent":
-                "ConstructionRadar/1.0"
-        }
-    )
+        batch = permit_numbers[
+            i:i + batch_size
+        ]
 
+        conditions = []
 
-    with urllib.request.urlopen(
-        request,
-        timeout=60
-    ) as response:
+        for permit_number in batch:
 
-        return json.loads(
-            response
-            .read()
-            .decode("utf-8")
+            safe_number = (
+                permit_number
+                .replace("'", "''")
+            )
+
+            conditions.append(
+                f"number_key='{safe_number}'"
+            )
+
+        where_clause = (
+            "("
+            + " OR ".join(conditions)
+            + ")"
         )
+
+        query = {
+            "$limit": "5000",
+            "$where": where_clause
+        }
+
+        url = (
+            CONTACTS_URL
+            + "?"
+            + urllib.parse.urlencode(query)
+        )
+
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent":
+                    "ConstructionRadar/1.0"
+            }
+        )
+
+        try:
+
+            with urllib.request.urlopen(
+                request,
+                timeout=60
+            ) as response:
+
+                records = json.loads(
+                    response
+                    .read()
+                    .decode("utf-8")
+                )
+
+            all_contacts.extend(records)
+
+        except Exception as error:
+
+            print(
+                f"WARNING: Contact batch failed: "
+                f"{error}"
+            )
+
+    print(
+        f"Downloaded {len(all_contacts)} "
+        f"permit contact records."
+    )
+
+    return all_contacts
 
 
 # ============================================================
@@ -1146,8 +1188,10 @@ def main():
     try:
 
         contact_records = (
-            get_recent_contacts()
-        )
+    get_contacts_for_permits(
+        permit_records
+    )
+)
 
     except Exception as error:
 
