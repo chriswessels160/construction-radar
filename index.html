@@ -7,129 +7,512 @@
     <title>Construction Radar</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-            color: #222;
+        * {
+            box-sizing: border-box;
         }
 
+        :root {
+            --background: #08090c;
+            --surface: #0e1015;
+            --surface-raised: #13161d;
+            --surface-hover: #181c25;
+
+            --border: #242832;
+            --border-light: #303541;
+
+            --text: #f5f7fa;
+            --text-secondary: #9ca3af;
+            --text-muted: #626975;
+
+            --accent: #8090ff;
+            --accent-soft: rgba(128, 144, 255, 0.12);
+        }
+
+        body {
+            margin: 0;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text);
+
+            min-height: 100vh;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* =========================
+           PAGE
+        ========================= */
+
         .container {
-            width: 95%;
-            margin: 30px auto;
+            width: min(94%, 1500px);
+            margin: 0 auto;
+            padding: 48px 0 64px;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 14px;
+
+            color: var(--text-secondary);
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .radar-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+            background: var(--accent);
+
+            box-shadow: 0 0 14px rgba(128, 144, 255, 0.8);
         }
 
         h1 {
-            color: #172033;
-            margin-bottom: 5px;
+            margin: 0;
+
+            color: var(--text);
+
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1;
+            font-weight: 700;
+
+            letter-spacing: -1.8px;
         }
 
         .subtitle {
-            color: #666;
-            margin-bottom: 25px;
+            max-width: 700px;
+
+            margin-top: 13px;
+            margin-bottom: 38px;
+
+            color: var(--text-secondary);
+
+            font-size: 15px;
+            line-height: 1.6;
         }
+
+        /* =========================
+           SUMMARY
+        ========================= */
 
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-bottom: 25px;
+
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,.08);
+            position: relative;
+
+            min-height: 125px;
+            padding: 21px 22px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--surface-raised),
+                    var(--surface)
+                );
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            box-shadow:
+                0 1px 2px rgba(0,0,0,.4),
+                0 12px 30px rgba(0,0,0,.14);
+
+            transition:
+                transform .2s ease,
+                border-color .2s ease,
+                background .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-light);
+            background: var(--surface-raised);
         }
 
         .card h3 {
-            margin-top: 0;
-            font-size: 15px;
-            color: #666;
+            margin: 0 0 20px;
+
+            color: var(--text-secondary);
+
+            font-size: 11px;
+            font-weight: 650;
+
+            letter-spacing: .8px;
+            text-transform: uppercase;
         }
 
         .card .number {
-            font-size: 30px;
-            font-weight: bold;
+            color: var(--text);
+
+            font-size: 32px;
+            line-height: 1;
+            font-weight: 700;
+
+            letter-spacing: -1px;
+        }
+
+        /* Small accent line on cards */
+
+        .card::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 20px;
+
+            width: 34px;
+            height: 2px;
+
+            background: var(--accent);
+
+            opacity: .8;
+        }
+
+        /* =========================
+           PROJECT TOOLBAR
+        ========================= */
+
+        .projects-section {
+            margin-top: 8px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            gap: 20px;
+
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            margin: 0;
+
+            font-size: 16px;
+            font-weight: 650;
+
+            letter-spacing: -.2px;
+        }
+
+        .section-label {
+            margin-top: 5px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
         }
 
         .filters {
             display: flex;
-            gap: 12px;
+            align-items: center;
+
+            gap: 9px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+
+            padding: 12px;
+
+            margin-bottom: 13px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 11px;
         }
 
         input,
         select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 14px;
+            height: 40px;
+
+            padding: 0 12px;
+
+            background: var(--surface-raised);
+            color: var(--text);
+
+            border: 1px solid var(--border);
+            border-radius: 7px;
+
+            font-family: inherit;
+            font-size: 13px;
+
+            outline: none;
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease,
+                background .2s ease;
         }
 
         input {
-            min-width: 280px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        input::placeholder {
+            color: var(--text-muted);
+        }
+
+        input:focus,
+        select:focus {
+            border-color: var(--accent);
+
+            box-shadow:
+                0 0 0 3px var(--accent-soft);
+
+            background: #171a22;
+        }
+
+        select {
+            min-width: 145px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           TABLE
+        ========================= */
+
+        .table-wrapper {
+            overflow-x: auto;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 11px;
+
+            box-shadow:
+                0 12px 40px rgba(0,0,0,.18);
         }
 
         table {
             width: 100%;
+
             border-collapse: collapse;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,.08);
+
+            background: transparent;
         }
 
         th,
         td {
-            padding: 12px;
-            border: 1px solid #ddd;
+            padding: 14px 16px;
+
             text-align: left;
-            vertical-align: top;
+            vertical-align: middle;
+
+            border-bottom: 1px solid var(--border);
         }
 
         th {
-            background: #172033;
-            color: white;
+            position: sticky;
+            top: 0;
+
+            background: #111319;
+
+            color: var(--text-secondary);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: .75px;
+            text-transform: uppercase;
+
+            white-space: nowrap;
         }
 
-        tr:hover {
-            background: #eef2f7;
+        td {
+            color: #d8dbe2;
+
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        tbody tr {
+            transition: background .15s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--surface-hover);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody td:first-child {
+            color: var(--text);
+            font-weight: 550;
         }
 
         .score-high {
-            font-weight: bold;
+            color: #ffffff;
+            font-weight: 700;
         }
+
+        /* =========================
+           EMPTY MESSAGE
+        ========================= */
 
         .empty-message {
-            background: white;
-            padding: 25px;
-            text-align: center;
             display: none;
+
+            margin-top: 13px;
+            padding: 35px;
+
+            background: var(--surface);
+
+            color: var(--text-secondary);
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+            border-radius: 11px;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            margin-top: 20px;
+            padding-top: 18px;
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #79d99a;
+            box-shadow: 0 0 8px rgba(121,217,154,.5);
+        }
+
+        /* =========================
+           SCROLLBAR
+        ========================= */
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #292d37;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3f4c;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
         @media (max-width: 900px) {
+
+            .container {
+                width: 94%;
+                padding-top: 32px;
+            }
+
             .summary-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             table {
-                font-size: 13px;
+                min-width: 900px;
             }
         }
 
         @media (max-width: 600px) {
-            .summary-grid {
-                grid-template-columns: 1fr;
+
+            .container {
+                padding-top: 25px;
             }
 
-            input {
+            .summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .card {
+                min-height: 105px;
+                padding: 17px;
+            }
+
+            .card h3 {
+                margin-bottom: 15px;
+                font-size: 10px;
+            }
+
+            .card .number {
+                font-size: 27px;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            input,
+            select {
                 width: 100%;
                 min-width: 0;
             }
 
-            .table-wrapper {
-                overflow-x: auto;
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -139,91 +522,175 @@
 
 <div class="container">
 
-    <h1>Greater Cincinnati Construction Radar</h1>
+    <!-- BRAND / HEADER -->
+
+    <div class="eyebrow">
+        <span class="radar-dot"></span>
+        Live Construction Intelligence
+    </div>
+
+    <h1>Construction Radar</h1>
 
     <div class="subtitle">
-        Construction opportunities across Cincinnati & Northern Kentucky
+        Discover construction activity, identify contractors, and surface
+        high-value opportunities across Greater Cincinnati.
     </div>
+
+
+    <!-- SUMMARY -->
 
     <div class="summary-grid">
 
         <div class="card">
             <h3>Total Projects</h3>
-            <div class="number" id="totalProjects">0</div>
+            <div
+                class="number"
+                id="totalProjects"
+            >
+                0
+            </div>
         </div>
 
         <div class="card">
             <h3>Industrial</h3>
-            <div class="number" id="industrialProjects">0</div>
+            <div
+                class="number"
+                id="industrialProjects"
+            >
+                0
+            </div>
         </div>
 
         <div class="card">
             <h3>Commercial</h3>
-            <div class="number" id="commercialProjects">0</div>
+            <div
+                class="number"
+                id="commercialProjects"
+            >
+                0
+            </div>
         </div>
 
         <div class="card">
             <h3>High Opportunity</h3>
-            <div class="number" id="highOpportunityProjects">0</div>
+            <div
+                class="number"
+                id="highOpportunityProjects"
+            >
+                0
+            </div>
         </div>
 
     </div>
 
-    <div class="filters">
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search project, address, city..."
+    <!-- PROJECTS -->
+
+    <div class="projects-section">
+
+        <div class="section-header">
+
+            <div>
+                <h2 class="section-title">
+                    Project Intelligence
+                </h2>
+
+                <div class="section-label">
+                    Search and filter active construction opportunities
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search projects, contractors, addresses..."
+            >
+
+            <select id="marketFilter">
+                <option value="">
+                    All Markets
+                </option>
+            </select>
+
+            <select id="countyFilter">
+                <option value="">
+                    All Counties
+                </option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="">
+                    All Statuses
+                </option>
+            </select>
+
+        </div>
+
+
+        <!-- PROJECT TABLE -->
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Project</th>
+                        <th>Market</th>
+                        <th>County</th>
+                        <th>Status</th>
+                        <th>Value</th>
+                        <th>Contractor</th>
+                        <th>Opportunity</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="projectsTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            id="emptyMessage"
+            class="empty-message"
         >
-
-        <select id="marketFilter">
-            <option value="">All Markets</option>
-        </select>
-
-        <select id="countyFilter">
-            <option value="">All Counties</option>
-        </select>
-
-        <select id="statusFilter">
-            <option value="">All Statuses</option>
-        </select>
+            No projects match your filters.
+        </div>
 
     </div>
 
-    <div class="table-wrapper">
 
-        <table>
+    <!-- FOOTER -->
 
-            <thead>
-                <tr>
-                
-                    <th>Project</th>
-                    <th>Market</th>
-                    <th>County</th>
-                    <th>Status</th>
-                    <th>Value</th>
-                    <th>Contractor</th>
-                    <th>Opportunity</th>
-                
-                </tr>
-            </thead>
+    <div class="footer">
 
-            <tbody id="projectsTableBody">
-            </tbody>
+        <div class="status">
+            <span class="status-dot"></span>
+            Automated project data active
+        </div>
 
-        </table>
+        <div>
+            Greater Cincinnati Construction Intelligence
+        </div>
 
-    </div>
-
-    <div
-        id="emptyMessage"
-        class="empty-message"
-    >
-        No projects match your filters.
     </div>
 
 </div>
+
 
 <script src="app.js"></script>
 
