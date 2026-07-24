@@ -6,6 +6,18 @@
 
     <title>Construction Radar</title>
 
+    <!-- Leaflet Map -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+    
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+    ></script>
+    
     <style>
         * {
             box-sizing: border-box;
@@ -197,6 +209,49 @@
             opacity: .8;
         }
 
+                /* =========================
+           MAP
+        ========================= */
+        
+        .map-section {
+            margin-bottom: 32px;
+        }
+        
+        #constructionMap {
+            width: 100%;
+            height: 520px;
+        
+            background: #0e1015;
+        
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        
+            overflow: hidden;
+        
+            box-shadow:
+                0 12px 40px rgba(0, 0, 0, .22);
+        }
+        
+        /* Darken Leaflet controls */
+        
+        .leaflet-control-zoom a {
+            background: #13161d !important;
+            color: #f5f7fa !important;
+            border-color: #242832 !important;
+        }
+        
+        .leaflet-control-zoom a:hover {
+            background: #1a1e29 !important;
+        }
+        
+        .leaflet-control-attribution {
+            background: rgba(8, 9, 12, .85) !important;
+            color: #626975 !important;
+        }
+        
+        .leaflet-control-attribution a {
+            color: #9ca3af !important;
+}
         /* =========================
            PROJECT TOOLBAR
         ========================= */
@@ -583,7 +638,27 @@
 
     </div>
 
+<!-- MAP -->
 
+    <div class="map-section">
+    
+        <div class="section-header">
+    
+            <div>
+                <h2 class="section-title">
+                    Opportunity Map
+                </h2>
+    
+                <div class="section-label">
+                    Explore construction activity across Greater Cincinnati
+                </div>
+            </div>
+    
+        </div>
+    
+        <div id="constructionMap"></div>
+    
+    </div>
     <!-- PROJECTS -->
 
     <div class="projects-section">
@@ -693,6 +768,28 @@
 
 
 <script src="app.js"></script>
+
+<script>
+    const constructionMap = L.map(
+        "constructionMap",
+        {
+            zoomControl: true
+        }
+    ).setView(
+        [39.1031, -84.5120],
+        11
+    );
+
+    L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+        {
+            attribution:
+                '&copy; OpenStreetMap contributors &copy; CARTO',
+            subdomains: "abcd",
+            maxZoom: 20
+        }
+    ).addTo(constructionMap);
+</script>
 
 </body>
 </html>
