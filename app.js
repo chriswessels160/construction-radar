@@ -296,7 +296,7 @@ function renderMapMarkers(projects) {
           project.longitude === null ||
           project.latitude === undefined ||
           project.longitude === undefined ||
-          project.latitude === ""
+          project.latitude === "" ||
           project.longitude === ""
       ) {
           return;
