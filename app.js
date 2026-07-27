@@ -291,19 +291,34 @@ function renderMapMarkers(projects) {
 
     projects.forEach(project => {
 
-        const latitude =
-            Number(project.latitude);
+      if (
+          project.latitude === null ||
+          project.longitude === null ||
+          project.latitude === undefined ||
+          project.longitude === undefined ||
+          project.latitude === ""
+          project.longitude === ""
+      ) {
+          return;
+      }
 
-        const longitude =
-            Number(project.longitude);
+const latitude =
+    Number(project.latitude);
+
+const longitude =
+    Number(project.longitude);
 
 
-        if (
-            !Number.isFinite(latitude) ||
-            !Number.isFinite(longitude)
-        ) {
-            return;
-        }
+if (
+    !Number.isFinite(latitude) ||
+    !Number.isFinite(longitude) ||
+    latitude < 38 ||
+    latitude > 40.5 ||
+    longitude < -85.5 ||
+    longitude > -83
+) {
+    return;
+}
 
 
         const opportunityScore =
