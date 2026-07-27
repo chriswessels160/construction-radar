@@ -24,6 +24,8 @@ DAYS_BACK = 60
 # whose contact record was created before the permit was issued.
 CONTACT_DAYS_BACK = 180
 
+GEOCODE_CACHE_FILE = "geocode_cache.json"
+
 # Ignore most tiny projects unless clearly useful
 MIN_VALUE = 25_000
 
@@ -101,7 +103,119 @@ def format_money(number):
         return "Unknown"
 
     return f"${number:,.0f}"
+def load_geocode_cache():
+    try:
+        with open(
+            GEOCODE_CACHE_FILE,
+            "r",
+            encoding="utf-8"
+        ) as file:
+            return json.load(file)
 
+    except (
+        FileNotFoundError,
+        json.JSONDecodeError
+    ):
+        return {}
+
+
+def save_geocode_cache(cache):
+    with open(
+        GEOCODE_CACHE_FILE,
+        "w",
+        encoding="utf-8"
+    ) as file:
+        json.dump(
+            cache,
+            file,
+            indent=2,
+            ensure_ascii=False
+        )
+
+
+def geocode_address(address, city, state, cache):
+    if not address or address == "Unknown":
+        return None, None
+
+    cache_key = (
+        f"{address}|{city}|{state}"
+        .upper()
+        .strip()
+    )
+
+    if cache_key in cache:
+        cached = cache[cache_key]
+
+        return (
+            cached.get("latitude"),
+            cached.get("longitude")
+        )
+
+    query = {
+        "street": address,
+        "city": city,
+        "state": state,
+        "benchmark": "Public_AR_Current",
+        "format": "json"
+    }
+
+    url = (
+        "https://geocoding.geo.census.gov/"
+        "geocoder/locations/address?"
+        + urllib.parse.urlencode(query)
+    )
+
+    try:
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "ConstructionRadar/1.0"
+            }
+        )
+
+        with urllib.request.urlopen(
+            request,
+            timeout=30
+        ) as response:
+            data = json.loads(
+                response.read().decode("utf-8")
+            )
+
+        matches = (
+            data
+            .get("result", {})
+            .get("addressMatches", [])
+        )
+
+        if matches:
+            coordinates = matches[0].get(
+                "coordinates",
+                {}
+            )
+
+            latitude = coordinates.get("y")
+            longitude = coordinates.get("x")
+
+            cache[cache_key] = {
+                "latitude": latitude,
+                "longitude": longitude
+            }
+
+            return latitude, longitude
+
+    except Exception as error:
+        print(
+            f"WARNING: Could not geocode "
+            f"{address}, {city}, {state}: "
+            f"{error}"
+        )
+
+    cache[cache_key] = {
+        "latitude": None,
+        "longitude": None
+    }
+
+    return None, None
 
 # ============================================================
 # MARKET CLASSIFICATION
@@ -740,7 +854,8 @@ def is_relevant(record):
 
 def normalize(
     record,
-    contractor_map
+    contractor_map,
+    geocode_cache
 ):
 
     description = (
@@ -792,7 +907,12 @@ def normalize(
 
     )
 
-
+    latitude, longitude = geocode_address(
+        address,
+        city,
+        state,
+        geocode_cache
+    )
     value = parse_money(
 
         record.get(
@@ -1020,6 +1140,12 @@ def normalize(
 
         "state":
             state,
+        
+        "latitude":
+            latitude,
+
+        "longitude":
+            longitude,
 
         "type":
             permit_type,
@@ -1063,7 +1189,9 @@ def normalize(
             contractor_display,
 
         "contractors":
-    [contractor_display] if contractor_display != "Unknown" else [],
+            [contractor_display]
+            if contractor_display != "Unknown" 
+            else [],
 
 
         # Reserved for future, more specific sources
@@ -1248,7 +1376,7 @@ def main():
     # --------------------------------------------------------
     # BUILD PROJECT LIST
     # --------------------------------------------------------
-
+    geocode_cache = load_geocode_cache()
     projects = []
 
 
@@ -1260,7 +1388,8 @@ def main():
 
                 record,
 
-                contractor_map
+                contractor_map,
+                geocode_cache
 
             )
 
@@ -1300,7 +1429,10 @@ def main():
     # --------------------------------------------------------
     # SAVE JSON
     # --------------------------------------------------------
-
+    
+    save_geocode_cache(
+        geocode_cache
+    )
     with open(
 
         "projects.json",
@@ -1422,50 +1554,7 @@ def main():
 # TEMPORARY CONTACT / PERMIT DIAGNOSTIC
 # ============================================================
 
-def diagnostic_check():
 
-    print("\n========== DIAGNOSTIC: RECENT PERMITS ==========\n")
-
-    permit_query = urllib.parse.urlencode({
-        "$limit": "5",
-        "$order": "issueddate DESC"
-    })
-
-    permit_url = PERMITS_URL + "?" + permit_query
-
-    request = urllib.request.Request(
-        permit_url,
-        headers={"User-Agent": "ConstructionRadar/1.0"}
-    )
-
-    with urllib.request.urlopen(request, timeout=60) as response:
-        permits = json.loads(response.read().decode("utf-8"))
-
-    for i, record in enumerate(permits, 1):
-        print(f"\n--- PERMIT {i} ---")
-        print(json.dumps(record, indent=2))
-
-
-    print("\n========== DIAGNOSTIC: RECENT CONTACTS ==========\n")
-
-    contact_query = urllib.parse.urlencode({
-        "$limit": "10",
-        "$order": "applied_date DESC"
-    })
-
-    contact_url = CONTACTS_URL + "?" + contact_query
-
-    request = urllib.request.Request(
-        contact_url,
-        headers={"User-Agent": "ConstructionRadar/1.0"}
-    )
-
-    with urllib.request.urlopen(request, timeout=60) as response:
-        contacts = json.loads(response.read().decode("utf-8"))
-
-    for i, record in enumerate(contacts, 1):
-        print(f"\n--- CONTACT {i} ---")
-        print(json.dumps(record, indent=2))
 if __name__ == "__main__":
     main()
-    diagnostic_check()
+    
