@@ -2,47 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Construction Radar helps electrical distributors and contractors identify high-value construction opportunities."
+    >
 
     <title>Construction Radar</title>
 
-    <!-- Leaflet Map -->
     <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        crossorigin=""
+        rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg"
     >
-    
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        crossorigin=""
-    ></script>
-    
+
     <style>
+        :root {
+            --background: #070a10;
+            --surface: #0d111a;
+            --surface-light: #121826;
+            --border: rgba(255, 255, 255, 0.10);
+            --text: #ffffff;
+            --muted: #a6afc3;
+            --blue: #4f7cff;
+            --purple: #8b5cf6;
+            --green: #32d583;
+        }
+
         * {
             box-sizing: border-box;
         }
 
-        :root {
-            --background: #08090c;
-            --surface: #0e1015;
-            --surface-raised: #13161d;
-            --surface-hover: #181c25;
-
-            --border: #242832;
-            --border-light: #303541;
-
-            --text: #f5f7fa;
-            --text-secondary: #9ca3af;
-            --text-muted: #626975;
-
-            --accent: #8090ff;
-            --accent-soft: rgba(128, 144, 255, 0.12);
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
-
+            min-height: 100vh;
+            overflow-x: hidden;
             font-family:
                 Inter,
                 -apple-system,
@@ -52,522 +55,733 @@
                 Helvetica,
                 Arial,
                 sans-serif;
-
-            background: var(--background);
+            background:
+                radial-gradient(
+                    circle at 75% 20%,
+                    rgba(79, 124, 255, 0.16),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 20% 55%,
+                    rgba(139, 92, 246, 0.10),
+                    transparent 30%
+                ),
+                var(--background);
             color: var(--text);
-
-            min-height: 100vh;
-
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* =========================
-           PAGE
-        ========================= */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-        .container {
-            width: min(94%, 1500px);
+        .page-shell {
+            width: min(1400px, calc(100% - 40px));
             margin: 0 auto;
-            padding: 48px 0 64px;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            background: rgba(7, 10, 16, 0.86);
+            backdrop-filter: blur(18px);
+        }
 
-        .eyebrow {
+        .nav {
+            min-height: 88px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+            gap: 28px;
+        }
 
-            margin-bottom: 14px;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
 
-            color: var(--text-secondary);
+        .brand-mark {
+            position: relative;
+            width: 62px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+        }
 
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
+        .brand-monogram {
+            position: relative;
+            z-index: 2;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -5px;
+            transform: translateX(-2px);
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    #ffffff 52%,
+                    var(--purple)
+                );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .radar-ring {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 2px solid var(--purple);
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            transform: rotate(-12deg);
+        }
+
+        .radar-ring.one {
+            width: 28px;
+            height: 28px;
+            top: 5px;
+            right: 6px;
+        }
+
+        .radar-ring.two {
+            width: 42px;
+            height: 42px;
+            top: -2px;
+            right: -1px;
+            opacity: 0.65;
         }
 
         .radar-dot {
+            position: absolute;
             width: 7px;
             height: 7px;
-
+            right: 4px;
+            top: 4px;
             border-radius: 50%;
-            background: var(--accent);
+            background: var(--purple);
+            box-shadow: 0 0 14px var(--purple);
+        }
 
-            box-shadow: 0 0 14px rgba(128, 144, 255, 0.8);
+        .brand-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.95;
+        }
+
+        .brand-copy span:first-child {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .brand-copy span:last-child {
+            font-size: 27px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--blue),
+                    var(--purple)
+                );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 54px;
+            padding: 0 24px;
+            border-radius: 12px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--purple)
+                );
+            box-shadow:
+                0 12px 32px rgba(79, 124, 255, 0.24);
+            font-size: 15px;
+            font-weight: 700;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 16px 38px rgba(79, 124, 255, 0.32);
+        }
+
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 54px;
+            padding: 0 24px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--muted);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .secondary-button:hover {
+            color: var(--text);
+            border-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .hero {
+            min-height: calc(100vh - 89px);
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            align-items: center;
+            gap: 64px;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 24px;
+            padding: 8px 12px;
+            border: 1px solid rgba(79, 124, 255, 0.28);
+            border-radius: 999px;
+            background: rgba(79, 124, 255, 0.08);
+            color: #cdd8ff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 12px var(--green);
         }
 
         h1 {
-            margin: 0;
-
-            color: var(--text);
-
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1;
-            font-weight: 700;
-
-            letter-spacing: -1.8px;
-        }
-
-        .subtitle {
             max-width: 700px;
-
-            margin-top: 13px;
-            margin-bottom: 38px;
-
-            color: var(--text-secondary);
-
-            font-size: 15px;
-            line-height: 1.6;
+            margin: 0;
+            font-size: clamp(55px, 6vw, 92px);
+            line-height: 0.98;
+            letter-spacing: -0.055em;
         }
 
-        /* =========================
-           SUMMARY
-        ========================= */
+        .gradient-text {
+            display: block;
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--blue),
+                    var(--purple)
+                );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-        .summary-grid {
+        .hero-copy {
+            max-width: 630px;
+            margin: 28px 0 0;
+            color: var(--muted);
+            font-size: 20px;
+            line-height: 1.55;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 34px;
+        }
+
+        .feature-strip {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 10px;
+            margin-top: 42px;
         }
 
-        .card {
+        .mini-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 66px;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.025);
+            color: #d9deea;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .mini-icon {
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            color: #a992ff;
+            background: rgba(139, 92, 246, 0.10);
+            border: 1px solid rgba(139, 92, 246, 0.24);
+        }
+
+        .dashboard-preview {
             position: relative;
+        }
 
-            min-height: 125px;
-            padding: 21px 22px;
+        .preview-glow {
+            position: absolute;
+            inset: 12% 10%;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(79, 124, 255, 0.32),
+                    transparent 64%
+                );
+            filter: blur(46px);
+        }
 
+        .preview-frame {
+            position: relative;
             overflow: hidden;
-
+            border: 1px solid rgba(154, 170, 215, 0.20);
+            border-radius: 26px;
             background:
                 linear-gradient(
                     145deg,
-                    var(--surface-raised),
-                    var(--surface)
+                    #101726,
+                    #080b12
                 );
-
-            border: 1px solid var(--border);
-            border-radius: 12px;
-
             box-shadow:
-                0 1px 2px rgba(0,0,0,.4),
-                0 12px 30px rgba(0,0,0,.14);
-
-            transition:
-                transform .2s ease,
-                border-color .2s ease,
-                background .2s ease;
+                0 30px 90px rgba(0, 0, 0, 0.5);
+            transform: perspective(1500px) rotateY(-5deg) rotateX(2deg);
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            border-color: var(--border-light);
-            background: var(--surface-raised);
-        }
-
-        .card h3 {
-            margin: 0 0 20px;
-
-            color: var(--text-secondary);
-
-            font-size: 11px;
-            font-weight: 650;
-
-            letter-spacing: .8px;
-            text-transform: uppercase;
-        }
-
-        .card .number {
-            color: var(--text);
-
-            font-size: 32px;
-            line-height: 1;
-            font-weight: 700;
-
-            letter-spacing: -1px;
-        }
-
-        /* Small accent line on cards */
-
-        .card::before {
-            content: "";
-
-            position: absolute;
-            top: 0;
-            left: 20px;
-
-            width: 34px;
-            height: 2px;
-
-            background: var(--accent);
-
-            opacity: .8;
-        }
-
-                /* =========================
-           MAP
-        ========================= */
-        
-        .map-section {
-            margin-bottom: 32px;
-        }
-        
-        #constructionMap {
-            width: 100%;
-            height: 520px;
-        
-            background: #0e1015;
-        
-            border: 1px solid var(--border);
-            border-radius: 12px;
-        
-            overflow: hidden;
-        
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, .22);
-        }
-        
-        /* Darken Leaflet controls */
-        
-        .leaflet-control-zoom a {
-            background: #13161d !important;
-            color: #f5f7fa !important;
-            border-color: #242832 !important;
-        }
-        
-        .leaflet-control-zoom a:hover {
-            background: #1a1e29 !important;
-        }
-        
-        .leaflet-control-attribution {
-            background: rgba(8, 9, 12, .85) !important;
-            color: #626975 !important;
-        }
-        
-        .leaflet-control-attribution a {
-            color: #9ca3af !important;
-}
-        /* =========================
-           PROJECT TOOLBAR
-        ========================= */
-
-        .projects-section {
-            margin-top: 8px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            gap: 20px;
-
-            margin-bottom: 13px;
-        }
-
-        .section-title {
-            margin: 0;
-
-            font-size: 16px;
-            font-weight: 650;
-
-            letter-spacing: -.2px;
-        }
-
-        .section-label {
-            margin-top: 5px;
-
-            color: var(--text-muted);
-
-            font-size: 12px;
-        }
-
-        .filters {
+        .preview-topbar {
+            height: 55px;
             display: flex;
             align-items: center;
-
-            gap: 9px;
-            flex-wrap: wrap;
-
-            padding: 12px;
-
-            margin-bottom: 13px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-            border-radius: 11px;
-        }
-
-        input,
-        select {
-            height: 40px;
-
-            padding: 0 12px;
-
-            background: var(--surface-raised);
-            color: var(--text);
-
-            border: 1px solid var(--border);
-            border-radius: 7px;
-
-            font-family: inherit;
-            font-size: 13px;
-
-            outline: none;
-
-            transition:
-                border-color .2s ease,
-                box-shadow .2s ease,
-                background .2s ease;
-        }
-
-        input {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        input::placeholder {
-            color: var(--text-muted);
-        }
-
-        input:focus,
-        select:focus {
-            border-color: var(--accent);
-
-            box-shadow:
-                0 0 0 3px var(--accent-soft);
-
-            background: #171a22;
-        }
-
-        select {
-            min-width: 145px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           TABLE
-        ========================= */
-
-        .table-wrapper {
-            overflow-x: auto;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-            border-radius: 11px;
-
-            box-shadow:
-                0 12px 40px rgba(0,0,0,.18);
-        }
-
-        table {
-            width: 100%;
-
-            border-collapse: collapse;
-
-            background: transparent;
-        }
-
-        th,
-        td {
-            padding: 14px 16px;
-
-            text-align: left;
-            vertical-align: middle;
-
+            justify-content: space-between;
+            padding: 0 20px;
             border-bottom: 1px solid var(--border);
         }
 
-        th {
-            position: sticky;
-            top: 0;
-
-            background: #111319;
-
-            color: var(--text-secondary);
-
-            font-size: 10px;
-            font-weight: 700;
-
-            letter-spacing: .75px;
-            text-transform: uppercase;
-
-            white-space: nowrap;
-        }
-
-        td {
-            color: #d8dbe2;
-
-            font-size: 13px;
-            line-height: 1.45;
-        }
-
-        tbody tr {
-            transition: background .15s ease;
-        }
-
-        tbody tr:hover {
-            background: var(--surface-hover);
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody td:first-child {
-            color: var(--text);
-            font-weight: 550;
-        }
-
-        .score-high {
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        /* =========================
-           EMPTY MESSAGE
-        ========================= */
-
-        .empty-message {
-            display: none;
-
-            margin-top: 13px;
-            padding: 35px;
-
-            background: var(--surface);
-
-            color: var(--text-secondary);
-
-            text-align: center;
-
-            border: 1px solid var(--border);
-            border-radius: 11px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        .footer {
+        .preview-title {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-
-            gap: 20px;
-
-            margin-top: 20px;
-            padding-top: 18px;
-
-            color: var(--text-muted);
-
-            font-size: 11px;
-
-            border-top: 1px solid var(--border);
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 700;
         }
 
-        .status {
+        .preview-logo {
+            width: 29px;
+            height: 29px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--purple)
+                );
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        .preview-live {
             display: flex;
             align-items: center;
             gap: 7px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            color: #7ef0b0;
+            background: rgba(50, 213, 131, 0.08);
+            font-size: 11px;
+            font-weight: 700;
         }
 
-        .status-dot {
-            width: 6px;
-            height: 6px;
+        .preview-body {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            min-height: 480px;
+        }
 
+        .preview-sidebar {
+            padding: 18px 12px;
+            border-right: 1px solid var(--border);
+        }
+
+        .sidebar-item {
+            margin-bottom: 9px;
+            padding: 11px 12px;
+            border-radius: 9px;
+            color: #8792aa;
+            font-size: 11px;
+        }
+
+        .sidebar-item.active {
+            color: #ffffff;
+            background: rgba(79, 124, 255, 0.16);
+            border: 1px solid rgba(79, 124, 255, 0.20);
+        }
+
+        .preview-content {
+            padding: 18px;
+        }
+
+        .preview-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .preview-stat {
+            min-height: 82px;
+            padding: 13px;
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            background: var(--surface);
+        }
+
+        .preview-stat span {
+            color: #8d97ac;
+            font-size: 8px;
+            text-transform: uppercase;
+        }
+
+        .preview-stat strong {
+            display: block;
+            margin-top: 8px;
+            font-size: 23px;
+        }
+
+        .map-mockup {
+            position: relative;
+            min-height: 300px;
+            margin-top: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background:
+                linear-gradient(
+                    rgba(79, 124, 255, 0.05) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(79, 124, 255, 0.05) 1px,
+                    transparent 1px
+                ),
+                radial-gradient(
+                    circle at 45% 52%,
+                    rgba(41, 83, 155, 0.30),
+                    transparent 40%
+                ),
+                #09101c;
+            background-size:
+                30px 30px,
+                30px 30px,
+                auto,
+                auto;
+        }
+
+        .map-road {
+            position: absolute;
+            height: 2px;
+            border-radius: 999px;
+            background: rgba(107, 143, 214, 0.18);
+            transform-origin: left center;
+        }
+
+        .map-road.one {
+            width: 84%;
+            left: 5%;
+            top: 48%;
+            transform: rotate(-11deg);
+        }
+
+        .map-road.two {
+            width: 62%;
+            left: 18%;
+            top: 63%;
+            transform: rotate(21deg);
+        }
+
+        .map-road.three {
+            width: 65%;
+            left: 24%;
+            top: 31%;
+            transform: rotate(8deg);
+        }
+
+        .map-dot {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
             border-radius: 50%;
-
-            background: #79d99a;
-            box-shadow: 0 0 8px rgba(121,217,154,.5);
+            box-shadow: 0 0 16px currentColor;
         }
 
-        /* =========================
-           SCROLLBAR
-        ========================= */
-
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
+        .map-dot.blue {
+            color: var(--blue);
+            background: var(--blue);
         }
 
-        ::-webkit-scrollbar-track {
-            background: var(--background);
+        .map-dot.purple {
+            color: var(--purple);
+            background: var(--purple);
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #292d37;
-            border-radius: 10px;
+        .map-dot.orange {
+            color: #f79009;
+            background: #f79009;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3a3f4c;
+        .features-section {
+            padding: 70px 0 110px;
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 34px;
+        }
 
-        @media (max-width: 900px) {
+        .section-heading h2 {
+            margin: 0;
+            font-size: clamp(36px, 5vw, 56px);
+            letter-spacing: -0.04em;
+        }
 
-            .container {
-                width: 94%;
-                padding-top: 32px;
+        .section-heading p {
+            margin: 16px 0 0;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .feature-card {
+            min-height: 220px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.035),
+                    rgba(255, 255, 255, 0.012)
+                );
+        }
+
+        .feature-card-icon {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            color: #aa95ff;
+            background: rgba(139, 92, 246, 0.10);
+            border: 1px solid rgba(139, 92, 246, 0.24);
+            font-size: 20px;
+        }
+
+        .feature-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            margin: 12px 0 0;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .cta-section {
+            padding: 0 0 100px;
+        }
+
+        .cta-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 44px;
+            border: 1px solid rgba(79, 124, 255, 0.25);
+            border-radius: 24px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(79, 124, 255, 0.14),
+                    rgba(139, 92, 246, 0.09)
+                );
+        }
+
+        .cta-card h2 {
+            margin: 0;
+            font-size: clamp(30px, 4vw, 46px);
+            letter-spacing: -0.04em;
+        }
+
+        .cta-card p {
+            margin: 10px 0 0;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 30px 0 45px;
+            border-top: 1px solid var(--border);
+            color: #818ba0;
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        @media (max-width: 1100px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 70px;
             }
 
-            .summary-grid {
+            .dashboard-preview {
+                max-width: 850px;
+            }
+
+            .feature-strip,
+            .feature-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            table {
-                min-width: 900px;
-            }
         }
 
-        @media (max-width: 600px) {
-
-            .container {
-                padding-top: 25px;
+        @media (max-width: 760px) {
+            .page-shell {
+                width: min(100% - 24px, 1400px);
             }
 
-            .summary-grid {
+            .nav {
+                min-height: 74px;
+            }
+
+            .brand-mark {
+                width: 48px;
+            }
+
+            .brand-copy span:first-child {
+                font-size: 11px;
+            }
+
+            .brand-copy span:last-child {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav .primary-button {
+                min-height: 44px;
+                padding: 0 15px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: auto;
+                gap: 50px;
+                padding: 62px 0 80px;
+            }
+
+            h1 {
+                font-size: clamp(49px, 15vw, 70px);
+            }
+
+            .hero-copy {
+                font-size: 17px;
+            }
+
+            .feature-strip,
+            .feature-grid,
+            .preview-stats {
                 grid-template-columns: 1fr 1fr;
             }
 
-            .card {
-                min-height: 105px;
-                padding: 17px;
+            .preview-body {
+                grid-template-columns: 1fr;
             }
 
-            .card h3 {
-                margin-bottom: 15px;
-                font-size: 10px;
+            .preview-sidebar {
+                display: none;
             }
 
-            .card .number {
-                font-size: 27px;
+            .preview-frame {
+                transform: none;
             }
 
-            .filters {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            input,
-            select {
-                width: 100%;
-                min-width: 0;
-            }
-
-            .footer {
-                flex-direction: column;
+            .cta-card {
                 align-items: flex-start;
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .feature-strip,
+            .feature-grid,
+            .preview-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .secondary-button,
+            .primary-button {
+                width: 100%;
+            }
+
+            .hero-actions {
+                flex-direction: column;
             }
         }
     </style>
@@ -575,202 +789,338 @@
 
 <body>
 
-<div class="container">
+    <header class="site-header">
+        <div class="page-shell nav">
 
-    <!-- BRAND / HEADER -->
-
-    <div class="eyebrow">
-        <span class="radar-dot"></span>
-        Live Construction Intelligence
-    </div>
-
-    <h1>Construction Radar</h1>
-
-    <div class="subtitle">
-        Discover construction activity, identify contractors, and surface
-        high-value opportunities across Greater Cincinnati.
-    </div>
-
-
-    <!-- SUMMARY -->
-
-    <div class="summary-grid">
-
-        <div class="card">
-            <h3>Total Projects</h3>
-            <div
-                class="number"
-                id="totalProjects"
+            <a
+                class="brand"
+                href="#top"
+                aria-label="Construction Radar home"
             >
-                0
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Industrial</h3>
-            <div
-                class="number"
-                id="industrialProjects"
-            >
-                0
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Commercial</h3>
-            <div
-                class="number"
-                id="commercialProjects"
-            >
-                0
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>High Opportunity</h3>
-            <div
-                class="number"
-                id="highOpportunityProjects"
-            >
-                0
-            </div>
-        </div>
-
-    </div>
-
-<!-- MAP -->
-
-    <div class="map-section">
-    
-        <div class="section-header">
-    
-            <div>
-                <h2 class="section-title">
-                    Opportunity Map
-                </h2>
-    
-                <div class="section-label">
-                    Explore construction activity across Greater Cincinnati
+                <div class="brand-mark">
+                    <span class="radar-ring one"></span>
+                    <span class="radar-ring two"></span>
+                    <span class="radar-dot"></span>
+                    <span class="brand-monogram">CR</span>
                 </div>
-            </div>
-    
-        </div>
-    
-        <div id="constructionMap"></div>
-    
-    </div>
-    <!-- PROJECTS -->
 
-    <div class="projects-section">
-
-        <div class="section-header">
-
-            <div>
-                <h2 class="section-title">
-                    Project Intelligence
-                </h2>
-
-                <div class="section-label">
-                    Search and filter active construction opportunities
+                <div class="brand-copy">
+                    <span>CONSTRUCTION</span>
+                    <span>RADAR</span>
                 </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#platform">Platform</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+
+            <a
+                class="primary-button"
+                href="dashboard.html"
+            >
+                Launch Dashboard
+                <span>→</span>
+            </a>
+
+        </div>
+    </header>
+
+
+    <main id="top">
+
+        <section class="page-shell hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    Daily permit intelligence
+                </div>
+
+                <h1>
+                    Construction
+                    <br>
+                    Intelligence.
+                    <span class="gradient-text">
+                        Real Opportunities.
+                    </span>
+                </h1>
+
+                <p class="hero-copy">
+                    Construction Radar helps electrical distributors,
+                    contractors, and sales teams identify high-value
+                    construction projects before their competitors.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="primary-button"
+                        href="dashboard.html"
+                    >
+                        Launch Dashboard
+                        <span>→</span>
+                    </a>
+
+                    <a
+                        class="secondary-button"
+                        href="#features"
+                    >
+                        Explore Features
+                    </a>
+
+                </div>
+
+                <div class="feature-strip">
+
+                    <div class="mini-feature">
+                        <span class="mini-icon">⌖</span>
+                        <span>Live Permit Tracking</span>
+                    </div>
+
+                    <div class="mini-feature">
+                        <span class="mini-icon">◎</span>
+                        <span>Contractor Intelligence</span>
+                    </div>
+
+                    <div class="mini-feature">
+                        <span class="mini-icon">◫</span>
+                        <span>Opportunity Scoring</span>
+                    </div>
+
+                    <div class="mini-feature">
+                        <span class="mini-icon">◇</span>
+                        <span>Interactive GIS Mapping</span>
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
+
+            <div class="dashboard-preview" id="platform">
+
+                <div class="preview-glow"></div>
+
+                <div class="preview-frame">
+
+                    <div class="preview-topbar">
+
+                        <div class="preview-title">
+                            <span class="preview-logo">CR</span>
+                            Construction Radar
+                        </div>
+
+                        <div class="preview-live">
+                            <span class="live-dot"></span>
+                            Live
+                        </div>
+
+                    </div>
+
+                    <div class="preview-body">
+
+                        <aside class="preview-sidebar">
+                            <div class="sidebar-item active">
+                                Dashboard
+                            </div>
+                            <div class="sidebar-item">
+                                Projects
+                            </div>
+                            <div class="sidebar-item">
+                                Contractors
+                            </div>
+                            <div class="sidebar-item">
+                                Map
+                            </div>
+                            <div class="sidebar-item">
+                                Analytics
+                            </div>
+                        </aside>
+
+                        <div class="preview-content">
+
+                            <div class="preview-stats">
+
+                                <div class="preview-stat">
+                                    <span>Total Projects</span>
+                                    <strong>287</strong>
+                                </div>
+
+                                <div class="preview-stat">
+                                    <span>Industrial</span>
+                                    <strong>98</strong>
+                                </div>
+
+                                <div class="preview-stat">
+                                    <span>Commercial</span>
+                                    <strong>142</strong>
+                                </div>
+
+                                <div class="preview-stat">
+                                    <span>High Opportunity</span>
+                                    <strong>87</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="map-mockup">
+
+                                <span class="map-road one"></span>
+                                <span class="map-road two"></span>
+                                <span class="map-road three"></span>
+
+                                <span
+                                    class="map-dot blue"
+                                    style="left: 18%; top: 42%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot purple"
+                                    style="left: 29%; top: 64%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot orange"
+                                    style="left: 42%; top: 35%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot blue"
+                                    style="left: 51%; top: 53%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot purple"
+                                    style="left: 62%; top: 67%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot orange"
+                                    style="left: 70%; top: 31%;"
+                                ></span>
+
+                                <span
+                                    class="map-dot blue"
+                                    style="left: 78%; top: 59%;"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-        <!-- FILTERS -->
-
-        <div class="filters">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search projects, contractors, addresses..."
-            >
-
-            <select id="marketFilter">
-                <option value="">
-                    All Markets
-                </option>
-            </select>
-
-            <select id="countyFilter">
-                <option value="">
-                    All Counties
-                </option>
-            </select>
-
-            <select id="statusFilter">
-                <option value="">
-                    All Statuses
-                </option>
-            </select>
-
-        </div>
-
-
-        <!-- PROJECT TABLE -->
-
-        <div class="table-wrapper">
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>Project</th>
-                        <th>Market</th>
-                        <th>County</th>
-                        <th>Status</th>
-                        <th>Value</th>
-                        <th>Contractor</th>
-                        <th>Opportunity</th>
-                    </tr>
-
-                </thead>
-
-                <tbody id="projectsTableBody">
-                </tbody>
-
-            </table>
-
-        </div>
-
-
-        <!-- EMPTY STATE -->
-
-        <div
-            id="emptyMessage"
-            class="empty-message"
+        <section
+            class="page-shell features-section"
+            id="features"
         >
-            No projects match your filters.
+
+            <div class="section-heading">
+                <h2>
+                    Built to surface the best opportunities first.
+                </h2>
+
+                <p>
+                    Construction Radar combines public permit data,
+                    contractor intelligence, opportunity scoring, and
+                    interactive mapping in one focused platform.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <div class="feature-card-icon">⌖</div>
+                    <h3>Live Permit Intelligence</h3>
+                    <p>
+                        Automatically discover newly issued construction
+                        permits across Greater Cincinnati.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-card-icon">◎</div>
+                    <h3>Contractor Intelligence</h3>
+                    <p>
+                        Identify the companies connected to projects and
+                        understand where contractors are most active.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-card-icon">◫</div>
+                    <h3>Opportunity Scoring</h3>
+                    <p>
+                        Prioritize projects using value, project type,
+                        work class, and other permit indicators.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-card-icon">◇</div>
+                    <h3>Interactive Mapping</h3>
+                    <p>
+                        Explore projects geographically, filter results,
+                        and focus on the areas with the most activity.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="page-shell cta-section">
+
+            <div class="cta-card">
+
+                <div>
+                    <h2>
+                        See what is being built next.
+                    </h2>
+
+                    <p>
+                        Open the live dashboard and explore current
+                        construction opportunities.
+                    </p>
+                </div>
+
+                <a
+                    class="primary-button"
+                    href="dashboard.html"
+                >
+                    Launch Dashboard
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="page-shell footer-inner">
+            <span>
+                Construction Radar — Construction Intelligence Platform
+            </span>
+
+            <span>
+                Built by Chris Wessels
+            </span>
         </div>
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-        <div class="status">
-            <span class="status-dot"></span>
-            Automated project data active
-        </div>
-
-        <div>
-            Greater Cincinnati Construction Intelligence
-        </div>
-
-    </div>
-
-</div>
-
-
-<script src="app.js"></script>
-
-</body>
-</html>
+    </footer>
 
 </body>
 </html>
