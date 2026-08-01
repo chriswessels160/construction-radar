@@ -36,7 +36,10 @@ async function loadProjects() {
 
     try {
 
-        const response = await fetch("projects.json");
+        const response = await fetch(
+            `projects.json?v=${Date.now()}`,
+            { cache: "no-store" }
+        );
 
         if (!response.ok) {
             throw new Error("Could not load projects.json");
