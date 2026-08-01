@@ -45,9 +45,8 @@ async function loadProjects() {
         allProjects = await response.json();
 
         populateFilters();
-        updateSummary(allProjects);
-        renderProjects(allProjects);
-        renderMapMarkers(allProjects);
+        applyFilters();
+        setAssistantReady(true);
 
     } catch (error) {
 
@@ -58,6 +57,8 @@ async function loadProjects() {
 
         document.getElementById("emptyMessage").innerText =
             "Unable to load project data.";
+
+        setAssistantReady(false, true);
 
     }
 }
@@ -570,6 +571,104 @@ function focusProjectOnMap(project) {
 }
 
 
+function setAssistantReady(isReady, loadFailed = false) {
+
+    const input =
+        document.getElementById("assistantInput");
+
+    input.disabled = !isReady;
+    input.placeholder = loadFailed
+        ? "Project data could not be loaded"
+        : isReady
+            ? "Try: Show Jefferson projects over $2 million"
+            : "Loading project data...";
+
+    document.getElementById("assistantSubmit").disabled = !isReady;
+
+    document
+        .querySelectorAll(".assistant-suggestion")
+        .forEach(button => {
+            button.disabled = !isReady;
+        });
+
+    if (loadFailed) {
+        const response = document.getElementById("assistantResponse");
+        response.classList.add("is-visible");
+        document.getElementById("assistantMessage").textContent =
+            "Project data is unavailable. Refresh the dashboard to try again.";
+    }
+}
+
+
+/* =========================================================
+   ASK CONSTRUCTION RADAR
+========================================================= */
+
+function runAssistantQuery(question) {
+
+    if (allProjects.length === 0) {
+        return;
+    }
+
+    const response =
+        document.getElementById("assistantResponse");
+
+    const message =
+        document.getElementById("assistantMessage");
+
+    const resultsContainer =
+        document.getElementById("assistantResults");
+
+    const answer =
+        ConstructionRadarAssistant.answer(
+            allProjects,
+            question,
+            new Date()
+        );
+
+    response.classList.add("is-visible");
+    message.textContent = answer.message;
+    resultsContainer.innerHTML = "";
+
+    if (answer.type === "contractor-ranking") {
+        answer.ranking.forEach(item => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "assistant-result";
+            button.innerHTML = `
+                <strong>${escapeHtml(item.name)}</strong>
+                <span>${item.count.toLocaleString()} projects</span>
+            `;
+            button.addEventListener("click", () => {
+                document.getElementById("searchInput").value = item.name;
+                applyFilters();
+                document.querySelector(".projects-section").scrollIntoView({ behavior: "smooth" });
+            });
+            resultsContainer.appendChild(button);
+        });
+        return;
+    }
+
+    if (answer.type === "projects" || answer.type === "count") {
+        updateSummary(answer.results);
+        renderProjects(answer.results);
+        renderMapMarkers(answer.results);
+
+        (answer.displayResults || answer.results.slice(0, 5)).slice(0, 5).forEach(project => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "assistant-result";
+            button.innerHTML = `
+                <strong>${escapeHtml(project.project || "Unknown project")}</strong>
+                <span>${escapeHtml(project.county || "Unknown")} · ${escapeHtml(project.value || "Unknown")} · ${escapeHtml(project.contractor || "Unknown")}</span>
+            `;
+            button.addEventListener("click", () => focusProjectOnMap(project));
+            resultsContainer.appendChild(button);
+        });
+    }
+}
+
+
 /* =========================================================
    FILTERING
 ========================================================= */
@@ -598,6 +697,12 @@ function applyFilters() {
     const status =
         document
             .getElementById("statusFilter")
+            .value;
+
+
+    const contractorAvailability =
+        document
+            .getElementById("contractorFilter")
             .value;
 
 
@@ -632,11 +737,22 @@ function applyFilters() {
                 project.status === status;
 
 
+            const hasKnownContractor =
+                Boolean(project.contractor) &&
+                project.contractor.trim().toLowerCase() !== "unknown";
+
+
+            const matchesContractorAvailability =
+                !contractorAvailability ||
+                (contractorAvailability === "known" && hasKnownContractor);
+
+
             return (
                 matchesSearch &&
                 matchesMarket &&
                 matchesCounty &&
-                matchesStatus
+                matchesStatus &&
+                matchesContractorAvailability
             );
 
         });
@@ -697,6 +813,35 @@ document
         "change",
         applyFilters
     );
+
+
+document
+    .getElementById("contractorFilter")
+    .addEventListener(
+        "change",
+        applyFilters
+    );
+
+
+document
+    .getElementById("assistantForm")
+    .addEventListener("submit", event => {
+        event.preventDefault();
+        runAssistantQuery(
+            document.getElementById("assistantInput").value
+        );
+    });
+
+
+document
+    .querySelectorAll(".assistant-suggestion")
+    .forEach(button => {
+        button.addEventListener("click", () => {
+            const question = button.textContent.trim();
+            document.getElementById("assistantInput").value = question;
+            runAssistantQuery(question);
+        });
+    });
 
 
 loadProjects();
