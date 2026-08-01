@@ -1,6 +1,7 @@
 """Source adapters and failure-isolated orchestration."""
 
 import json
+import time
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
@@ -60,6 +61,9 @@ class ArcGISPermitConfig:
     fields: dict
     page_size: int = 1000
     return_geometry: bool = False
+    where_clause: str = ""
+    max_records: int = 5000
+    allow_unvalued_commercial: bool = False
 
 
 class ConfigurableArcGISPermitAdapter:
@@ -67,7 +71,9 @@ class ConfigurableArcGISPermitAdapter:
 
     config = None
 
-    def __init__(self, relevant, classify_market, electrical_score, parse_money, format_money, days_back=60):
+    def __init__(self, relevant, classify_market, electrical_score, parse_money, format_money, days_back=60, config=None):
+        if config is not None:
+            self.config = config
         if self.config is None:
             raise TypeError("ArcGIS adapter requires a source configuration")
         self.source_id = self.config.source_id
@@ -88,22 +94,26 @@ class ConfigurableArcGISPermitAdapter:
         return record.get(field_name) if field_name else None
 
     def fetch_records(self):
-        cutoff = (
-            datetime.now(timezone.utc) - timedelta(days=self.days_back)
-        ).strftime("%Y-%m-%d")
+        now = datetime.now(timezone.utc)
+        cutoff = (now - timedelta(days=self.days_back)).strftime("%Y-%m-%d")
+        where = self.config.where_clause.format(
+            cutoff=cutoff, year=now.year, month=now.month
+        ) if self.config.where_clause else f"{self.config.date_field} >= DATE '{cutoff}'"
         records = []
         offset = 0
 
         while True:
             query = {
-                "where": f"{self.config.date_field} >= DATE '{cutoff}'",
+                "where": where,
                 "outFields": "*",
                 "returnGeometry": str(self.config.return_geometry).lower(),
-                "orderByFields": f"{self.config.date_field} DESC",
                 "resultOffset": str(offset),
                 "resultRecordCount": str(self.config.page_size),
                 "f": "json",
+                "_ts": str(int(time.time())),
             }
+            if self.config.date_field:
+                query["orderByFields"] = f"{self.config.date_field} DESC"
             if self.config.return_geometry:
                 query["outSR"] = "4326"
 
@@ -111,8 +121,18 @@ class ConfigurableArcGISPermitAdapter:
             request = urllib.request.Request(
                 url, headers={"User-Agent": "ConstructionRadar/1.0"}
             )
-            with urllib.request.urlopen(request, timeout=60) as response:
-                payload = json.loads(response.read().decode("utf-8"))
+            last_error = None
+            for attempt in range(2):
+                try:
+                    with urllib.request.urlopen(request, timeout=60) as response:
+                        payload = json.loads(response.read().decode("utf-8"))
+                    break
+                except Exception as error:
+                    last_error = error
+                    if attempt == 0:
+                        time.sleep(1)
+            else:
+                raise last_error
 
             if payload.get("error"):
                 raise RuntimeError(payload["error"].get("message", "ArcGIS query failed"))
@@ -126,6 +146,9 @@ class ConfigurableArcGISPermitAdapter:
                 batch.append(record)
 
             records.extend(batch)
+            if len(records) >= self.config.max_records:
+                records = records[:self.config.max_records]
+                break
             if not payload.get("exceededTransferLimit") and len(batch) < self.config.page_size:
                 break
             if not batch:
@@ -238,7 +261,18 @@ class ConfigurableArcGISPermitAdapter:
                 "workclass": self._value(record, "work_class"),
                 "estprojectcostdec": self._value(record, "value"),
             }
-            if self.relevant(relevance_record):
+            relevant = self.relevant(relevance_record)
+            if not relevant and self.config.allow_unvalued_commercial:
+                text = " ".join(
+                    self._text(self._value(record, key), "")
+                    for key in ("permit_type", "work_class", "proposed_use")
+                ).lower()
+                relevant = any(term in text for term in (
+                    "commercial", "office", "retail", "industrial", "warehouse",
+                    "hospital", "school", "hotel", "restaurant", "multifamily",
+                    "multi-family", "apartment", "tenant improvement",
+                ))
+            if relevant:
                 projects.append(self.normalize_record(record))
         return AdapterResult(self.source_id, "success", projects)
 
@@ -293,33 +327,113 @@ class ColumbusBuildingPermitsAdapter(ConfigurableArcGISPermitAdapter):
     )
     source_url = "https://www.arcgis.com/home/item.html?id=f7a785b863454d96a0fe3f5aa5368e7d"
     config = ArcGISPermitConfig(
-        source_id=source_id,
-        layer_url=layer_url,
-        source_url=source_url,
-        source_name="City of Columbus Building Permits",
-        jurisdiction="Columbus",
-        county="Unknown",
-        state="OH",
-        default_city="Columbus",
-        date_field="ISSUED_DT",
-        return_geometry=True,
-        page_size=2000,
+        source_id=source_id, layer_url=layer_url, source_url=source_url,
+        source_name="City of Columbus Building Permits", jurisdiction="Columbus",
+        county="Unknown", state="OH", default_city="Columbus", date_field="ISSUED_DT",
+        return_geometry=True, page_size=2000,
         fields={
-            "permit_number": "B1_ALT_ID",
-            "permit_type": "GENERAL_TYPE",
-            "status": "PERMIT_STATUS",
-            "proposed_use": "VALUE_DESC",
-            "work_class": "B1_PER_SUB_TYPE",
-            "value": "G3_VALUE_TTL",
-            "address": "SITE_ADDRESS",
-            "issued_date": "ISSUED_DT",
-            "record_url": "ACA_URL",
-            "applicant_business": "APPLICANT_BUS_NAME",
+            "permit_number": "B1_ALT_ID", "permit_type": "GENERAL_TYPE",
+            "status": "PERMIT_STATUS", "proposed_use": "VALUE_DESC",
+            "work_class": "B1_PER_SUB_TYPE", "value": "G3_VALUE_TTL",
+            "address": "SITE_ADDRESS", "issued_date": "ISSUED_DT",
+            "record_url": "ACA_URL", "applicant_business": "APPLICANT_BUS_NAME",
             "applicant_name": "APPLICANT_FULL_NAME",
         },
     )
 
 
+def additional_city_configs():
+    """Verified official permit layers that use the shared ArcGIS adapter."""
+    return [
+        ArcGISPermitConfig(
+            source_id="cleveland-building-permits",
+            layer_url="https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Building_Permits/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=c08ddeaf2d1e41679a03103ff4e9fe17",
+            source_name="City of Cleveland Building Permits", jurisdiction="Cleveland",
+            county="Cuyahoga", state="OH", default_city="Cleveland", date_field="ISSUE_DATE",
+            return_geometry=True, page_size=2000,
+            fields={"permit_number":"PERMIT_ID","permit_type":"PERMIT_TYPE","status":"CURRENT_TASK_STATUS","contractor":"CONTRATOR_BUSINESS_NAME","proposed_use":"USE_GROUP_1","work_class":"WORK_DESCRIPTION","value":"JOB_VALUE","address":"PRIMARY_ADDRESS","issued_date":"ISSUE_DATE","record_url":"ACCELA_CITIZEN_ACCESS_URL"},
+        ),
+        ArcGISPermitConfig(
+            source_id="detroit-building-permits",
+            layer_url="https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/bseed_building_permits/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=86d47e86062e4beeb19344eb125b75d2",
+            source_name="City of Detroit Building Permits", jurisdiction="Detroit",
+            county="Wayne", state="MI", default_city="Detroit", date_field="issued_date",
+            fields={"permit_number":"record_id","permit_type":"permit_type","status":"is_open_to_elements","proposed_use":"proposed_use_type","work_class":"work_description","value":"amt_estimated_contractor_cost","address":"address","issued_date":"issued_date","latitude":"latitude","longitude":"longitude"},
+        ),
+        ArcGISPermitConfig(
+            source_id="austin-issued-building-permits",
+            layer_url="https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/PLANNINGCADASTRE_issued_building_permits/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=3dfba2a413ee47ebae6c875890b79a59",
+            source_name="City of Austin Issued Building Permits", jurisdiction="Austin",
+            county="Travis", state="TX", default_city="Austin", date_field="ISSUE_DATE",
+            return_geometry=True, page_size=2000,
+            fields={"permit_number":"PERMIT_NUMBER","permit_type":"PERMIT_TYPE","status":"STATUS","proposed_use":"SUB_TYPE","work_class":"WORK_TYPE","value":"TOTAL_JOB_VALUATION","address":"PERMIT_LOCATION","city":"CITY","state":"STATE","issued_date":"ISSUE_DATE","record_url":"LINK","latitude":"LATITUDE","longitude":"LONGITUDE"},
+        ),
+        ArcGISPermitConfig(
+            source_id="raleigh-building-permits",
+            layer_url="https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/Building_Permits/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=bdfad82b15344d37beb28d7f90b6c4be",
+            source_name="City of Raleigh Building Permits", jurisdiction="Raleigh",
+            county="Wake", state="NC", default_city="Raleigh", date_field="issueddate",
+            fields={"permit_number":"permitnum","permit_type":"permittype","status":"statuscurrent","contractor":"contractorcompanyname","proposed_use":"proposeduse","work_class":"workclass","value":"estprojectcost","address":"originaladdress1","city":"originalcity","state":"originalstate","issued_date":"issueddate","latitude":"latitude_perm","longitude":"longitude_perm"},
+        ),
+        ArcGISPermitConfig(
+            source_id="pasadena-active-building-permits",
+            layer_url="https://services2.arcgis.com/zNjnZafDYCAJAbN0/arcgis/rest/services/Active_Building_Permits_view/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=fbcfc2f4307d4a4ba4e8c57e7db511ce",
+            source_name="City of Pasadena Active Building Permits", jurisdiction="Pasadena",
+            county="Los Angeles", state="CA", default_city="Pasadena", date_field="",
+            return_geometry=True, where_clause="1=1", allow_unvalued_commercial=True,
+            fields={"permit_number":"CASE_NUMBER","permit_type":"DESCRIPTION","status":"DESCRIPTION","work_class":"DESCRIPTION","address":"ADDRESS"},
+        ),
+        ArcGISPermitConfig(
+            source_id="baltimore-building-permits",
+            layer_url="https://egisdata.baltimorecity.gov/egis/rest/services/Housing/DHCD_Open_Baltimore_Datasets/FeatureServer/3",
+            source_url="https://www.arcgis.com/home/item.html?id=189e6d1c65df4e13b38c0027cee574f6",
+            source_name="City of Baltimore Housing and Building Permits", jurisdiction="Baltimore",
+            county="Baltimore City", state="MD", default_city="Baltimore", date_field="IssuedDate",
+            return_geometry=True,
+            fields={"permit_number":"CaseNumber","permit_type":"PermitName","proposed_use":"ProposedUse","work_class":"Description","value":"Cost","address":"Address","issued_date":"IssuedDate"},
+        ),
+        ArcGISPermitConfig(
+            source_id="beverly-hills-building-permits",
+            layer_url="https://services5.arcgis.com/7CXE3aevo18HlHBC/arcgis/rest/services/Permit_Assessor_Export/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=d25f52e393d5436e844737d2e3447bf1",
+            source_name="City of Beverly Hills Building Permit Report", jurisdiction="Beverly Hills",
+            county="Los Angeles", state="CA", default_city="Beverly Hills", date_field="",
+            where_clause="ISSUED_YEAR = {year}",
+            fields={"permit_number":"PERMIT_NUMBER","permit_type":"PERMIT_TYPE","work_class":"PERMIT_DESCRIPTION","value":"VALUATION","address":"ADDRESS","applicant_name":"NAME"},
+        ),
+        ArcGISPermitConfig(
+            source_id="las-vegas-building-permits",
+            layer_url="https://services1.arcgis.com/F1v0ufATbBQScMtY/arcgis/rest/services/Bldg_Permits/FeatureServer/379",
+            source_url="https://www.arcgis.com/home/item.html?id=a51e6fdbe4bb4562abf769842abad9d2",
+            source_name="City of Las Vegas Building Permits", jurisdiction="Las Vegas",
+            county="Clark", state="NV", default_city="Las Vegas", date_field="ISSUE_DT",
+            return_geometry=True, page_size=2000,
+            fields={"permit_number":"APNO","permit_type":"APTYPE","status":"Status","proposed_use":"APDESC","work_class":"WORKDESC","value":"VALUATION","address":"ADDR","issued_date":"ISSUE_DT","applicant_name":"APPLICANT"},
+        ),
+        ArcGISPermitConfig(
+            source_id="washington-dc-building-permits",
+            layer_url="https://maps2.dcgis.dc.gov/dcgis/rest/services/FEEDS/DCRA/FeatureServer/18",
+            source_url="https://www.arcgis.com/home/item.html?id=7296e6392349498bb6ba6ba3db836644",
+            source_name="District of Columbia Building Permits", jurisdiction="Washington",
+            county="District of Columbia", state="DC", default_city="Washington", date_field="ISSUE_DATE",
+            page_size=2000, allow_unvalued_commercial=True,
+            fields={"permit_number":"PERMIT_ID","permit_type":"PERMIT_TYPE_NAME","status":"APPLICATION_STATUS_NAME","proposed_use":"PERMIT_CATEGORY_NAME","work_class":"DESC_OF_WORK","address":"FULL_ADDRESS","city":"CITY","state":"STATE","issued_date":"ISSUE_DATE","latitude":"LATITUDE","longitude":"LONGITUDE","applicant_name":"PERMIT_APPLICANT"},
+        ),
+        ArcGISPermitConfig(
+            source_id="tempe-building-permits",
+            layer_url="https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0",
+            source_url="https://www.arcgis.com/home/item.html?id=55b38626464d48cb94e81cb8227d6fde",
+            source_name="City of Tempe Building Safety Permits", jurisdiction="Tempe",
+            county="Maricopa", state="AZ", default_city="Tempe", date_field="IssuedDateDtm",
+            page_size=2000,
+            fields={"permit_number":"PermitNum","permit_type":"PermitTypeDesc","status":"StatusCurrent","contractor":"ContractorCompanyName","proposed_use":"PermitClass","work_class":"Description","value":"EstProjectCost","address":"OriginalAddress1","city":"OriginalCity","state":"OriginalState","issued_date":"IssuedDateDtm","latitude":"Latitude","longitude":"Longitude"},
+        ),
+    ]
 class UnverifiedCountyAdapter:
     """Safe scaffold: documents a source without making network requests."""
 

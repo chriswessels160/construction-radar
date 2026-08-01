@@ -5,8 +5,10 @@ from permit_schema import PermitValidationError, SCHEMA_VERSION, validate_projec
 from source_adapters import (
     AdapterResult,
     ColumbusBuildingPermitsAdapter,
+    ConfigurableArcGISPermitAdapter,
     LouisvilleJeffersonAdapter,
     UnverifiedCountyAdapter,
+    additional_city_configs,
     run_adapters,
 )
 import scraper
@@ -53,6 +55,32 @@ class SchemaTests(unittest.TestCase):
 
 
 class AdapterTests(unittest.TestCase):
+    def test_ten_additional_city_configs_are_unique_and_mapped(self):
+        configs = additional_city_configs()
+        self.assertEqual(len(configs), 10)
+        self.assertEqual(len({config.source_id for config in configs}), 10)
+        for config in configs:
+            self.assertTrue(config.layer_url.startswith("https://"))
+            self.assertTrue(config.source_url.startswith("https://"))
+            self.assertIn("permit_number", config.fields)
+
+    def test_configured_city_keeps_contact_roles_truthful(self):
+        config = next(c for c in additional_city_configs() if c.jurisdiction == "Tempe")
+        adapter = ConfigurableArcGISPermitAdapter(
+            scraper.is_relevant, scraper.classify_market, scraper.electrical_score,
+            scraper.parse_money, scraper.format_money, config=config,
+        )
+        project = adapter.normalize_record({
+            "PermitNum": "BP-1", "PermitTypeDesc": "Commercial Building",
+            "StatusCurrent": "Issued", "ContractorCompanyName": "Builder LLC",
+            "PermitClass": "Office", "Description": "New construction",
+            "EstProjectCost": 900000, "OriginalAddress1": "1 Mill Ave",
+            "IssuedDateDtm": 1782864000000,
+        })
+        self.assertEqual(project["contractor"], "Builder LLC")
+        self.assertEqual(project["contractors"][0]["source_field"], "ContractorCompanyName")
+        self.assertEqual(project["record_id"], "tempe-building-permits:BP-1")
+
     def louisville_adapter(self):
         return LouisvilleJeffersonAdapter(
             scraper.is_relevant,

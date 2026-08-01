@@ -390,10 +390,10 @@ const longitude =
 if (
     !Number.isFinite(latitude) ||
     !Number.isFinite(longitude) ||
-    latitude < 38 ||
-    latitude > 40.5 ||
-    longitude < -85.5 ||
-    longitude > -82.5
+    latitude < 20 ||
+    latitude > 55 ||
+    longitude < -130 ||
+    longitude > -60
 ) {
     return;
 }

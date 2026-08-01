@@ -8,7 +8,9 @@ from permit_schema import SCHEMA_VERSION, validate_project
 from source_adapters import (
     CincinnatiHamiltonAdapter,
     ColumbusBuildingPermitsAdapter,
+    ConfigurableArcGISPermitAdapter,
     LouisvilleJeffersonAdapter,
+    additional_city_configs,
     kentucky_scaffolds,
     run_adapters,
 )
@@ -1342,6 +1344,13 @@ def main():
             format_money,
             DAYS_BACK,
         ),
+        *[
+            ConfigurableArcGISPermitAdapter(
+                is_relevant, classify_market, electrical_score,
+                parse_money, format_money, DAYS_BACK, config=config,
+            )
+            for config in additional_city_configs()
+        ],
         *kentucky_scaffolds(),
     ]
     source_results = run_adapters(adapters, geocode_cache)
