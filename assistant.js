@@ -84,6 +84,14 @@
             filters.knownContractor = true;
         }
 
+        if (/known|identified|verified/.test(text) && text.includes("contact")) {
+            filters.knownContact = true;
+        }
+
+        if (/with applicants?|known applicants?/.test(text)) {
+            filters.knownApplicant = true;
+        }
+
         const rangeMatch = text.match(
             /\b(?:between|from)\s*\$?([\d,.]+)\s*(million|thousand|m|k)?\s*(?:and|to|-)\s*\$?([\d,.]+)\s*(million|thousand|m|k)?\b/
         );
@@ -113,6 +121,14 @@
 
         if (contractorMatch && !filters.unknownContractor) {
             filters.contractor = contractorMatch[1].trim();
+        }
+
+        const applicantMatch = text.match(
+            /(?:submitted by|applied by|applicant(?:\s+is|[:\s]+))\s*["']?([a-z0-9&.,' -]+?)["']?$/
+        );
+
+        if (applicantMatch) {
+            filters.applicant = applicantMatch[1].trim();
         }
 
         if (text.includes("this month")) {
@@ -171,6 +187,8 @@
             wantsCount: /\bhow many\b|\bcount\b/.test(text),
             wantsContractorRanking:
                 /which contractor|top contractors|contractors? (?:have|with) the most|most active contractor/.test(text),
+            wantsApplicantRanking:
+                /which applicants?|top applicants?|applicants? (?:have|with) the most|most active applicant/.test(text),
             compareCounties: /compare|versus|\bvs\.?\b/.test(text) && matchedCounties.length > 1
                 ? matchedCounties
                 : [],
@@ -203,6 +221,22 @@
 
         if (filters.knownContractor && contractor.toLowerCase() === "unknown") {
             return false;
+        }
+
+        const applicant = String(project.applicant || "Unknown").trim();
+
+        if (filters.knownApplicant && applicant.toLowerCase() === "unknown") {
+            return false;
+        }
+
+        if (filters.applicant && !applicant.toLowerCase().includes(filters.applicant)) {
+            return false;
+        }
+
+        if (filters.knownContact) {
+            const knownContractor = contractor && contractor.toLowerCase() !== "unknown";
+            const knownApplicant = applicant && applicant.toLowerCase() !== "unknown";
+            if (!knownContractor && !knownApplicant) return false;
         }
 
         if (filters.contractor && !contractor.toLowerCase().includes(filters.contractor)) {
@@ -272,6 +306,9 @@
         if (filters.contractor) parts.push(`contractor matching “${filters.contractor}”`);
         if (filters.unknownContractor) parts.push("unknown contractors");
         if (filters.knownContractor) parts.push("known contractors");
+        if (filters.knownApplicant) parts.push("known applicants");
+        if (filters.knownContact) parts.push("known project contacts");
+        if (filters.applicant) parts.push(`applicant matching “${filters.applicant}”`);
         if (filters.minimumValue !== undefined) parts.push(`value at least $${filters.minimumValue.toLocaleString()}`);
         if (filters.maximumValue !== undefined) parts.push(`value up to $${filters.maximumValue.toLocaleString()}`);
         if (filters.issueYear !== undefined) parts.push("issued this month");
@@ -299,6 +336,21 @@
             .slice(0, limit);
     }
 
+    function rankApplicants(projects, limit) {
+        const counts = new Map();
+
+        projects.forEach(project => {
+            const name = String(project.applicant || "Unknown").trim();
+            if (!name || name.toLowerCase() === "unknown") return;
+            counts.set(name, (counts.get(name) || 0) + 1);
+        });
+
+        return [...counts.entries()]
+            .map(([name, count]) => ({ name, count }))
+            .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+            .slice(0, limit);
+    }
+
     function answer(projects, question, now) {
         const parsed = parseQuery(question, now);
 
@@ -314,6 +366,7 @@
             Object.keys(parsed.filters).length > 0 ||
             parsed.wantsCount ||
             parsed.wantsContractorRanking ||
+            parsed.wantsApplicantRanking ||
             parsed.compareCounties.length > 0 ||
             parsed.compareMarkets.length > 0 ||
             parsed.sortByValue ||
@@ -383,6 +436,18 @@
             };
         }
 
+        if (parsed.wantsApplicantRanking) {
+            const ranking = rankApplicants(matches, parsed.limit);
+            return {
+                type: "applicant-ranking",
+                message: ranking.length
+                    ? `Top applicants for ${description}.`
+                    : `No known applicants matched ${description}.`,
+                ranking,
+                results: matches
+            };
+        }
+
         return {
             type: parsed.wantsCount ? "count" : "projects",
             message: parsed.wantsCount
@@ -398,6 +463,7 @@
         matchesFilters,
         numericValue,
         parseQuery,
+        rankApplicants,
         rankContractors
     };
 }));

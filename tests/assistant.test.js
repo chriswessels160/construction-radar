@@ -148,3 +148,34 @@ test("filters Columbus by explicit jurisdiction without guessing county", () => 
     assert.equal(answer.results[0].record_id, "columbus:1");
     assert.match(answer.message, /Columbus/);
 });
+
+test("filters projects with any known project contact", () => {
+    const applicantProject = {
+        record_id: "columbus:contact",
+        county: "Unknown",
+        jurisdiction: "Columbus",
+        market: "Commercial",
+        status: "Permit Issued",
+        value_numeric: 1000000,
+        contractor: "Unknown",
+        applicant: "Design Applicant LLC",
+        issued_date: "2026-07-25"
+    };
+    const answer = assistant.answer(
+        [...projects, applicantProject],
+        "Show projects with known contacts"
+    );
+    assert.equal(answer.results.length, 3);
+    assert.equal(answer.results.some(project => project.record_id === "columbus:contact"), true);
+});
+
+test("ranks applicants separately from contractors", () => {
+    const applicantProjects = [
+        {applicant: "Design Applicant LLC"},
+        {applicant: "Design Applicant LLC"},
+        {applicant: "Another Applicant"}
+    ];
+    const answer = assistant.answer(applicantProjects, "Which applicants have the most projects?");
+    assert.equal(answer.type, "applicant-ranking");
+    assert.deepEqual(answer.ranking[0], {name: "Design Applicant LLC", count: 2});
+});

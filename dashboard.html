@@ -26,9 +26,18 @@
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         crossorigin=""
     >
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+        crossorigin=""
+    >
     
     <script
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+    ></script>
+    <script
+        src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
         crossorigin=""
     ></script>
     
@@ -348,6 +357,33 @@
         :root[data-theme="light"] .leaflet-control-attribution a {
             color: #4c596d !important;
         }
+
+        .project-cluster {
+            display: grid !important;
+            place-items: center;
+            color: #ffffff;
+            background: rgba(83, 102, 223, .22);
+            border: 1px solid rgba(128, 144, 255, .55);
+            border-radius: 50%;
+            box-shadow: 0 0 0 7px rgba(83, 102, 223, .12), 0 8px 24px rgba(0,0,0,.3);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .project-cluster-medium {
+            font-size: 13px;
+        }
+
+        .project-cluster-large {
+            font-size: 14px;
+        }
+
+        :root[data-theme="light"] .project-cluster {
+            color: #ffffff;
+            background: rgba(63, 80, 196, .9);
+            border-color: #ffffff;
+            box-shadow: 0 0 0 7px rgba(83, 102, 223, .16), 0 8px 24px rgba(39,53,78,.22);
+        }
         /* =========================
            PROJECT TOOLBAR
         ========================= */
@@ -664,6 +700,27 @@
         tbody td:first-child {
             color: var(--text);
             font-weight: 550;
+        }
+
+        .project-contact {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            min-width: 180px;
+        }
+
+        .contact-role {
+            display: inline-flex;
+            padding: 3px 6px;
+            color: var(--text-muted);
+            background: var(--surface-raised);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 8px;
+            font-weight: 750;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .score-high {
@@ -1015,8 +1072,8 @@
                 </option>
             </select>
 
-            <select id="contractorFilter" aria-label="Filter by contractor availability">
-                <option value="known" selected>Known Contractors</option>
+            <select id="contractorFilter" aria-label="Filter by project contact availability">
+                <option value="known" selected>Known Contacts</option>
                 <option value="">All Projects</option>
             </select>
 
@@ -1037,7 +1094,7 @@
                         <th>Area</th>
                         <th>Status</th>
                         <th>Value</th>
-                        <th>Contractor</th>
+                        <th>Project Contact</th>
                         <th>Opportunity</th>
                     </tr>
 
@@ -1081,8 +1138,8 @@
 </div>
 
 
-<script src="assistant.js?v=3"></script>
-<script src="app.js?v=4"></script>
+<script src="assistant.js?v=4"></script>
+<script src="app.js?v=5"></script>
 
 </body>
 </html>

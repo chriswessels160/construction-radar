@@ -28,6 +28,34 @@ const constructionTiles = L.tileLayer(
 ).addTo(constructionMap);
 
 
+const projectMarkerLayer =
+    typeof L.markerClusterGroup === "function"
+        ? L.markerClusterGroup({
+            showCoverageOnHover: false,
+            maxClusterRadius: 58,
+            spiderfyOnMaxZoom: true,
+            iconCreateFunction(cluster) {
+                const count = cluster.getChildCount();
+                const size = count >= 100 ? 52 : count >= 20 ? 46 : 40;
+                const sizeClass = count >= 100
+                    ? "project-cluster-large"
+                    : count >= 20
+                        ? "project-cluster-medium"
+                        : "project-cluster-small";
+
+                return L.divIcon({
+                    html: `<span>${count.toLocaleString()}</span>`,
+                    className: `project-cluster ${sizeClass}`,
+                    iconSize: L.point(size, size)
+                });
+            }
+        })
+        : L.layerGroup();
+
+
+projectMarkerLayer.addTo(constructionMap);
+
+
 /* =========================================================
    THEME
 ========================================================= */
@@ -292,9 +320,13 @@ function renderProjects(projects) {
             </td>
 
             <td>
-                ${escapeHtml(
-                    project.contractor || "Unknown"
-                )}
+                <div class="project-contact">
+                    <span>${escapeHtml(getProjectContact(project).name)}</span>
+                    ${getProjectContact(project).role !== "Unknown"
+                        ? `<span class="contact-role">${escapeHtml(getProjectContact(project).role)}</span>`
+                        : ""
+                    }
+                </div>
             </td>
 
             <td class="${
@@ -407,11 +439,14 @@ if (
         );
 
 
-        marker.addTo(constructionMap);
+        projectMarkerLayer.addLayer(marker);
 
 
         marker.projectPermitNumber =
             project.permit_number;
+
+        marker.projectRecordId =
+            project.record_id;
 
 
         mapMarkers.push(marker);
@@ -445,10 +480,7 @@ if (
 
 function clearMapMarkers() {
 
-    mapMarkers.forEach(marker => {
-        constructionMap.removeLayer(marker);
-    });
-
+    projectMarkerLayer.clearLayers();
     mapMarkers = [];
 }
 
@@ -473,6 +505,9 @@ function createProjectPopup(project) {
         Number(
             project.opportunity_score || 0
         );
+
+
+    const projectContact = getProjectContact(project);
 
 
     const sourceButton =
@@ -535,12 +570,13 @@ function createProjectPopup(project) {
                 </div>
 
                 <div>
-                    <span>Contractor</span>
+                    <span>Project Contact</span>
                     <strong>
                         ${escapeHtml(
-                            project.contractor || "Unknown"
+                            projectContact.name
                         )}
                     </strong>
+                    <small>${escapeHtml(projectContact.role)}</small>
                 </div>
 
                 <div>
@@ -605,12 +641,13 @@ function focusProjectOnMap(project) {
     const marker =
         mapMarkers.find(
             currentMarker =>
-                currentMarker.projectPermitNumber ===
-                project.permit_number
+                currentMarker.projectRecordId === project.record_id
         );
 
 
-    if (marker) {
+    if (marker && typeof projectMarkerLayer.zoomToShowLayer === "function") {
+        projectMarkerLayer.zoomToShowLayer(marker, () => marker.openPopup());
+    } else if (marker) {
         marker.openPopup();
     }
 }
@@ -623,6 +660,36 @@ function getProjectArea(project) {
     }
 
     return project.jurisdiction || project.city || "Unknown";
+}
+
+
+function getProjectContact(project) {
+
+    const contractor = String(project.contractor || "").trim();
+
+    if (contractor && contractor.toLowerCase() !== "unknown") {
+        return {
+            name: contractor,
+            role: "Contractor",
+            source: project.contractor_source || project.source || "Unknown"
+        };
+    }
+
+    const applicant = String(project.applicant || "").trim();
+
+    if (applicant && applicant.toLowerCase() !== "unknown") {
+        return {
+            name: applicant,
+            role: "Applicant",
+            source: project.applicant_source || project.source || "Unknown"
+        };
+    }
+
+    return {
+        name: "Unknown",
+        role: "Unknown",
+        source: "Unknown"
+    };
 }
 
 
@@ -685,7 +752,7 @@ function runAssistantQuery(question) {
     message.textContent = answer.message;
     resultsContainer.innerHTML = "";
 
-    if (answer.type === "contractor-ranking") {
+    if (answer.type === "contractor-ranking" || answer.type === "applicant-ranking") {
         answer.ranking.forEach(item => {
             const button = document.createElement("button");
             button.type = "button";
@@ -728,7 +795,7 @@ function runAssistantQuery(question) {
             button.className = "assistant-result";
             button.innerHTML = `
                 <strong>${escapeHtml(project.project || "Unknown project")}</strong>
-                <span>${escapeHtml(getProjectArea(project))} · ${escapeHtml(project.value || "Unknown")} · ${escapeHtml(project.contractor || "Unknown")}</span>
+                <span>${escapeHtml(getProjectArea(project))} · ${escapeHtml(project.value || "Unknown")} · ${escapeHtml(getProjectContact(project).name)} (${escapeHtml(getProjectContact(project).role)})</span>
             `;
             button.addEventListener("click", () => focusProjectOnMap(project));
             resultsContainer.appendChild(button);
@@ -783,6 +850,7 @@ function applyFilters() {
                 ${project.city || ""}
                 ${project.description || ""}
                 ${project.contractor || ""}
+                ${project.applicant || ""}
             `.toLowerCase();
 
 
@@ -805,14 +873,13 @@ function applyFilters() {
                 project.status === status;
 
 
-            const hasKnownContractor =
-                Boolean(project.contractor) &&
-                project.contractor.trim().toLowerCase() !== "unknown";
+            const hasKnownContact =
+                getProjectContact(project).role !== "Unknown";
 
 
             const matchesContractorAvailability =
                 !contractorAvailability ||
-                (contractorAvailability === "known" && hasKnownContractor);
+                (contractorAvailability === "known" && hasKnownContact);
 
 
             return (
