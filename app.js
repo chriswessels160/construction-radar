@@ -649,6 +649,19 @@ function runAssistantQuery(question) {
         return;
     }
 
+    if (answer.type === "comparison") {
+        answer.comparison.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "assistant-result";
+            card.innerHTML = `
+                <strong>${escapeHtml(item.name)}</strong>
+                <span>${item.count.toLocaleString()} projects</span>
+            `;
+            resultsContainer.appendChild(card);
+        });
+        return;
+    }
+
     if (answer.type === "projects" || answer.type === "count") {
         updateSummary(answer.results);
         renderProjects(answer.results);

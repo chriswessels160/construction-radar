@@ -10,7 +10,9 @@ const projects = [
         status: "Issued",
         value_numeric: 3000000,
         contractor: "WODA CONSTRUCTION INC",
-        issued_date: "2026-07-12"
+        issued_date: "2026-07-12",
+        latitude: 38.2,
+        longitude: -85.7
     },
     {
         record_id: "cincinnati:1",
@@ -52,6 +54,17 @@ test("counts projects with unknown contractors", () => {
     assert.equal(answer.results.length, 1);
 });
 
+test("filters projects with known contractors", () => {
+    const answer = assistant.answer(
+        projects,
+        "Show Jefferson projects with known contractors"
+    );
+
+    assert.equal(answer.results.length, 1);
+    assert.equal(answer.results[0].record_id, "louisville:1");
+    assert.match(answer.message, /known contractors/);
+});
+
 test("ranks known contractors without fabricating missing names", () => {
     const answer = assistant.answer(
         projects,
@@ -77,4 +90,44 @@ test("returns guidance for unsupported questions", () => {
     const answer = assistant.answer(projects, "Tell me a joke");
     assert.equal(answer.type, "help");
     assert.equal(answer.results.length, 0);
+});
+
+test("answers contractor-specific counts", () => {
+    const answer = assistant.answer(projects, "How many projects does HGC Construction have?");
+    assert.equal(answer.type, "count");
+    assert.equal(answer.results.length, 1);
+});
+
+test("filters value ranges", () => {
+    const answer = assistant.answer(projects, "Show projects between $1 million and $4 million");
+    assert.equal(answer.results.length, 2);
+});
+
+test("sorts the newest projects first", () => {
+    const answer = assistant.answer(projects, "Show the newest projects");
+    assert.equal(answer.results[0].record_id, "cincinnati:1");
+});
+
+test("filters projects after a calendar date", () => {
+    const answer = assistant.answer(projects, "Show projects after July 15, 2026");
+    assert.equal(answer.results.length, 1);
+    assert.equal(answer.results[0].record_id, "cincinnati:1");
+});
+
+test("compares Hamilton and Jefferson", () => {
+    const answer = assistant.answer(projects, "Compare Hamilton versus Jefferson");
+    assert.equal(answer.type, "comparison");
+    assert.deepEqual(answer.comparison.map(item => item.count), [1, 2]);
+});
+
+test("compares commercial and industrial markets", () => {
+    const answer = assistant.answer(projects, "Compare commercial vs industrial projects");
+    assert.equal(answer.type, "comparison");
+    assert.deepEqual(answer.comparison.map(item => item.count), [2, 1]);
+});
+
+test("filters projects with map coordinates", () => {
+    const answer = assistant.answer(projects, "Show projects with map coordinates");
+    assert.equal(answer.results.length, 1);
+    assert.equal(answer.results[0].record_id, "louisville:1");
 });
