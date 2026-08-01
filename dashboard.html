@@ -6,6 +6,20 @@
 
     <title>Construction Radar</title>
 
+    <script>
+        (() => {
+            try {
+                const saved = localStorage.getItem("construction-radar-theme");
+                const preferred = window.matchMedia("(prefers-color-scheme: light)").matches
+                    ? "light"
+                    : "dark";
+                document.documentElement.dataset.theme = saved || preferred;
+            } catch (_error) {
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script>
+
     <!-- Leaflet Map -->
     <link
         rel="stylesheet"
@@ -38,6 +52,30 @@
 
             --accent: #8090ff;
             --accent-soft: rgba(128, 144, 255, 0.12);
+            --focus-surface: #171a22;
+            --table-heading: #111319;
+            --table-text: #d8dbe2;
+            --map-surface: #0e1015;
+            --shadow: rgba(0,0,0,.18);
+        }
+
+        :root[data-theme="light"] {
+            --background: #f3f6fb;
+            --surface: #ffffff;
+            --surface-raised: #f8fafc;
+            --surface-hover: #eef2f8;
+            --border: #d8deea;
+            --border-light: #bcc7d8;
+            --text: #162033;
+            --text-secondary: #4c596d;
+            --text-muted: #6b7688;
+            --accent: #5366df;
+            --accent-soft: rgba(83, 102, 223, 0.12);
+            --focus-surface: #ffffff;
+            --table-heading: #f1f4f9;
+            --table-text: #354156;
+            --map-surface: #e7ebf2;
+            --shadow: rgba(39, 53, 78, .12);
         }
 
         body {
@@ -69,6 +107,45 @@
             width: min(94%, 1500px);
             margin: 0 auto;
             padding: 48px 0 64px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .header-copy {
+            min-width: 0;
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 116px;
+            height: 40px;
+            padding: 0 13px;
+            background: var(--surface-raised);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font: 650 12px inherit;
+            cursor: pointer;
+            transition: color .2s ease, background .2s ease, border-color .2s ease;
+        }
+
+        .theme-toggle:hover {
+            color: var(--text);
+            background: var(--surface-hover);
+            border-color: var(--border-light);
+        }
+
+        .theme-icon {
+            font-size: 15px;
+            line-height: 1;
         }
 
         /* =========================
@@ -221,7 +298,7 @@
             width: 100%;
             height: 520px;
         
-            background: #0e1015;
+            background: var(--map-surface);
         
             border: 1px solid var(--border);
             border-radius: 12px;
@@ -229,7 +306,7 @@
             overflow: hidden;
         
             box-shadow:
-                0 12px 40px rgba(0, 0, 0, .22);
+                0 12px 40px var(--shadow);
         }
         
         /* Darken Leaflet controls */
@@ -252,6 +329,25 @@
         .leaflet-control-attribution a {
             color: #9ca3af !important;
 }
+
+        :root[data-theme="light"] .leaflet-control-zoom a {
+            background: #ffffff !important;
+            color: #26334a !important;
+            border-color: #d8deea !important;
+        }
+
+        :root[data-theme="light"] .leaflet-control-zoom a:hover {
+            background: #eef2f8 !important;
+        }
+
+        :root[data-theme="light"] .leaflet-control-attribution {
+            background: rgba(255,255,255,.88) !important;
+            color: #6b7688 !important;
+        }
+
+        :root[data-theme="light"] .leaflet-control-attribution a {
+            color: #4c596d !important;
+        }
         /* =========================
            PROJECT TOOLBAR
         ========================= */
@@ -343,7 +439,7 @@
             box-shadow:
                 0 0 0 3px var(--accent-soft);
 
-            background: #171a22;
+            background: var(--focus-surface);
         }
 
         select {
@@ -363,7 +459,7 @@
                 var(--surface);
             border: 1px solid var(--border);
             border-radius: 13px;
-            box-shadow: 0 12px 40px rgba(0,0,0,.16);
+            box-shadow: 0 12px 40px var(--shadow);
         }
 
         .assistant-heading {
@@ -385,6 +481,11 @@
             letter-spacing: .7px;
             text-transform: uppercase;
             white-space: nowrap;
+        }
+
+        :root[data-theme="light"] .assistant-badge {
+            color: #3d4fac;
+            border-color: rgba(83, 102, 223, .35);
         }
 
         .assistant-form {
@@ -464,7 +565,7 @@
         .assistant-result {
             padding: 11px;
             color: inherit;
-            background: rgba(255,255,255,.025);
+            background: var(--surface-raised);
             border: 1px solid var(--border);
             border-radius: 8px;
             text-align: left;
@@ -503,7 +604,7 @@
             border-radius: 11px;
 
             box-shadow:
-                0 12px 40px rgba(0,0,0,.18);
+                0 12px 40px var(--shadow);
         }
 
         table {
@@ -528,7 +629,7 @@
             position: sticky;
             top: 0;
 
-            background: #111319;
+            background: var(--table-heading);
 
             color: var(--text-secondary);
 
@@ -542,7 +643,7 @@
         }
 
         td {
-            color: #d8dbe2;
+            color: var(--table-text);
 
             font-size: 13px;
             line-height: 1.45;
@@ -675,6 +776,20 @@
                 padding-top: 25px;
             }
 
+            .page-header {
+                gap: 14px;
+            }
+
+            .theme-toggle {
+                min-width: 40px;
+                width: 40px;
+                padding: 0;
+            }
+
+            .theme-label {
+                display: none;
+            }
+
             .summary-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -728,16 +843,25 @@
 
     <!-- BRAND / HEADER -->
 
-    <div class="eyebrow">
-        <span class="radar-dot"></span>
-        Live Construction Intelligence
-    </div>
+    <div class="page-header">
+        <div class="header-copy">
+            <div class="eyebrow">
+                <span class="radar-dot"></span>
+                Live Construction Intelligence
+            </div>
 
-    <h1>Construction Radar</h1>
+            <h1>Construction Radar</h1>
 
-    <div class="subtitle">
-        Discover construction activity, identify contractors, and surface
-        high-value opportunities across Greater Cincinnati.
+            <div class="subtitle">
+                Discover construction activity, identify contractors, and surface
+                high-value opportunities across Greater Cincinnati.
+            </div>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+            <span class="theme-icon" id="themeIcon" aria-hidden="true">☀</span>
+            <span class="theme-label" id="themeLabel">Light mode</span>
+        </button>
     </div>
 
 
@@ -958,7 +1082,7 @@
 
 
 <script src="assistant.js?v=2"></script>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 
 </body>
 </html>

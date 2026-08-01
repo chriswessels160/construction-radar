@@ -17,7 +17,7 @@ const constructionMap = L.map(
 );
 
 
-L.tileLayer(
+const constructionTiles = L.tileLayer(
     "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
     {
         attribution:
@@ -26,6 +26,48 @@ L.tileLayer(
         maxZoom: 20
     }
 ).addTo(constructionMap);
+
+
+/* =========================================================
+   THEME
+========================================================= */
+
+function applyTheme(theme, persist = true) {
+
+    const nextTheme = theme === "light" ? "light" : "dark";
+    const lightMode = nextTheme === "light";
+
+    document.documentElement.dataset.theme = nextTheme;
+    document.getElementById("themeIcon").textContent = lightMode ? "☾" : "☀";
+    document.getElementById("themeLabel").textContent = lightMode ? "Dark mode" : "Light mode";
+    document.getElementById("themeToggle").setAttribute(
+        "aria-label",
+        lightMode ? "Switch to dark mode" : "Switch to light mode"
+    );
+
+    constructionTiles.setUrl(
+        lightMode
+            ? "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            : "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    );
+
+    if (persist) {
+        try {
+            localStorage.setItem("construction-radar-theme", nextTheme);
+        } catch (_error) {
+            // Theme switching still works when browser storage is unavailable.
+        }
+    }
+}
+
+
+function initializeTheme() {
+
+    applyTheme(
+        document.documentElement.dataset.theme || "dark",
+        false
+    );
+}
 
 
 /* =========================================================
@@ -860,4 +902,13 @@ document
     });
 
 
+document
+    .getElementById("themeToggle")
+    .addEventListener("click", () => {
+        const currentTheme = document.documentElement.dataset.theme;
+        applyTheme(currentTheme === "light" ? "dark" : "light");
+    });
+
+
+initializeTheme();
 loadProjects();
