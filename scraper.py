@@ -4,6 +4,14 @@ import urllib.request
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
+from permit_schema import SCHEMA_VERSION, validate_project
+from source_adapters import (
+    CincinnatiHamiltonAdapter,
+    LouisvilleJeffersonAdapter,
+    kentucky_scaffolds,
+    run_adapters,
+)
+
 
 # ============================================================
 # CONFIGURATION
@@ -1054,15 +1062,15 @@ def normalize(
     )
 
 
-    if contractors:
-
-        contractor_display = ", ".join(
-            contractors
-        )
-
-    else:
-
-        contractor_display = "Unknown"
+    contractor_details = [
+        {
+            "name": name,
+            "role": "contractor",
+            "source": "City of Cincinnati Permit Contacts",
+            "source_field": "name (relationship=CONTRACTOR)",
+        }
+        for name in contractors
+    ]
 
 
     # Keep Cincinnati's original company field separately
@@ -1086,9 +1094,23 @@ def normalize(
         "NONE",
         ""
     ]:
-        contractor_display = "Unknown"
+        contractor_display = (
+            ", ".join(contractors)
+            if contractors
+            else "Unknown"
+        )
     else:
         contractor_display = clean_company
+        if clean_company.upper() not in {
+            contractor["name"].upper()
+            for contractor in contractor_details
+        }:
+            contractor_details.insert(0, {
+                "name": clean_company,
+                "role": "contractor",
+                "source": "City of Cincinnati Building Permits",
+                "source_field": "companyname",
+            })
 
 
     # ========================================================
@@ -1124,7 +1146,16 @@ def normalize(
         )
     
     
-    return {
+    project = {
+
+        "schema_version":
+            SCHEMA_VERSION,
+
+        "record_id":
+            f"cincinnati-building-permits:{permit_number}",
+
+        "source_id":
+            "cincinnati-building-permits",
 
         "project":
             project_name,
@@ -1189,9 +1220,7 @@ def normalize(
             contractor_display,
 
         "contractors":
-            [contractor_display]
-            if contractor_display != "Unknown" 
-            else [],
+            contractor_details,
 
 
         # Reserved for future, more specific sources
@@ -1223,8 +1252,8 @@ def normalize(
 
         "contractor_source":
             (
-                "Cincinnati Building Permits"
-                if contractor_display != "Unknown"
+                contractor_details[0]["source"]
+                if contractor_details
                 else "Unknown"
             ),
     
@@ -1236,6 +1265,8 @@ def normalize(
             )
 
     }
+
+    return validate_project(project)
 
 
 # ============================================================
@@ -1251,16 +1282,10 @@ def remove_duplicates(projects):
 
     for project in projects:
 
-        key = (
-
-            project.get(
-                "permit_number"
-            ),
-
-            project.get(
-                "address"
-            ),
-
+        key = project.get("record_id") or (
+            project.get("source_id"),
+            project.get("permit_number"),
+            project.get("address"),
         )
 
 
@@ -1291,111 +1316,42 @@ def main():
     print("=" * 60)
 
 
-    # --------------------------------------------------------
-    # PERMITS
-    # --------------------------------------------------------
-
-    try:
-
-        permit_records = (
-            get_recent_permits()
-        )
-
-    except Exception as error:
-
-        print(
-            "ERROR downloading permits:"
-        )
-
-        print(error)
-
-        raise
-
-
-    print(
-
-        f"Downloaded "
-        f"{len(permit_records)} "
-        f"recent permits."
-
-    )
-
-
-    # --------------------------------------------------------
-    # CONTRACTORS
-    # --------------------------------------------------------
-
-    try:
-
-        contact_records = (
-    get_contacts_for_permits(
-        permit_records
-    )
-)
-
-    except Exception as error:
-
-        # Contractor failure should NOT destroy
-        # the entire permit update.
-
-        print(
-            "WARNING: Contractor contacts "
-            "could not be downloaded."
-        )
-
-        print(error)
-
-        contact_records = []
-
-
-    print(
-
-        f"Downloaded "
-        f"{len(contact_records)} "
-        f"contractor contact records."
-
-    )
-
-
-    contractor_map = (
-        build_contractor_lookup(
-            contact_records
-        )
-    )
-
-
-    print(
-
-        f"Contractor lookup contains "
-        f"{len(contractor_map)} "
-        f"permit numbers."
-
-    )
-
-
-    # --------------------------------------------------------
-    # BUILD PROJECT LIST
-    # --------------------------------------------------------
     geocode_cache = load_geocode_cache()
-    projects = []
+    adapters = [
+        CincinnatiHamiltonAdapter(
+            get_recent_permits,
+            get_contacts_for_permits,
+            build_contractor_lookup,
+            is_relevant,
+            normalize,
+        ),
+        LouisvilleJeffersonAdapter(
+            is_relevant,
+            classify_market,
+            electrical_score,
+            parse_money,
+            format_money,
+            DAYS_BACK,
+        ),
+        *kentucky_scaffolds(),
+    ]
+    source_results = run_adapters(adapters, geocode_cache)
+    projects = [
+        project
+        for result in source_results
+        if result.status == "success"
+        for project in result.projects
+    ]
 
-
-    for record in permit_records:
-
-        if is_relevant(record):
-
-            project = normalize(
-
-                record,
-
-                contractor_map,
-                geocode_cache
-
-            )
-
-            projects.append(
-                project
-            )
+    if not projects:
+        failures = [
+            result for result in source_results
+            if result.status == "failed"
+        ]
+        raise RuntimeError(
+            "No permit source produced projects. "
+            + "; ".join(result.message for result in failures)
+        )
 
 
     projects = remove_duplicates(
@@ -1504,20 +1460,12 @@ def main():
     print("=" * 60)
 
 
-    print(
-
-        f"Permits downloaded: "
-        f"{len(permit_records)}"
-
-    )
-
-
-    print(
-
-        f"Contract contacts downloaded: "
-        f"{len(contact_records)}"
-
-    )
+    print("Source results:")
+    for result in source_results:
+        print(
+            f"  {result.source_id}: {result.status} "
+            f"({len(result.projects)} projects)"
+        )
 
 
     print(

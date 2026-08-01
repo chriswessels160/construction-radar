@@ -1,1 +1,714 @@
-{}
+{
+  "3203 OBSERVATORY AV|CINCINNATI|OH": {
+    "latitude": 39.136460467878,
+    "longitude": -84.426702897921
+  },
+  "6000 MONTGOMERY RD|CINCINNATI|OH": {
+    "latitude": 39.180934165394,
+    "longitude": -84.431358514965
+  },
+  "1706 REPUBLIC ST|CINCINNATI|OH": {
+    "latitude": 39.114474397824,
+    "longitude": -84.516867463271
+  },
+  "1648 VINE ST|CINCINNATI|OH": {
+    "latitude": 39.114491956233,
+    "longitude": -84.516260080814
+  },
+  "2312 MOERLEIN AV|CINCINNATI|OH": {
+    "latitude": 39.125192216675,
+    "longitude": -84.517868149334
+  },
+  "312 WALNUT ST|CINCINNATI|OH": {
+    "latitude": 39.099141970527,
+    "longitude": -84.510727160569
+  },
+  "3565 BURCH AV|CINCINNATI|OH": {
+    "latitude": 39.141985798428,
+    "longitude": -84.447034990133
+  },
+  "101 E LIBERTY ST|CINCINNATI|OH": {
+    "latitude": 39.112689023848,
+    "longitude": -84.514161864014
+  },
+  "6255 ORCHARD LN|CINCINNATI|OH": {
+    "latitude": 39.187414239517,
+    "longitude": -84.420434416512
+  },
+  "1534 RUTH AV|CINCINNATI|OH": {
+    "latitude": 39.139224524364,
+    "longitude": -84.477817903551
+  },
+  "1006 LENOX PL|CINCINNATI|OH": {
+    "latitude": 39.154084303461,
+    "longitude": -84.478465960421
+  },
+  "2348 GRANDIN RD|CINCINNATI|OH": {
+    "latitude": 39.128926776578,
+    "longitude": -84.451308291956
+  },
+  "278 STARK ST|CINCINNATI|OH": {
+    "latitude": 39.119489292849,
+    "longitude": -84.523976823595
+  },
+  "124 E GALBRAITH RD|CINCINNATI|OH": {
+    "latitude": 39.212346966624,
+    "longitude": -84.468974323973
+  },
+  "1039 E ROOKWOOD DR|CINCINNATI|OH": {
+    "latitude": 39.129389826668,
+    "longitude": -84.445623101399
+  },
+  "1408 QUEEN CITY AV|CINCINNATI|OH": {
+    "latitude": 39.126280916262,
+    "longitude": -84.543928084971
+  },
+  "1007 DAYTON ST|CINCINNATI|OH": {
+    "latitude": 39.118402852038,
+    "longitude": -84.531560579987
+  },
+  "3634 BEVIS AV|CINCINNATI|OH": {
+    "latitude": 39.144939306827,
+    "longitude": -84.464851309176
+  },
+  "4311 33RD AV|CINCINNATI|OH": {
+    "latitude": 39.154782306096,
+    "longitude": -84.434250750758
+  },
+  "425 WALNUT ST|CINCINNATI|OH": {
+    "latitude": 39.100472414568,
+    "longitude": -84.511213476211
+  },
+  "3578 EPWORTH AV|CINCINNATI|OH": {
+    "latitude": 39.154205884546,
+    "longitude": -84.599218920395
+  },
+  "5040 KINGSLEY DR|CINCINNATI|OH": {
+    "latitude": 39.16879976913,
+    "longitude": -84.40815558407
+  },
+  "302 W 3RD ST|CINCINNATI|OH": {
+    "latitude": 39.098007184517,
+    "longitude": -84.517282717948
+  },
+  "1885 WILLIAM H TAFT RD|CINCINNATI|OH": {
+    "latitude": 39.126171748284,
+    "longitude": -84.466485395547
+  },
+  "1248 MICHIGAN AV|CINCINNATI|OH": {
+    "latitude": 39.13375493448,
+    "longitude": -84.442160678594
+  },
+  "3333 BURNET AV|CINCINNATI|OH": {
+    "latitude": 39.141244472964,
+    "longitude": -84.500436044145
+  },
+  "6314 DESMOND ST|CINCINNATI|OH": {
+    "latitude": 39.162239485624,
+    "longitude": -84.387162609272
+  },
+  "4403 WATTERSON ST|CINCINNATI|OH": {
+    "latitude": 39.152671473184,
+    "longitude": -84.391875809777
+  },
+  "2791 BAKER PL|CINCINNATI|OH": {
+    "latitude": 39.130318595068,
+    "longitude": -84.467026047795
+  },
+  "4460 31ST AV|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "4483 32ND AV|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "4469 32ND AV|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "2810 THREE OAKS LN|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "4480 31ST AV|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "4451 32ND AV|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "132 W ELDER ST|CINCINNATI|OH": {
+    "latitude": 39.115436346865,
+    "longitude": -84.519296491427
+  },
+  "1720 RACE ST|CINCINNATI|OH": {
+    "latitude": 39.114807868533,
+    "longitude": -84.518012368836
+  },
+  "1232 CLIFF LAINE DR|CINCINNATI|OH": {
+    "latitude": 39.128779925035,
+    "longitude": -84.417872998321
+  },
+  "225 WILMER AV|CINCINNATI|OH": {
+    "latitude": 39.102392256163,
+    "longitude": -84.43204558543
+  },
+  "1 PAYCOR STADIUM|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "2304 UPLAND PL|CINCINNATI|OH": {
+    "latitude": 39.122463568392,
+    "longitude": -84.482537715812
+  },
+  "2161 GRANDIN RD|CINCINNATI|OH": {
+    "latitude": 39.130742103867,
+    "longitude": -84.458033697177
+  },
+  "3111 SPRING GROVE AV|CINCINNATI|OH": {
+    "latitude": 39.137240950169,
+    "longitude": -84.541850558335
+  },
+  "6199 KELLOGG AV|CINCINNATI|OH": {
+    "latitude": 39.059494601313,
+    "longitude": -84.420632648995
+  },
+  "1048 CONSIDINE AV|CINCINNATI|OH": {
+    "latitude": 39.110824824745,
+    "longitude": -84.562872683863
+  },
+  "3782 COUNTRY CLUB PL|CINCINNATI|OH": {
+    "latitude": 39.150562246102,
+    "longitude": -84.412994460616
+  },
+  "1825 KEYS CRESCENT LN|CINCINNATI|OH": {
+    "latitude": 39.128691122208,
+    "longitude": -84.47153346338
+  },
+  "2139 AUBURN AV|CINCINNATI|OH": {
+    "latitude": 39.121130133795,
+    "longitude": -84.508580544922
+  },
+  "1243 ELM ST|CINCINNATI|OH": {
+    "latitude": 39.108653364827,
+    "longitude": -84.518285434559
+  },
+  "800 BROADWAY|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "1635 EVERLY PL|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "3117 TROY AV|CINCINNATI|OH": {
+    "latitude": 39.184840144033,
+    "longitude": -84.430063211087
+  },
+  "5375 MEDPACE WY|CINCINNATI|OH": {
+    "latitude": 39.160369657038,
+    "longitude": -84.401612540747
+  },
+  "4041 HAMILTON AV|CINCINNATI|OH": {
+    "latitude": 39.159444587748,
+    "longitude": -84.539483174238
+  },
+  "3131 QUEEN CITY AV|CINCINNATI|OH": {
+    "latitude": 39.136329006405,
+    "longitude": -84.605597621366
+  },
+  "822 DUNORE RD|CINCINNATI|OH": {
+    "latitude": 39.148327795994,
+    "longitude": -84.531207218785
+  },
+  "266 W MITCHELL AV|CINCINNATI|OH": {
+    "latitude": 39.165465257644,
+    "longitude": -84.512625211518
+  },
+  "1100 GEST ST|CINCINNATI|OH": {
+    "latitude": 39.106731231168,
+    "longitude": -84.533636135827
+  },
+  "5100 DUCK CREEK RD|CINCINNATI|OH": {
+    "latitude": 39.164658150281,
+    "longitude": -84.406538556192
+  },
+  "200 W GALBRAITH RD|CINCINNATI|OH": {
+    "latitude": 39.214028283412,
+    "longitude": -84.484598857852
+  },
+  "1641 BLUE ROCK ST|CINCINNATI|OH": {
+    "latitude": 39.160270866363,
+    "longitude": -84.541639625061
+  },
+  "1 PROCTER AND GAMBLE PLZ|CINCINNATI|OH": {
+    "latitude": 39.103109106572,
+    "longitude": -84.506634490494
+  },
+  "819 FINDLAY ST|CINCINNATI|OH": {
+    "latitude": 39.116060279741,
+    "longitude": -84.527830661691
+  },
+  "2621 SHORT VINE ST|CINCINNATI|OH": {
+    "latitude": 39.129401266256,
+    "longitude": -84.509671269507
+  },
+  "301 E 4TH ST|CINCINNATI|OH": {
+    "latitude": 39.100618497167,
+    "longitude": -84.50774407894
+  },
+  "1324 VINE ST|CINCINNATI|OH": {
+    "latitude": 39.110275021966,
+    "longitude": -84.515191976074
+  },
+  "2365 WHITEWOOD LN|CINCINNATI|OH": {
+    "latitude": 39.196369791341,
+    "longitude": -84.569273297111
+  },
+  "4711 WINONA TER|CINCINNATI|OH": {
+    "latitude": 39.156582129989,
+    "longitude": -84.387514396659
+  },
+  "2921 THREE OAKS LN|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "375 DIXMYTH AV|CINCINNATI|OH": {
+    "latitude": 39.141015067459,
+    "longitude": -84.520481349613
+  },
+  "3002 BURNET AV|CINCINNATI|OH": {
+    "latitude": 39.134154579624,
+    "longitude": -84.501062373349
+  },
+  "37 E CLIFTON AV|CINCINNATI|OH": {
+    "latitude": 39.117677167251,
+    "longitude": -84.51661307223
+  },
+  "3211 HARDISTY AV|CINCINNATI|OH": {
+    "latitude": 39.131082625678,
+    "longitude": -84.427534850346
+  },
+  "516 LINN ST|CINCINNATI|OH": {
+    "latitude": 39.098946311738,
+    "longitude": -84.529878139102
+  },
+  "235 W 12TH ST|CINCINNATI|OH": {
+    "latitude": 39.107627544134,
+    "longitude": -84.518874226623
+  },
+  "6219 WOODLARK DR|CINCINNATI|OH": {
+    "latitude": 39.077147382564,
+    "longitude": -84.387704967525
+  },
+  "3030 MONTANA AV|CINCINNATI|OH": {
+    "latitude": 39.14853294731,
+    "longitude": -84.600634232837
+  },
+  "3858 DRAKE AV|CINCINNATI|OH": {
+    "latitude": 39.148837891285,
+    "longitude": -84.435162987663
+  },
+  "3520 EDWARDS RD|CINCINNATI|OH": {
+    "latitude": 39.140487752779,
+    "longitude": -84.443192199718
+  },
+  "525 VINE ST|CINCINNATI|OH": {
+    "latitude": 39.101878823896,
+    "longitude": -84.51322970771
+  },
+  "967 RICHWOOD CIR|CINCINNATI|OH": {
+    "latitude": 39.124334535028,
+    "longitude": -84.416613073728
+  },
+  "2668 W NORTH BEND RD|CINCINNATI|OH": {
+    "latitude": 39.189757377908,
+    "longitude": -84.572668176153
+  },
+  "50 W 5TH ST|CINCINNATI|OH": {
+    "latitude": 39.101138243447,
+    "longitude": -84.51381192662
+  },
+  "3545 CLIFTON AV|CINCINNATI|OH": {
+    "latitude": 39.146297606072,
+    "longitude": -84.518969781053
+  },
+  "688 RIDDLE RD|CINCINNATI|OH": {
+    "latitude": 39.137100208894,
+    "longitude": -84.529498976444
+  },
+  "230 W GALBRAITH RD|CINCINNATI|OH": {
+    "latitude": 39.214223226875,
+    "longitude": -84.486128581157
+  },
+  "1235 CLIFF LAINE DR|CINCINNATI|OH": {
+    "latitude": 39.128915699818,
+    "longitude": -84.418166979492
+  },
+  "6 MADISON LN|CINCINNATI|OH": {
+    "latitude": 39.137240228053,
+    "longitude": -84.456256875497
+  },
+  "3752 MT VERNON AV|CINCINNATI|OH": {
+    "latitude": 39.146692343133,
+    "longitude": -84.431488569498
+  },
+  "2772 THREE OAKS LN|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "5555 GLENWAY AV|CINCINNATI|OH": {
+    "latitude": 39.131549863746,
+    "longitude": -84.609638659685
+  },
+  "5932 HAMILTON AV|CINCINNATI|OH": {
+    "latitude": 39.19914527064,
+    "longitude": -84.546808889736
+  },
+  "6592 EDWOOD AV|CINCINNATI|OH": {
+    "latitude": 39.210149750426,
+    "longitude": -84.53629242523
+  },
+  "2933 WALWORTH AV|CINCINNATI|OH": {
+    "latitude": 39.119026987154,
+    "longitude": -84.44370700808
+  },
+  "211 W 4TH ST|CINCINNATI|OH": {
+    "latitude": 39.099342258445,
+    "longitude": -84.516285129676
+  },
+  "444 PLUM ST|CINCINNATI|OH": {
+    "latitude": 39.099981166156,
+    "longitude": -84.517621477006
+  },
+  "5125 RIVER RD|CINCINNATI|OH": {
+    "latitude": 39.100280779689,
+    "longitude": -84.670979065017
+  },
+  "21 E 5TH ST|CINCINNATI|OH": {
+    "latitude": 39.101028575957,
+    "longitude": -84.512655213141
+  },
+  "3225 MADISON RD|CINCINNATI|OH": {
+    "latitude": 39.154874495352,
+    "longitude": -84.427128968743
+  },
+  "3533 DEEPWOODS LN|CINCINNATI|OH": {
+    "latitude": 39.135404723272,
+    "longitude": -84.417998091229
+  },
+  "300 MAIN ST|CINCINNATI|OH": {
+    "latitude": 39.099236198547,
+    "longitude": -84.509081150029
+  },
+  "2115 LURAY AV|CINCINNATI|OH": {
+    "latitude": 39.118303684691,
+    "longitude": -84.488270321123
+  },
+  "542 E 13TH ST|CINCINNATI|OH": {
+    "latitude": 39.110752401404,
+    "longitude": -84.505973712087
+  },
+  "2464 W ROOKWOOD CT|CINCINNATI|OH": {
+    "latitude": 39.132301775794,
+    "longitude": -84.448262332451
+  },
+  "780 CLINTON SPRINGS AV|CINCINNATI|OH": {
+    "latitude": 39.155158362253,
+    "longitude": -84.48575234148
+  },
+  "937 WINDSOR ST|CINCINNATI|OH": {
+    "latitude": 39.122310092896,
+    "longitude": -84.489924096193
+  },
+  "6807 DANIELS WALK|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "745 DERBY AV|CINCINNATI|OH": {
+    "latitude": 39.171101447492,
+    "longitude": -84.518158917884
+  },
+  "2123 AUBURN AV|CINCINNATI|OH": {
+    "latitude": 39.120842065636,
+    "longitude": -84.508602445673
+  },
+  "507 TRISON DR|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "1318 EDWARDS RD|CINCINNATI|OH": {
+    "latitude": 39.135918005658,
+    "longitude": -84.443590079834
+  },
+  "164 GLENMARY AV|CINCINNATI|OH": {
+    "latitude": 39.145914636902,
+    "longitude": -84.516349889976
+  },
+  "4765 AIRPORT RD|CINCINNATI|OH": {
+    "latitude": 39.093999439856,
+    "longitude": -84.423922070487
+  },
+  "6127 HAMILTON AV|CINCINNATI|OH": {
+    "latitude": 39.202189140452,
+    "longitude": -84.547733101779
+  },
+  "3015 PARKVIEW AV|CINCINNATI|OH": {
+    "latitude": 39.18010985903,
+    "longitude": -84.431257720807
+  },
+  "5552 MONTGOMERY RD|CINCINNATI|OH": {
+    "latitude": 39.175158343278,
+    "longitude": -84.441982608157
+  },
+  "15 W 4TH ST|CINCINNATI|OH": {
+    "latitude": 39.099862738766,
+    "longitude": -84.512936924649
+  },
+  "3425 MIDDLETON AV|CINCINNATI|OH": {
+    "latitude": 39.144825308542,
+    "longitude": -84.522316439503
+  },
+  "20 GARDEN PL|CINCINNATI|OH": {
+    "latitude": 39.138862774954,
+    "longitude": -84.45693096846
+  },
+  "2702 ERIE AV|CINCINNATI|OH": {
+    "latitude": 39.139754244737,
+    "longitude": -84.443206108811
+  },
+  "5000 BROTHERTON RD|CINCINNATI|OH": {
+    "latitude": 39.153013123972,
+    "longitude": -84.408591310451
+  },
+  "1816 PULTE ST|CINCINNATI|OH": {
+    "latitude": 39.1365953198,
+    "longitude": -84.554689063268
+  },
+  "1620 DEXTER AV|CINCINNATI|OH": {
+    "latitude": 39.134092851238,
+    "longitude": -84.475762652254
+  },
+  "2932 THREE OAKS LN|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "3470 HOLLY AV|CINCINNATI|OH": {
+    "latitude": 39.140460247916,
+    "longitude": -84.457973799596
+  },
+  "989 PARKSIDE PL|CINCINNATI|OH": {
+    "latitude": 39.110453802863,
+    "longitude": -84.495195624329
+  },
+  "3520 PEMBROKE AV|CINCINNATI|OH": {
+    "latitude": 39.142041023162,
+    "longitude": -84.418591633065
+  },
+  "314 MULBERRY ST|CINCINNATI|OH": {
+    "latitude": 39.115171913028,
+    "longitude": -84.511500404892
+  },
+  "100 W 5TH ST|CINCINNATI|OH": {
+    "latitude": 39.101005658016,
+    "longitude": -84.514694599825
+  },
+  "100 JOE NUXHALL WY|CINCINNATI|OH": {
+    "latitude": 39.096122125056,
+    "longitude": -84.508275514299
+  },
+  "10 W 4TH ST|CINCINNATI|OH": {
+    "latitude": 39.099988402627,
+    "longitude": -84.512877490071
+  },
+  "1312 MAIN ST|CINCINNATI|OH": {
+    "latitude": 39.110421810959,
+    "longitude": -84.511887962374
+  },
+  "318 W MCMICKEN AV|CINCINNATI|OH": {
+    "latitude": 39.1205537987,
+    "longitude": -84.524969536575
+  },
+  "2811 THREE OAKS LN|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "1001 GEST ST|CINCINNATI|OH": {
+    "latitude": 39.106415359733,
+    "longitude": -84.532754970415
+  },
+  "3806 KELLOGG AV|CINCINNATI|OH": {
+    "latitude": 39.110383657444,
+    "longitude": -84.438023644329
+  },
+  "1401 BANK ST|CINCINNATI|OH": {
+    "latitude": 39.119855138734,
+    "longitude": -84.537099738964
+  },
+  "601 MAPLE AV|CINCINNATI|OH": {
+    "latitude": 39.217072405185,
+    "longitude": -84.45486513074
+  },
+  "4030 READING RD|CINCINNATI|OH": {
+    "latitude": 39.15680698758,
+    "longitude": -84.47870634574
+  },
+  "5200 READING RD|CINCINNATI|OH": {
+    "latitude": 39.1794752144,
+    "longitude": -84.465739933658
+  },
+  "49 E 4TH ST|CINCINNATI|OH": {
+    "latitude": 39.100039508874,
+    "longitude": -84.511686454489
+  },
+  "1910 ELM ST|CINCINNATI|OH": {
+    "latitude": 39.116804865846,
+    "longitude": -84.520206403248
+  },
+  "400 W 9TH ST|CINCINNATI|OH": {
+    "latitude": 39.104453740137,
+    "longitude": -84.520521149133
+  },
+  "2601 STANTON AV|CINCINNATI|OH": {
+    "latitude": 39.127696068391,
+    "longitude": -84.492475704006
+  },
+  "809 MANN PL|CINCINNATI|OH": {
+    "latitude": 39.146774680931,
+    "longitude": -84.489237079031
+  },
+  "2124 FREEMAN AV|CINCINNATI|OH": {
+    "latitude": 39.12093370861,
+    "longitude": -84.530872571095
+  },
+  "1100 SYCAMORE ST|CINCINNATI|OH": {
+    "latitude": 39.107939646096,
+    "longitude": -84.50961749036
+  },
+  "6531 BEECHMONT AV|CINCINNATI|OH": {
+    "latitude": 39.085771733535,
+    "longitude": -84.377721062736
+  },
+  "108 E MCMICKEN AV|CINCINNATI|OH": {
+    "latitude": 39.114548149691,
+    "longitude": -84.514215333548
+  },
+  "110 E MCMICKEN AV|CINCINNATI|OH": {
+    "latitude": 39.114499208686,
+    "longitude": -84.514159005234
+  },
+  "300 E 6TH ST|CINCINNATI|OH": {
+    "latitude": 39.103241901411,
+    "longitude": -84.508407483414
+  },
+  "3569 MICHIGAN AV|CINCINNATI|OH": {
+    "latitude": 39.141597055798,
+    "longitude": -84.441610672138
+  },
+  "1278 MICHIGAN AV|CINCINNATI|OH": {
+    "latitude": 39.134572697157,
+    "longitude": -84.442080968377
+  },
+  "1909 GREGORY LN|CINCINNATI|OH": {
+    "latitude": 39.131668981406,
+    "longitude": -84.467251950765
+  },
+  "3038 CINNAMON ST|CINCINNATI|OH": {
+    "latitude": 39.132961644437,
+    "longitude": -84.462016932068
+  },
+  "170 WILDWOOD ST|CINCINNATI|OH": {
+    "latitude": 39.208075008433,
+    "longitude": -84.470608282686
+  },
+  "7 W COURT ST|CINCINNATI|OH": {
+    "latitude": 39.106182314933,
+    "longitude": -84.514495369567
+  },
+  "1435 VINE ST|CINCINNATI|OH": {
+    "latitude": 39.111167798149,
+    "longitude": -84.5155758282
+  },
+  "2800 LEHMAN RD|CINCINNATI|OH": {
+    "latitude": 39.114932115512,
+    "longitude": -84.556584834611
+  },
+  "968 MANSION AV|CINCINNATI|OH": {
+    "latitude": 39.109541993505,
+    "longitude": -84.566228854975
+  },
+  "3559 GLENWOOD PL|CINCINNATI|OH": {
+    "latitude": 39.147073486005,
+    "longitude": -84.486016873275
+  },
+  "1301 WESTERN AV|CINCINNATI|OH": {
+    "latitude": 39.108852737342,
+    "longitude": -84.532341758273
+  },
+  "511 WALNUT ST|CINCINNATI|OH": {
+    "latitude": 39.101396065136,
+    "longitude": -84.511456062822
+  },
+  "4320 32ND AV|CINCINNATI|OH": {
+    "latitude": 39.154950250251,
+    "longitude": -84.435252364052
+  },
+  "15 W CENTRAL PKWY|CINCINNATI|OH": {
+    "latitude": 39.107000242608,
+    "longitude": -84.515083715939
+  },
+  "5515 MADISON RD|CINCINNATI|OH": {
+    "latitude": 39.16097472552,
+    "longitude": -84.399195860751
+  },
+  "315 E 7TH ST|CINCINNATI|OH": {
+    "latitude": 39.104483964605,
+    "longitude": -84.507978636197
+  },
+  "210 W 14TH ST|CINCINNATI|OH": {
+    "latitude": 39.110128336696,
+    "longitude": -84.518809662886
+  },
+  "6536 BEECHMONT AV|CINCINNATI|OH": {
+    "latitude": 39.086217987888,
+    "longitude": -84.378290814882
+  },
+  "2800 AMBLESIDE PL|CINCINNATI|OH": {
+    "latitude": 39.12644142736,
+    "longitude": -84.448111974807
+  },
+  "2944 MADISON RD|CINCINNATI|OH": {
+    "latitude": 39.149809573799,
+    "longitude": -84.435381623427
+  },
+  "2500 PARK AV|CINCINNATI|OH": {
+    "latitude": 39.125726846712,
+    "longitude": -84.486155711946
+  },
+  "6178 WOODLARK DR|CINCINNATI|OH": {
+    "latitude": 39.077221783484,
+    "longitude": -84.388623536368
+  },
+  "681 S FRED SHUTTLESWORTH CIR|CINCINNATI|OH": {
+    "latitude": 39.152098728983,
+    "longitude": -84.490918380878
+  },
+  "5400 RED BANK RD|CINCINNATI|OH": {
+    "latitude": 39.166888885203,
+    "longitude": -84.403003847956
+  },
+  "2 PROCTER AND GAMBLE PLZ|CINCINNATI|OH": {
+    "latitude": 39.102998028715,
+    "longitude": -84.506598204342
+  },
+  "4805 BEVERLY HILL DR|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "301 E 6TH ST|CINCINNATI|OH": {
+    "latitude": 39.103129531723,
+    "longitude": -84.508378545368
+  }
+}
