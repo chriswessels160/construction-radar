@@ -4,6 +4,7 @@ from unittest.mock import patch
 from permit_schema import PermitValidationError, SCHEMA_VERSION, validate_project
 from source_adapters import (
     AdapterResult,
+    ColumbusBuildingPermitsAdapter,
     LouisvilleJeffersonAdapter,
     UnverifiedCountyAdapter,
     run_adapters,
@@ -61,6 +62,15 @@ class AdapterTests(unittest.TestCase):
             scraper.format_money,
         )
 
+    def columbus_adapter(self):
+        return ColumbusBuildingPermitsAdapter(
+            scraper.is_relevant,
+            scraper.classify_market,
+            scraper.electrical_score,
+            scraper.parse_money,
+            scraper.format_money,
+        )
+
     def test_louisville_matches_dashboard_schema_and_contractor_provenance(self):
         project = self.louisville_adapter().normalize_record({
             "PERMIT_NUMBER": "BLD-2026-001",
@@ -96,6 +106,34 @@ class AdapterTests(unittest.TestCase):
         })
         self.assertEqual(project["contractor"], "Unknown")
         self.assertEqual(project["contractors"], [])
+
+    def test_columbus_uses_geometry_and_does_not_promote_applicant_to_contractor(self):
+        project = self.columbus_adapter().normalize_record({
+            "B1_ALT_ID": "ALTC2523456",
+            "GENERAL_TYPE": "Commercial New Building",
+            "PERMIT_STATUS": "Permit Issued",
+            "B1_PER_SUB_TYPE": "New Construction",
+            "VALUE_DESC": "Office Building",
+            "G3_VALUE_TTL": 4000000,
+            "SITE_ADDRESS": "100 HIGH ST",
+            "ISSUED_DT": 1782864000000,
+            "ACA_URL": "https://ca.columbus.gov/example",
+            "APPLICANT_BUS_NAME": "Applicant Design LLC",
+            "_geometry_x": -82.99,
+            "_geometry_y": 39.96,
+        })
+        self.assertEqual(project["jurisdiction"], "Columbus")
+        self.assertEqual(project["county"], "Unknown")
+        self.assertEqual(project["latitude"], 39.96)
+        self.assertEqual(project["longitude"], -82.99)
+        self.assertEqual(project["contractor"], "Unknown")
+        self.assertEqual(project["contractors"], [])
+        self.assertEqual(project["applicant"], "Applicant Design LLC")
+        self.assertEqual(project["applicant_source"], "City of Columbus Building Permits")
+
+    def test_arcgis_adapter_rejects_missing_source_id_field(self):
+        with self.assertRaisesRegex(ValueError, "missing its permit number"):
+            self.columbus_adapter().normalize_record({"SITE_ADDRESS": "100 HIGH ST"})
 
     @patch("scraper.geocode_address", return_value=(39.1, -84.5))
     def test_cincinnati_normalization_preserves_dashboard_and_provenance(self, _):

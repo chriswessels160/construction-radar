@@ -710,5 +710,25 @@
   "301 E 6TH ST|CINCINNATI|OH": {
     "latitude": 39.103129531723,
     "longitude": -84.508378545368
+  },
+  "1608 BREWSTER AV|CINCINNATI|OH": {
+    "latitude": 39.144174995974,
+    "longitude": -84.474111772625
+  },
+  "1631 EVERLY PL|CINCINNATI|OH": {
+    "latitude": null,
+    "longitude": null
+  },
+  "33 WOODSDALE AV|CINCINNATI|OH": {
+    "latitude": 39.214540274249,
+    "longitude": -84.472357397076
+  },
+  "4861 DUCK CREEK RD|CINCINNATI|OH": {
+    "latitude": 39.164977848425,
+    "longitude": -84.412887891509
+  },
+  "846 OAK ST|CINCINNATI|OH": {
+    "latitude": 39.12992876941,
+    "longitude": -84.490096833482
   }
 }

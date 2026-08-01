@@ -66,6 +66,10 @@
         const text = String(question || "").trim().toLowerCase();
         const filters = {};
 
+        if (text.includes("columbus")) {
+            filters.jurisdiction = "Columbus";
+        }
+
         const matchedCounties = matchedAliasValues(text, countyAliases);
 
         if (matchedCounties.length === 1) filters.county = matchedCounties[0];
@@ -183,6 +187,10 @@
             return false;
         }
 
+        if (filters.jurisdiction && project.jurisdiction !== filters.jurisdiction) {
+            return false;
+        }
+
         if (filters.market && project.market !== filters.market) {
             return false;
         }
@@ -259,6 +267,7 @@
         const parts = [];
 
         if (filters.county) parts.push(`${filters.county} County`);
+        if (filters.jurisdiction) parts.push(filters.jurisdiction);
         if (filters.market) parts.push(filters.market.toLowerCase());
         if (filters.contractor) parts.push(`contractor matching “${filters.contractor}”`);
         if (filters.unknownContractor) parts.push("unknown contractors");

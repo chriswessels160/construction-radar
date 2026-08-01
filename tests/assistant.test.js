@@ -131,3 +131,20 @@ test("filters projects with map coordinates", () => {
     assert.equal(answer.results.length, 1);
     assert.equal(answer.results[0].record_id, "louisville:1");
 });
+
+test("filters Columbus by explicit jurisdiction without guessing county", () => {
+    const columbusProject = {
+        record_id: "columbus:1",
+        county: "Unknown",
+        jurisdiction: "Columbus",
+        market: "Commercial",
+        status: "Permit Issued",
+        value_numeric: 6000000,
+        contractor: "Unknown",
+        issued_date: "2026-07-25"
+    };
+    const answer = assistant.answer([...projects, columbusProject], "Show Columbus projects");
+    assert.equal(answer.results.length, 1);
+    assert.equal(answer.results[0].record_id, "columbus:1");
+    assert.match(answer.message, /Columbus/);
+});

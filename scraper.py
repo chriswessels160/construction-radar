@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, timezone
 from permit_schema import SCHEMA_VERSION, validate_project
 from source_adapters import (
     CincinnatiHamiltonAdapter,
+    ColumbusBuildingPermitsAdapter,
     LouisvilleJeffersonAdapter,
     kentucky_scaffolds,
     run_adapters,
@@ -1310,7 +1311,7 @@ def main():
     print("=" * 60)
 
     print(
-        "GREATER CINCINNATI CONSTRUCTION RADAR"
+        "REGIONAL CONSTRUCTION RADAR"
     )
 
     print("=" * 60)
@@ -1326,6 +1327,14 @@ def main():
             normalize,
         ),
         LouisvilleJeffersonAdapter(
+            is_relevant,
+            classify_market,
+            electrical_score,
+            parse_money,
+            format_money,
+            DAYS_BACK,
+        ),
+        ColumbusBuildingPermitsAdapter(
             is_relevant,
             classify_market,
             electrical_score,

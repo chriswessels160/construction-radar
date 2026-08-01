@@ -127,7 +127,7 @@ function populateFilters() {
     const counties = [
         ...new Set(
             allProjects
-                .map(project => project.county)
+                .map(project => getProjectArea(project))
                 .filter(Boolean)
         )
     ].sort();
@@ -275,7 +275,7 @@ function renderProjects(projects) {
 
             <td>
                 ${escapeHtml(
-                    project.county || "Unknown"
+                    getProjectArea(project)
                 )}
             </td>
 
@@ -361,7 +361,7 @@ if (
     latitude < 38 ||
     latitude > 40.5 ||
     longitude < -85.5 ||
-    longitude > -83
+    longitude > -82.5
 ) {
     return;
 }
@@ -616,6 +616,16 @@ function focusProjectOnMap(project) {
 }
 
 
+function getProjectArea(project) {
+
+    if (project.county && project.county !== "Unknown") {
+        return project.county;
+    }
+
+    return project.jurisdiction || project.city || "Unknown";
+}
+
+
 function setAssistantReady(isReady, loadFailed = false) {
 
     const input =
@@ -718,7 +728,7 @@ function runAssistantQuery(question) {
             button.className = "assistant-result";
             button.innerHTML = `
                 <strong>${escapeHtml(project.project || "Unknown project")}</strong>
-                <span>${escapeHtml(project.county || "Unknown")} · ${escapeHtml(project.value || "Unknown")} · ${escapeHtml(project.contractor || "Unknown")}</span>
+                <span>${escapeHtml(getProjectArea(project))} · ${escapeHtml(project.value || "Unknown")} · ${escapeHtml(project.contractor || "Unknown")}</span>
             `;
             button.addEventListener("click", () => focusProjectOnMap(project));
             resultsContainer.appendChild(button);
@@ -787,7 +797,7 @@ function applyFilters() {
 
             const matchesCounty =
                 !county ||
-                project.county === county;
+                getProjectArea(project) === county;
 
 
             const matchesStatus =
