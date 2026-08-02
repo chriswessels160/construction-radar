@@ -1,5 +1,26 @@
 let allProjects = [];
 let mapMarkers = [];
+let visibleProjects = [];
+let savedProjectIds = loadStoredIds("construction-radar-watchlist");
+let comparedProjectIds = new Set();
+let showingWatchlist = false;
+
+function loadStoredIds(key) {
+    try {
+        const value = JSON.parse(localStorage.getItem(key) || "[]");
+        return new Set(Array.isArray(value) ? value.map(String) : []);
+    } catch (_error) {
+        return new Set();
+    }
+}
+
+function persistWatchlist() {
+    try {
+        localStorage.setItem("construction-radar-watchlist", JSON.stringify([...savedProjectIds]));
+    } catch (_error) {
+        // The current session still works when browser storage is unavailable.
+    }
+}
 
 
 /* =========================================================
@@ -288,7 +309,17 @@ function renderProjects(projects) {
             document.createElement("tr");
 
 
+        const projectId = ConstructionLeadTools.projectId(project);
+        const isSaved = savedProjectIds.has(projectId);
+        const isCompared = comparedProjectIds.has(projectId);
+
         row.innerHTML = `
+            <td>
+                <div class="row-tools">
+                    <button class="row-action save-project ${isSaved ? "is-active" : ""}" type="button" aria-pressed="${isSaved}">${isSaved ? "Saved" : "Save"}</button>
+                    <button class="row-action compare-project ${isCompared ? "is-active" : ""}" type="button" aria-pressed="${isCompared}">${isCompared ? "Added" : "Compare"}</button>
+                </div>
+            </td>
             <td>
                 ${escapeHtml(
                     project.project || "Unknown"
@@ -343,10 +374,17 @@ function renderProjects(projects) {
         `;
 
 
-        row.addEventListener(
-            "click",
-            () => focusProjectOnMap(project)
-        );
+        row.querySelector(".save-project").addEventListener("click", event => {
+            event.stopPropagation();
+            toggleSavedProject(projectId);
+        });
+
+        row.querySelector(".compare-project").addEventListener("click", event => {
+            event.stopPropagation();
+            toggleComparedProject(projectId);
+        });
+
+        row.addEventListener("click", () => focusProjectOnMap(project));
 
 
         tableBody.appendChild(row);
@@ -652,6 +690,60 @@ function focusProjectOnMap(project) {
     }
 }
 
+function toggleSavedProject(projectId) {
+    savedProjectIds.has(projectId) ? savedProjectIds.delete(projectId) : savedProjectIds.add(projectId);
+    persistWatchlist();
+    updateLeadTools();
+    applyFilters();
+}
+
+function toggleComparedProject(projectId) {
+    if (comparedProjectIds.has(projectId)) {
+        comparedProjectIds.delete(projectId);
+    } else if (comparedProjectIds.size < 3) {
+        comparedProjectIds.add(projectId);
+    }
+    updateLeadTools();
+    renderProjects(visibleProjects);
+}
+
+function updateLeadTools() {
+    document.getElementById("watchlistCount").textContent = savedProjectIds.size;
+    document.getElementById("compareCount").textContent = comparedProjectIds.size;
+    document.getElementById("compareButton").disabled = comparedProjectIds.size < 2;
+    document.getElementById("watchlistToggle").classList.toggle("is-active", showingWatchlist);
+}
+
+function showComparison() {
+    const projects = ConstructionLeadTools.selectedProjects(allProjects, comparedProjectIds);
+    const grid = document.getElementById("comparisonGrid");
+    grid.innerHTML = projects.map(project => {
+        const contact = getProjectContact(project);
+        return `<article class="comparison-card">
+            <strong>${escapeHtml(project.project || "Unknown project")}</strong>
+            <span>${escapeHtml(getProjectArea(project))} · ${escapeHtml(project.market || "Other")}</span>
+            <span><b>Value:</b> ${escapeHtml(project.value || "Unknown")}</span>
+            <span><b>Contact:</b> ${escapeHtml(contact.name)} (${escapeHtml(contact.role)})</span>
+            <span><b>Status:</b> ${escapeHtml(project.status || "Unknown")}</span>
+            <span><b>Opportunity:</b> ${escapeHtml(project.opportunity || "Unknown")}</span>
+        </article>`;
+    }).join("");
+    document.getElementById("comparisonPanel").classList.toggle("is-visible", projects.length >= 2);
+}
+
+function exportVisibleProjects() {
+    const csv = ConstructionLeadTools.projectsToCsv(visibleProjects, getProjectContact);
+    const blob = new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" });
+    const link = document.createElement("a");
+    const objectUrl = URL.createObjectURL(blob);
+    link.href = objectUrl;
+    link.download = `construction-radar-${showingWatchlist ? "watchlist" : "projects"}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+}
+
 
 function getProjectArea(project) {
 
@@ -881,18 +973,23 @@ function applyFilters() {
                 !contractorAvailability ||
                 (contractorAvailability === "known" && hasKnownContact);
 
+            const matchesWatchlist =
+                !showingWatchlist || savedProjectIds.has(ConstructionLeadTools.projectId(project));
+
 
             return (
                 matchesSearch &&
                 matchesMarket &&
                 matchesCounty &&
                 matchesStatus &&
-                matchesContractorAvailability
+                matchesContractorAvailability &&
+                matchesWatchlist
             );
 
         });
 
 
+    visibleProjects = filtered;
     updateSummary(filtered);
     renderProjects(filtered);
     renderMapMarkers(filtered);
@@ -977,6 +1074,22 @@ document
             runAssistantQuery(question);
         });
     });
+
+document.getElementById("watchlistToggle").addEventListener("click", () => {
+    showingWatchlist = !showingWatchlist;
+    updateLeadTools();
+    applyFilters();
+});
+
+document.getElementById("compareButton").addEventListener("click", showComparison);
+document.getElementById("clearComparison").addEventListener("click", () => {
+    comparedProjectIds.clear();
+    document.getElementById("comparisonPanel").classList.remove("is-visible");
+    updateLeadTools();
+    renderProjects(visibleProjects);
+});
+document.getElementById("exportCsvButton").addEventListener("click", exportVisibleProjects);
+updateLeadTools();
 
 
 document

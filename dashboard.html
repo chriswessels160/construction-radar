@@ -483,6 +483,68 @@
             cursor: pointer;
         }
 
+        .lead-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+        }
+
+        .lead-action,
+        .row-action {
+            height: 40px;
+            padding: 0 12px;
+            color: var(--text-secondary);
+            background: var(--surface-raised);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            font: 650 11px inherit;
+            cursor: pointer;
+        }
+
+        .lead-action:hover,
+        .lead-action.is-active,
+        .row-action:hover,
+        .row-action.is-active {
+            color: var(--text);
+            border-color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .lead-action:disabled {
+            cursor: not-allowed;
+            opacity: .45;
+        }
+
+        .row-tools {
+            display: flex;
+            gap: 6px;
+            min-width: 118px;
+        }
+
+        .row-action {
+            height: 31px;
+            padding: 0 8px;
+            font-size: 10px;
+        }
+
+        .comparison-panel {
+            display: none;
+            margin: 0 0 13px;
+            padding: 14px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 11px;
+        }
+
+        .comparison-panel.is-visible { display: block; }
+        .comparison-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .comparison-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+        .comparison-card { padding: 12px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: 8px; }
+        .comparison-card strong, .comparison-card span { display: block; }
+        .comparison-card strong { color: var(--text); font-size: 12px; }
+        .comparison-card span { margin-top: 5px; color: var(--text-secondary); font-size: 10px; line-height: 1.4; }
+
         /* =========================
            ASK CONSTRUCTION RADAR
         ========================= */
@@ -870,6 +932,10 @@
                 align-items: stretch;
             }
 
+            .lead-toolbar { width: 100%; margin-left: 0; }
+            .lead-action { flex: 1; }
+            .comparison-grid { grid-template-columns: 1fr; }
+
             .assistant-heading,
             .assistant-form {
                 flex-direction: column;
@@ -1077,7 +1143,24 @@
                 <option value="">All Projects</option>
             </select>
 
+            <div class="lead-toolbar" aria-label="Lead tools">
+                <button class="lead-action" id="watchlistToggle" type="button">Saved <span id="watchlistCount">0</span></button>
+                <button class="lead-action" id="compareButton" type="button" disabled>Compare <span id="compareCount">0</span></button>
+                <button class="lead-action" id="exportCsvButton" type="button">Export CSV</button>
+            </div>
+
         </div>
+
+        <section class="comparison-panel" id="comparisonPanel" aria-live="polite">
+            <div class="comparison-header">
+                <div>
+                    <h2 class="section-title">Project Comparison</h2>
+                    <div class="section-label">Compare up to three selected opportunities</div>
+                </div>
+                <button class="row-action" id="clearComparison" type="button">Clear</button>
+            </div>
+            <div class="comparison-grid" id="comparisonGrid"></div>
+        </section>
 
 
         <!-- PROJECT TABLE -->
@@ -1089,6 +1172,7 @@
                 <thead>
 
                     <tr>
+                        <th>Lead Tools</th>
                         <th>Project</th>
                         <th>Market</th>
                         <th>Area</th>
@@ -1139,7 +1223,8 @@
 
 
 <script src="assistant.js?v=4"></script>
-<script src="app.js?v=5"></script>
+<script src="lead-tools.js?v=1"></script>
+<script src="app.js?v=6"></script>
 
 </body>
 </html>
