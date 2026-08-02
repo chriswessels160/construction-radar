@@ -12,6 +12,7 @@ from source_adapters import (
     LouisvilleJeffersonAdapter,
     additional_city_configs,
     kentucky_scaffolds,
+    ohio_kentucky_expansion_scaffolds,
     run_adapters,
 )
 
@@ -1352,6 +1353,7 @@ def main():
             for config in additional_city_configs()
         ],
         *kentucky_scaffolds(),
+        *ohio_kentucky_expansion_scaffolds(),
     ]
     source_results = run_adapters(adapters, geocode_cache)
     projects = [

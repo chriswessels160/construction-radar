@@ -493,3 +493,58 @@ def kentucky_scaffolds():
             common_reason,
         ),
     ]
+
+
+def ohio_kentucky_expansion_scaffolds():
+    """Researched regional sources that are not safe current-lead feeds yet."""
+    return [
+        UnverifiedCountyAdapter(
+            "lexington-fayette-ky-permits",
+            "Lexington-Fayette County, Kentucky",
+            "https://www.lexingtonky.gov/working/development-records",
+            (
+                "the official AgencyCounter portal supports public record lookup, "
+                "but no authoritative bulk/API feed or automated-access terms have "
+                "been verified"
+            ),
+        ),
+        UnverifiedCountyAdapter(
+            "cuyahoga-county-high-value-construction",
+            "Cuyahoga County, Ohio",
+            "https://services8.arcgis.com/1cKSe8lh4duMZ8W0/ArcGIS/rest/services/DeltaTrack_All/FeatureServer/0",
+            (
+                "the official DeltaTrack layer is a historical high-value new-"
+                "construction dataset covering 2012-2025, not a current permit feed; "
+                "City of Cleveland permits are already enabled separately"
+            ),
+        ),
+        UnverifiedCountyAdapter(
+            "bowling-green-warren-ky-permits",
+            "Bowling Green-Warren County, Kentucky",
+            "https://www.bgky.org/ncs/building",
+            (
+                "the public GIS layer contains construction inspections rather than "
+                "permit opportunities and does not publish the required project, "
+                "valuation, address, and contractor fields"
+            ),
+        ),
+        UnverifiedCountyAdapter(
+            "toledo-oh-building-permits",
+            "Toledo, Ohio",
+            "https://toledo.oh.gov/business/how-to-build-in-the-city/permits",
+            (
+                "the available official ArcGIS permit dataset ends in March 2023 and "
+                "would misrepresent historical records as current opportunities"
+            ),
+        ),
+        UnverifiedCountyAdapter(
+            "dayton-oh-building-permits",
+            "Dayton, Ohio",
+            "https://daytonohio.gov/201/Online-Permit-System",
+            (
+                "the official portal is a record-status search rather than a bulk "
+                "feed, and the City states that commercial use requires prior written "
+                "permission"
+            ),
+        ),
+    ]

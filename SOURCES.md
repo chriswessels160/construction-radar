@@ -21,6 +21,11 @@ application portal is not treated as permission for automated extraction.
 | `boone-county-ky-permits` | Boone County, KY | Scaffold only | Official Building Department and Oracle permitting guidance found; no verified public bulk/API feed or automation terms. |
 | `kenton-county-ky-permits` | Kenton County, KY participating jurisdictions | Scaffold only | PDS One Stop Shop uses an application portal. PDS directs records access through its Open Records process and requires commercial-purpose disclosure. |
 | `campbell-county-ky-permits` | Campbell County, KY service area | Scaffold only | Official permit department and forms found; no verified public bulk/API feed or automation terms. County coverage is not equivalent to every incorporated city. |
+| `lexington-fayette-ky-permits` | Lexington-Fayette County, KY | Scaffold only | The official development-records page links to AgencyCounter for public permit lookup, but no authoritative bulk/API feed or automated-access terms were verified. |
+| `cuyahoga-county-high-value-construction` | Cuyahoga County, OH | Historical scaffold only | County Planning/Fiscal Office DeltaTrack is an official ArcGIS layer for new-construction permits of at least $1 million from 2012-2025. It is intentionally excluded from the current-opportunity feed. Cleveland's current city permit source is already enabled. |
+| `bowling-green-warren-ky-permits` | Bowling Green-Warren County, KY | Inspection scaffold only | The official public GIS service exposes construction-inspection points, not permit opportunities, and omits the fields required to represent project value, address, and contractor truthfully. |
+| `toledo-oh-building-permits` | Toledo, OH | Historical scaffold only | The official ArcGIS building-permit dataset covers 2018 through March 2023. It is too stale for the dashboard's current-opportunity window. |
+| `dayton-oh-building-permits` | Dayton, OH | Permission required | Dayton's official system provides individual record-status search rather than a bulk feed, and its published notice requires prior written permission for commercial use. |
 
 Before enabling a scaffold, record the exact issuing jurisdictions, official
 endpoint/export, permitted use, rate limits, update window, field mapping, and

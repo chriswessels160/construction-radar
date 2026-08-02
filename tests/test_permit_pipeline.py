@@ -9,6 +9,7 @@ from source_adapters import (
     LouisvilleJeffersonAdapter,
     UnverifiedCountyAdapter,
     additional_city_configs,
+    ohio_kentucky_expansion_scaffolds,
     run_adapters,
 )
 import scraper
@@ -210,6 +211,20 @@ class AdapterTests(unittest.TestCase):
         result = adapter.run({})
         self.assertEqual(result.status, "skipped")
         self.assertEqual(result.projects, [])
+
+    def test_regional_expansion_sources_remain_safely_disabled(self):
+        adapters = ohio_kentucky_expansion_scaffolds()
+        self.assertEqual(len(adapters), 5)
+        self.assertEqual(len({adapter.source_id for adapter in adapters}), 5)
+
+        results = run_adapters(adapters, {})
+
+        self.assertTrue(all(result.status == "skipped" for result in results))
+        self.assertTrue(all(result.projects == [] for result in results))
+        reasons = " ".join(result.message for result in results)
+        self.assertIn("historical", reasons)
+        self.assertIn("inspections", reasons)
+        self.assertIn("commercial use", reasons)
 
 
 if __name__ == "__main__":
