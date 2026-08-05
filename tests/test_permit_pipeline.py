@@ -9,6 +9,8 @@ from source_adapters import (
     LouisvilleJeffersonAdapter,
     UnverifiedCountyAdapter,
     additional_city_configs,
+    kentucky_scaffolds,
+    licensed_county_configs,
     ohio_kentucky_expansion_scaffolds,
     run_adapters,
 )
@@ -225,6 +227,73 @@ class AdapterTests(unittest.TestCase):
         self.assertIn("historical", reasons)
         self.assertIn("inspections", reasons)
         self.assertIn("commercial use", reasons)
+
+    def test_northern_kentucky_sources_record_verified_access_blockers(self):
+        adapters = kentucky_scaffolds()
+        self.assertEqual(
+            [adapter.source_id for adapter in adapters],
+            [
+                "boone-county-ky-permits",
+                "kenton-county-ky-permits",
+                "campbell-county-ky-permits",
+            ],
+        )
+
+        results = run_adapters(adapters, {})
+
+        self.assertTrue(all(result.status == "skipped" for result in results))
+        self.assertTrue(all(result.projects == [] for result in results))
+        messages = {result.source_id: result.message for result in results}
+        self.assertIn("Oracle", messages["boone-county-ky-permits"])
+        self.assertIn("prohibit", messages["kenton-county-ky-permits"])
+        self.assertIn("commercial-use disclosure", messages["campbell-county-ky-permits"])
+
+    def test_five_licensed_county_configs_require_commercial_contractors(self):
+        configs = licensed_county_configs()
+        self.assertEqual(len(configs), 5)
+        self.assertEqual(len({config.source_id for config in configs}), 5)
+        self.assertEqual(
+            {config.county for config in configs},
+            {"Butler", "Allen", "Loudoun", "Pasco", "Charlotte"},
+        )
+        for config in configs:
+            self.assertEqual(config.fields["contractor"], "CONTRACTOR_NAME")
+            self.assertIn("PROPERTY_TYPE = 'commercial'", config.where_clause)
+            self.assertIn("CONTRACTOR_NAME IS NOT NULL", config.where_clause)
+            self.assertTrue(config.allow_unvalued_commercial)
+            self.assertTrue(config.return_geometry)
+
+    def test_licensed_county_normalization_preserves_contractor_and_address(self):
+        config = licensed_county_configs()[0]
+        adapter = ConfigurableArcGISPermitAdapter(
+            lambda record: True,
+            lambda *args: "Commercial",
+            lambda *args: (6, "new commercial construction"),
+            lambda value: float(value or 0),
+            lambda value: f"${value:,.0f}",
+            config=config,
+        )
+        project = adapter.normalize_record({
+            "PERMIT_NUMBER": "B-26-100",
+            "CATEGORY": "New Construction",
+            "STATUS": "active",
+            "CONTRACTOR_NAME": "Regional Builder LLC",
+            "PROPERTY_TYPE": "commercial",
+            "SUB_CATEGORY": "retail",
+            "STREET_NO": "120",
+            "STREET": "MAIN ST",
+            "CITY": "HAMILTON",
+            "STATE": "OH",
+            "START_DATE": "2026-03-20",
+            "_geometry_x": -84.56,
+            "_geometry_y": 39.40,
+        })
+        self.assertEqual(project["address"], "120 MAIN ST")
+        self.assertEqual(project["contractor"], "Regional Builder LLC")
+        self.assertEqual(project["contractors"][0]["source_field"], "CONTRACTOR_NAME")
+        self.assertEqual(
+            project["record_id"], "butler-county-oh-new-construction:B-26-100"
+        )
 
 
 if __name__ == "__main__":

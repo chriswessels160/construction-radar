@@ -24,10 +24,14 @@ jobs:
       - name: Run project updater
         run: python scraper.py
 
+      - name: Update Cincinnati open bids
+        continue-on-error: true
+        run: python bids.py
+
       - name: Commit updated projects
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add projects.json
-          git diff --cached --quiet || git commit -m "Automatic construction project update"
+          git add projects.json bids.json
+          git diff --cached --quiet || git commit -m "Automatic construction data update"
           git push

@@ -12,6 +12,7 @@ from source_adapters import (
     LouisvilleJeffersonAdapter,
     additional_city_configs,
     kentucky_scaffolds,
+    licensed_county_configs,
     ohio_kentucky_expansion_scaffolds,
     run_adapters,
 )
@@ -1351,6 +1352,13 @@ def main():
                 parse_money, format_money, DAYS_BACK, config=config,
             )
             for config in additional_city_configs()
+        ],
+        *[
+            ConfigurableArcGISPermitAdapter(
+                is_relevant, classify_market, electrical_score,
+                parse_money, format_money, DAYS_BACK, config=config,
+            )
+            for config in licensed_county_configs()
         ],
         *kentucky_scaffolds(),
         *ohio_kentucky_expansion_scaffolds(),

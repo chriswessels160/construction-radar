@@ -177,6 +177,9 @@ class ConfigurableArcGISPermitAdapter:
         work_class = self._text(self._value(record, "work_class"))
         proposed_use = self._text(self._value(record, "proposed_use"))
         address = self._text(self._value(record, "address"))
+        address_number = self._text(self._value(record, "address_number"), "")
+        if address_number and address != "Unknown":
+            address = f"{address_number} {address}".strip()
         city = self._text(self._value(record, "city"), self.config.default_city)
         state = self._text(self._value(record, "state"), self.config.state)
         contractor = self._text(self._value(record, "contractor"))
@@ -434,6 +437,66 @@ def additional_city_configs():
             fields={"permit_number":"PermitNum","permit_type":"PermitTypeDesc","status":"StatusCurrent","contractor":"ContractorCompanyName","proposed_use":"PermitClass","work_class":"Description","value":"EstProjectCost","address":"OriginalAddress1","city":"OriginalCity","state":"OriginalState","issued_date":"IssuedDateDtm","latitude":"Latitude","longitude":"Longitude"},
         ),
     ]
+
+
+def licensed_county_configs():
+    """CC BY 4.0 county slices from Shovels' Q1 2026 permit release."""
+    layer_url = (
+        "https://services5.arcgis.com/ygiShlCiglrHaijs/arcgis/rest/services/"
+        "Nationwide_New_Construction_Permits/FeatureServer/0"
+    )
+    source_url = (
+        "https://www.arcgis.com/home/item.html?id="
+        "368d580663f641be8e9627fd3d444bbc"
+    )
+    source_name = (
+        "Shovels Nationwide New Construction Permits (Q1 2026), CC BY 4.0"
+    )
+    fields = {
+        "permit_number": "PERMIT_NUMBER",
+        "permit_type": "CATEGORY",
+        "status": "STATUS",
+        "contractor": "CONTRACTOR_NAME",
+        "proposed_use": "PROPERTY_TYPE",
+        "work_class": "SUB_CATEGORY",
+        "address_number": "STREET_NO",
+        "address": "STREET",
+        "city": "CITY",
+        "state": "STATE",
+        "issued_date": "START_DATE",
+    }
+    counties = [
+        ("butler-county-oh-new-construction", "Butler County", "OH", "BUTLER COUNTY"),
+        ("allen-county-in-new-construction", "Allen County", "IN", "ALLEN COUNTY-FORT WAYNE"),
+        ("loudoun-county-va-new-construction", "Loudoun County", "VA", "LOUDOUN COUNTY"),
+        ("pasco-county-fl-new-construction", "Pasco County", "FL", "PASCO COUNTY"),
+        ("charlotte-county-fl-new-construction", "Charlotte County", "FL", "CHARLOTTE COUNTY"),
+    ]
+    return [
+        ArcGISPermitConfig(
+            source_id=source_id,
+            layer_url=layer_url,
+            source_url=source_url,
+            source_name=source_name,
+            jurisdiction=county,
+            county=county.replace(" County", ""),
+            state=state,
+            default_city="Unknown",
+            date_field="START_DATE",
+            page_size=500,
+            max_records=500,
+            return_geometry=True,
+            allow_unvalued_commercial=True,
+            where_clause=(
+                f"STATE = '{state}' AND JURISDICTION = '{publisher_jurisdiction}' "
+                "AND PROPERTY_TYPE = 'commercial' "
+                "AND CONTRACTOR_NAME IS NOT NULL "
+                "AND STATUS IN ('active', 'in_review')"
+            ),
+            fields=dict(fields),
+        )
+        for source_id, county, state, publisher_jurisdiction in counties
+    ]
 class UnverifiedCountyAdapter:
     """Safe scaffold: documents a source without making network requests."""
 
@@ -469,28 +532,38 @@ def run_adapters(adapters, geocode_cache):
 
 
 def kentucky_scaffolds():
-    common_reason = (
-        "no authoritative public bulk/API feed with verified automated-access "
-        "terms has been identified"
-    )
+    """Researched Northern Kentucky sources awaiting authorized data access."""
     return [
         UnverifiedCountyAdapter(
             "boone-county-ky-permits",
             "Boone County, Kentucky",
             "https://www.boonecountyky.org/departments/building_department/index.php",
-            common_reason,
+            (
+                "the official Oracle portal is authenticated and its monthly "
+                "reports contain aggregates rather than project-level records; "
+                "an authorized commercial-purpose export is required"
+            ),
         ),
         UnverifiedCountyAdapter(
             "kenton-county-ky-permits",
             "Kenton County, Kentucky",
-            "https://www.pdskc.org/services/one-stop-shop/",
-            common_reason,
+            "https://pdskc.govbuilt.com/ActivitySearchTool",
+            (
+                "the public GovBuilt activity search is licensed for personal "
+                "use and its terms prohibit copying, republishing, and "
+                "redistribution; written permission or an authorized county "
+                "export is required"
+            ),
         ),
         UnverifiedCountyAdapter(
             "campbell-county-ky-permits",
             "Campbell County, Kentucky",
-            "https://campbellcountyky.gov/department/index.php?structureid=37",
-            common_reason,
+            "https://co-campbell-ky.smartgovcommunity.com/ApplicationPublic/ApplicationSearchAdvanced",
+            (
+                "SmartGov provides human permit search but no authorized bulk "
+                "feed was verified, and Campbell County requires commercial-use "
+                "disclosure and may require a records contract"
+            ),
         ),
     ]
 

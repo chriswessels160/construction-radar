@@ -483,6 +483,54 @@
             cursor: pointer;
         }
 
+        .bids-section {
+            margin-top: 36px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+        .bid-count {
+            color: var(--accent);
+        }
+
+        .bid-match,
+        .bid-link {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 0 10px;
+            border: 1px solid var(--border-light);
+            border-radius: 999px;
+            color: var(--text);
+            background: var(--accent-soft);
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .bid-link:hover {
+            border-color: var(--accent);
+        }
+
+        .bid-deadline {
+            color: var(--text);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .bid-deadline.urgent {
+            color: #ff8e8e;
+        }
+
+        .cell-secondary {
+            margin-top: 4px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
         .lead-toolbar {
             display: flex;
             align-items: center;
@@ -1034,6 +1082,41 @@
 
     </div>
 
+    <!-- OPEN BIDS -->
+
+    <section class="bids-section" aria-labelledby="openBidsTitle">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title" id="openBidsTitle">Open Cincinnati Bids</h2>
+                <div class="section-label" id="bidLoadStatus">Loading official City of Cincinnati opportunities...</div>
+            </div>
+            <div class="assistant-badge"><span class="bid-count" id="openBidCount">0</span>&nbsp; accepting bids</div>
+        </div>
+
+        <div class="filters">
+            <input id="bidSearch" type="text" placeholder="Search bid names, departments, buyers..." aria-label="Search open bids">
+            <select id="bidMatchFilter" aria-label="Filter bids by trade match">
+                <option value="">All Open Bids</option>
+                <option value="Electrical match">Electrical Matches</option>
+                <option value="Construction match">Construction Matches</option>
+                <option value="Other city bid">Other City Bids</option>
+            </select>
+            <div class="section-label"><span id="visibleBidCount">0</span> shown</div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead><tr>
+                    <th>Trade Match</th><th>Opportunity</th><th>Department</th>
+                    <th>Type</th><th>Inclusion</th><th>Deadline</th>
+                    <th>Buyer</th><th>Official Source</th>
+                </tr></thead>
+                <tbody id="bidsTableBody"></tbody>
+            </table>
+        </div>
+        <div id="bidEmptyMessage" class="empty-message">No open bids match your filters.</div>
+    </section>
+
     <!-- ASK CONSTRUCTION RADAR -->
 
     <section class="assistant-panel" aria-labelledby="assistantTitle">
@@ -1224,6 +1307,7 @@
 
 <script src="assistant.js?v=4"></script>
 <script src="lead-tools.js?v=1"></script>
+<script src="bids.js?v=1"></script>
 <script src="app.js?v=6"></script>
 
 </body>
