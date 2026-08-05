@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid Intelligence | Construction Radar</title>
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem("construction-radar-theme")
+                || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        } catch (_error) { document.documentElement.dataset.theme = "dark"; }
+    </script>
+    <style>
+        * { box-sizing: border-box; }
+        :root {
+            --background:#08090c; --surface:#0e1015; --raised:#13161d;
+            --hover:#181c25; --border:#242832; --border-light:#303541;
+            --text:#f5f7fa; --secondary:#9ca3af; --muted:#626975;
+            --accent:#8090ff; --accent-soft:rgba(128,144,255,.12);
+            --heading:#111319; --urgent:#ff8e8e;
+        }
+        :root[data-theme="light"] {
+            --background:#f3f6fb; --surface:#fff; --raised:#f8fafc;
+            --hover:#eef2f8; --border:#d8deea; --border-light:#bcc7d8;
+            --text:#162033; --secondary:#4c596d; --muted:#6b7688;
+            --accent:#5366df; --accent-soft:rgba(83,102,223,.12);
+            --heading:#f1f4f9; --urgent:#c43b3b;
+        }
+        body { margin:0; background:var(--background); color:var(--text); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+        .container { width:min(96%,1800px); margin:auto; padding:38px 0 60px; }
+        header { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; }
+        .eyebrow { color:var(--secondary); font-size:11px; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; }
+        h1 { margin:10px 0 8px; font-size:clamp(32px,4vw,48px); letter-spacing:-1.6px; }
+        .subtitle,.source-status { color:var(--secondary); line-height:1.5; }
+        .header-actions { display:flex; gap:10px; }
+        .button,.source-link { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:0 14px; border:1px solid var(--border-light); border-radius:999px; background:var(--raised); color:var(--text); font-size:12px; font-weight:750; text-decoration:none; cursor:pointer; white-space:nowrap; }
+        .button.primary { border-color:var(--accent); background:var(--accent-soft); }
+        .summary { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:30px 0; }
+        .card { padding:22px; min-height:125px; border:1px solid var(--border); border-radius:16px; background:var(--surface); }
+        .card span { color:var(--secondary); font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
+        .card strong { display:block; margin-top:22px; font-size:32px; }
+        .panel { padding:24px; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
+        .panel-heading { display:flex; justify-content:space-between; gap:18px; align-items:end; margin-bottom:18px; }
+        h2 { margin:0 0 5px; font-size:21px; }
+        .filters { display:grid; grid-template-columns:minmax(260px,2fr) repeat(5,minmax(145px,1fr)); gap:10px; padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--raised); }
+        input,select { width:100%; height:42px; padding:0 12px; border:1px solid var(--border); border-radius:8px; background:var(--surface); color:var(--text); font:13px inherit; outline:none; }
+        input:focus,select:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
+        .table-wrap { margin-top:18px; overflow:auto; max-height:70vh; border:1px solid var(--border); border-radius:12px; }
+        table { width:100%; border-collapse:collapse; min-width:1500px; font-size:13px; }
+        th { position:sticky; top:0; z-index:1; padding:13px 12px; background:var(--heading); color:var(--secondary); text-align:left; font-size:10px; letter-spacing:.8px; text-transform:uppercase; }
+        td { padding:14px 12px; border-top:1px solid var(--border); vertical-align:top; color:var(--secondary); }
+        tr:hover td { background:var(--hover); }
+        td strong { color:var(--text); }
+        .secondary { display:block; margin-top:5px; color:var(--muted); font-size:11px; }
+        .match-pill,.status-pill { display:inline-flex; padding:6px 9px; border:1px solid var(--border-light); border-radius:999px; color:var(--text); background:var(--raised); font-size:11px; font-weight:750; white-space:nowrap; }
+        .status-pill.open { border-color:var(--accent); background:var(--accent-soft); }
+        .empty { padding:35px; text-align:center; color:var(--secondary); }
+        @media(max-width:1000px) { .summary{grid-template-columns:repeat(2,1fr)} .filters{grid-template-columns:1fr 1fr} }
+        @media(max-width:650px) { header{flex-direction:column} .summary,.filters{grid-template-columns:1fr} .header-actions{width:100%} .button{flex:1} }
+    </style>
+</head>
+<body>
+<main class="container">
+    <header>
+        <div>
+            <div class="eyebrow">Construction Radar · Cincinnati</div>
+            <h1>Bid Intelligence</h1>
+            <div class="subtitle">Current opportunities, deadlines, awards, and competitive history from the City of Cincinnati.</div>
+        </div>
+        <div class="header-actions">
+            <a class="button primary" href="dashboard.html">Projects &amp; Map</a>
+            <button class="button" id="themeToggle" type="button">Change theme</button>
+        </div>
+    </header>
+
+    <section class="summary" aria-label="Bid summary">
+        <div class="card"><span>All Records</span><strong id="totalCount">0</strong></div>
+        <div class="card"><span>Accepting Bids</span><strong id="openCount">0</strong></div>
+        <div class="card"><span>Closing in 7 Days</span><strong id="closingCount">0</strong></div>
+        <div class="card"><span>Open Electrical Matches</span><strong id="electricalCount">0</strong></div>
+    </section>
+
+    <section class="panel">
+        <div class="panel-heading">
+            <div><h2>City Business Opportunities</h2><div class="source-status" id="sourceStatus">Loading official Cincinnati data...</div></div>
+            <div class="source-status"><strong id="resultCount">0</strong> results</div>
+        </div>
+        <div class="filters" id="bidFilters">
+            <input id="bidSearch" type="search" placeholder="Search project, bid number, buyer, winner..." aria-label="Search bid intelligence">
+            <select id="statusFilter" aria-label="Filter by status"><option value="">All Statuses</option><option value="__open__" selected>Accepting Bids</option></select>
+            <select id="matchFilter" aria-label="Filter by trade match"><option value="">All Trade Matches</option><option>Electrical match</option><option>Construction match</option><option>Other city bid</option></select>
+            <select id="departmentFilter" aria-label="Filter by department"><option value="">All Departments</option></select>
+            <select id="typeFilter" aria-label="Filter by procurement type"><option value="">All Procurement Types</option></select>
+            <select id="inclusionFilter" aria-label="Filter by inclusion"><option value="">All Inclusion Rules</option><option value="published">Requirements Published</option><option value="none">None Published</option></select>
+            <select id="sortFilter" aria-label="Sort bid records"><option value="newest">Newest Deadline</option><option value="oldest">Oldest Deadline</option><option value="name">Project Name</option><option value="status">Status</option></select>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Match</th><th>Opportunity</th><th>Status</th><th>Department</th><th>Type</th><th>Inclusion</th><th>Deadline</th><th>Buyer</th><th>Awarded Contractor</th><th>Source</th></tr></thead>
+                <tbody id="bidsTableBody"></tbody>
+            </table>
+        </div>
+        <div class="empty" id="emptyMessage" hidden>No opportunities match these filters.</div>
+    </section>
+</main>
+<script src="bids.js?v=2"></script>
+<script>
+    document.getElementById("themeToggle").addEventListener("click", () => {
+        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem("construction-radar-theme", next); } catch (_error) {}
+    });
+</script>
+</body>
+</html>

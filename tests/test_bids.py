@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timezone
 
-from bids import classify_bid, parse_open_bids
+from bids import classify_bid, parse_bids, parse_open_bids
 
 
 HTML = """
@@ -25,9 +25,21 @@ class BidTests(unittest.TestCase):
             HTML, now=datetime(2026, 8, 5, tzinfo=timezone.utc)
         )
         self.assertEqual(len(bids), 1)
-        self.assertEqual(bids[0]["record_id"], "cincinnati-open-bids:27E")
+        self.assertEqual(
+            bids[0]["record_id"], "cincinnati-business-opportunities:27E"
+        )
         self.assertEqual(bids[0]["match_type"], "Electrical match")
         self.assertEqual(bids[0]["document_code"], "ITB")
+
+    def test_full_history_preserves_status_and_award(self):
+        bids = parse_bids(
+            HTML, now=datetime(2026, 8, 5, tzinfo=timezone.utc)
+        )
+        self.assertEqual(len(bids), 3)
+        awarded = next(bid for bid in bids if bid["bid_number"] == "OLD")
+        self.assertEqual(awarded["status"], "Awarded")
+        self.assertEqual(awarded["awarded_contractor"], "Winner")
+        self.assertFalse(awarded["is_open"])
 
     def test_trade_classification_does_not_claim_hidden_scope(self):
         self.assertEqual(classify_bid("Office supplies", "Procurement"), "Other city bid")

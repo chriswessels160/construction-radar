@@ -7,7 +7,7 @@ application portal is not treated as permission for automated extraction.
 
 | Source ID | Jurisdiction | Status | Authority / access note |
 | --- | --- | --- | --- |
-| `cincinnati-open-bids` | City of Cincinnati, OH | Enabled / daily | City of Cincinnati Office of Procurement Business Opportunities portal. The public portal is expressly intended to identify current business opportunities. Ingestion keeps only `Accepting Bids` records whose published deadline has not passed and links users back to the official portal. Trade matching is based only on published title and department text and is labeled accordingly. |
+| `cincinnati-business-opportunities` | City of Cincinnati, OH | Enabled / daily | City of Cincinnati Office of Procurement Business Opportunities portal. Ingestion preserves the portal's published current and historical records, statuses, deadlines, departments, buyers, procurement types, inclusion requirements, and award recipients without inferring missing values. The Bid Intelligence page defaults to future `Accepting Bids` records and links every entry back to the official portal. Trade matching is based only on published title and department text and is labeled accordingly. |
 
 ## Permits
 

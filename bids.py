@@ -1,4 +1,4 @@
-"""Fetch current City of Cincinnati business opportunities."""
+"""Fetch City of Cincinnati current and historical business opportunities."""
 
 import json
 import os
@@ -72,26 +72,27 @@ def classify_bid(name, department):
     return "Other city bid"
 
 
-def parse_open_bids(html, now=None):
+def parse_bids(html, now=None):
     parser = CincinnatiBidTableParser()
     parser.feed(html)
     now = now or datetime.now(timezone.utc)
     bids = []
     for attrs, cells in parser.rows:
-        bid_number, status, name, department, buyer, procurement_type, inclusion, due_text, _award = cells[:9]
-        if status.casefold() != "accepting bids":
-            continue
+        bid_number, status, name, department, buyer, procurement_type, inclusion, due_text, award = cells[:9]
         try:
             due = datetime.strptime(due_text, "%m/%d/%Y %I:%M %p").replace(
                 tzinfo=LOCAL_ZONE
             )
         except ValueError:
-            continue
-        if due <= now:
-            continue
+            due = None
+        is_open = (
+            status.casefold() == "accepting bids"
+            and due is not None
+            and due > now
+        )
         bids.append({
-            "record_id": f"cincinnati-open-bids:{bid_number}",
-            "source_id": "cincinnati-open-bids",
+            "record_id": f"cincinnati-business-opportunities:{bid_number}",
+            "source_id": "cincinnati-business-opportunities",
             "bid_number": bid_number,
             "status": status,
             "project_name": name,
@@ -99,24 +100,34 @@ def parse_open_bids(html, now=None):
             "buyer": buyer or "Unknown",
             "procurement_type": procurement_type or "Unknown",
             "inclusion": inclusion or "None published",
-            "due_at": due.isoformat().replace("+00:00", "Z"),
-            "due_display": due_text,
+            "due_at": due.isoformat() if due else "",
+            "due_display": due_text or "Unknown",
+            "is_open": is_open,
+            "awarded_contractor": award or "None published",
             "match_type": classify_bid(name, department),
             "source": "City of Cincinnati Office of Procurement",
             "source_url": SOURCE_URL,
             "document_code": attrs.get("data-doccd", ""),
             "department_id": attrs.get("data-deptid", ""),
         })
-    return sorted(bids, key=lambda bid: bid["due_at"])
+    return bids
 
 
-def fetch_open_bids():
+def parse_open_bids(html, now=None):
+    """Compatibility helper used by focused ingestion tests."""
+    return sorted(
+        (bid for bid in parse_bids(html, now=now) if bid["is_open"]),
+        key=lambda bid: bid["due_at"],
+    )
+
+
+def fetch_bids():
     request = urllib.request.Request(
         SOURCE_URL, headers={"User-Agent": "ConstructionRadar/1.0"}
     )
     with urllib.request.urlopen(request, timeout=60) as response:
         html = response.read().decode("utf-8", errors="replace")
-    return parse_open_bids(html)
+    return parse_bids(html)
 
 
 def write_bids(bids):
@@ -125,6 +136,7 @@ def write_bids(bids):
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "source_url": SOURCE_URL,
         "count": len(bids),
+        "open_count": sum(bid["is_open"] for bid in bids),
         "bids": bids,
     }
     output_dir = os.path.dirname(OUTPUT_PATH)
@@ -143,8 +155,12 @@ def write_bids(bids):
 
 
 if __name__ == "__main__":
-    current_bids = fetch_open_bids()
-    if not current_bids:
-        raise RuntimeError("Cincinnati source returned no current open bids")
-    write_bids(current_bids)
-    print(f"Wrote {len(current_bids)} current Cincinnati bids to {OUTPUT_PATH}")
+    opportunities = fetch_bids()
+    if not opportunities:
+        raise RuntimeError("Cincinnati source returned no business opportunities")
+    write_bids(opportunities)
+    open_count = sum(bid["is_open"] for bid in opportunities)
+    print(
+        f"Wrote {len(opportunities)} Cincinnati opportunities "
+        f"({open_count} currently open) to {OUTPUT_PATH}"
+    )

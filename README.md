@@ -24,14 +24,16 @@ See `SOURCES.md` for source status and enablement requirements.
 
 ## Open bids
 
-The dashboard includes current City of Cincinnati solicitations from the
-official Business Opportunities portal. Only records explicitly marked
-`Accepting Bids` with a future Cincinnati-local deadline are published.
-Title-level electrical and construction matches are labeled as matches rather
-than guaranteed scope; contractors should confirm the complete solicitation on
-the official source before bidding. The daily workflow refreshes `bids.json`
-independently so a bid-source outage cannot block permit updates or erase the
-last successful bid file.
+The map dashboard links to a dedicated Bid Intelligence page containing the
+full published City of Cincinnati Business Opportunities history. It defaults
+to records explicitly marked `Accepting Bids` with a future Cincinnati-local
+deadline, while filters expose historical statuses, departments, procurement
+types, inclusion requirements, buyers, and published award recipients. No
+missing values are inferred. Title-level electrical and construction matches
+are labeled as matches rather than guaranteed scope; contractors should confirm
+the complete solicitation on the official source before bidding. The daily
+workflow refreshes `bids.json` independently so a bid-source outage cannot
+block permit updates or erase the last successful bid file.
 
 ## Lead tools
 
