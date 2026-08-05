@@ -39,10 +39,17 @@
         .card { padding:22px; min-height:125px; border:1px solid var(--border); border-radius:16px; background:var(--surface); }
         .card span { color:var(--secondary); font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
         .card strong { display:block; margin-top:22px; font-size:32px; }
+        .sources-panel { margin:0 0 20px; padding:20px; border:1px solid var(--border); border-radius:16px; background:var(--surface); }
+        .sources-panel h2 { margin-bottom:14px; }
+        .source-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+        .source-card { display:flex; flex-direction:column; gap:5px; padding:14px; border:1px solid var(--border); border-radius:11px; background:var(--raised); color:var(--text); text-decoration:none; }
+        .source-card:hover { border-color:var(--accent); background:var(--hover); }
+        .source-card span,.source-card small { color:var(--secondary); font-size:12px; }
+        .source-card small { color:var(--accent); font-weight:750; }
         .panel { padding:24px; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
         .panel-heading { display:flex; justify-content:space-between; gap:18px; align-items:end; margin-bottom:18px; }
         h2 { margin:0 0 5px; font-size:21px; }
-        .filters { display:grid; grid-template-columns:minmax(260px,2fr) repeat(5,minmax(145px,1fr)); gap:10px; padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--raised); }
+        .filters { display:grid; grid-template-columns:minmax(260px,2fr) repeat(6,minmax(140px,1fr)); gap:10px; padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--raised); }
         input,select { width:100%; height:42px; padding:0 12px; border:1px solid var(--border); border-radius:8px; background:var(--surface); color:var(--text); font:13px inherit; outline:none; }
         input:focus,select:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
         .table-wrap { margin-top:18px; overflow:auto; max-height:70vh; border:1px solid var(--border); border-radius:12px; }
@@ -55,17 +62,17 @@
         .match-pill,.status-pill { display:inline-flex; padding:6px 9px; border:1px solid var(--border-light); border-radius:999px; color:var(--text); background:var(--raised); font-size:11px; font-weight:750; white-space:nowrap; }
         .status-pill.open { border-color:var(--accent); background:var(--accent-soft); }
         .empty { padding:35px; text-align:center; color:var(--secondary); }
-        @media(max-width:1000px) { .summary{grid-template-columns:repeat(2,1fr)} .filters{grid-template-columns:1fr 1fr} }
-        @media(max-width:650px) { header{flex-direction:column} .summary,.filters{grid-template-columns:1fr} .header-actions{width:100%} .button{flex:1} }
+        @media(max-width:1000px) { .summary,.source-cards{grid-template-columns:repeat(2,1fr)} .filters{grid-template-columns:1fr 1fr} }
+        @media(max-width:650px) { header{flex-direction:column} .summary,.filters,.source-cards{grid-template-columns:1fr} .header-actions{width:100%} .button{flex:1} }
     </style>
 </head>
 <body>
 <main class="container">
     <header>
         <div>
-            <div class="eyebrow">Construction Radar · Cincinnati</div>
+            <div class="eyebrow">Construction Radar · Greater Cincinnati</div>
             <h1>Bid Intelligence</h1>
-            <div class="subtitle">Current opportunities, deadlines, awards, and competitive history from the City of Cincinnati.</div>
+            <div class="subtitle">Open work, deadlines, awards, and procurement history from public agencies across Cincinnati and Northern Kentucky.</div>
         </div>
         <div class="header-actions">
             <a class="button primary" href="dashboard.html">Projects &amp; Map</a>
@@ -75,20 +82,26 @@
 
     <section class="summary" aria-label="Bid summary">
         <div class="card"><span>All Records</span><strong id="totalCount">0</strong></div>
-        <div class="card"><span>Accepting Bids</span><strong id="openCount">0</strong></div>
+        <div class="card"><span>Open Bids</span><strong id="openCount">0</strong></div>
         <div class="card"><span>Closing in 7 Days</span><strong id="closingCount">0</strong></div>
         <div class="card"><span>Open Electrical Matches</span><strong id="electricalCount">0</strong></div>
     </section>
 
+    <section class="sources-panel" aria-label="Connected bid sources">
+        <h2>Connected Public Agencies</h2>
+        <div class="source-cards" id="sourceCards"></div>
+    </section>
+
     <section class="panel">
         <div class="panel-heading">
-            <div><h2>City Business Opportunities</h2><div class="source-status" id="sourceStatus">Loading official Cincinnati data...</div></div>
+            <div><h2>Public Business Opportunities</h2><div class="source-status" id="sourceStatus">Loading official procurement data...</div></div>
             <div class="source-status"><strong id="resultCount">0</strong> results</div>
         </div>
         <div class="filters" id="bidFilters">
             <input id="bidSearch" type="search" placeholder="Search project, bid number, buyer, winner..." aria-label="Search bid intelligence">
-            <select id="statusFilter" aria-label="Filter by status"><option value="">All Statuses</option><option value="__open__" selected>Accepting Bids</option></select>
-            <select id="matchFilter" aria-label="Filter by trade match"><option value="">All Trade Matches</option><option>Electrical match</option><option>Construction match</option><option>Other city bid</option></select>
+            <select id="statusFilter" aria-label="Filter by status"><option value="">All Statuses</option><option value="__open__" selected>Open Bids</option></select>
+            <select id="sourceFilter" aria-label="Filter by public agency"><option value="">All Agencies</option></select>
+            <select id="matchFilter" aria-label="Filter by trade match"><option value="">All Trade Matches</option><option>Electrical match</option><option>Construction match</option><option>Other public bid</option></select>
             <select id="departmentFilter" aria-label="Filter by department"><option value="">All Departments</option></select>
             <select id="typeFilter" aria-label="Filter by procurement type"><option value="">All Procurement Types</option></select>
             <select id="inclusionFilter" aria-label="Filter by inclusion"><option value="">All Inclusion Rules</option><option value="published">Requirements Published</option><option value="none">None Published</option></select>

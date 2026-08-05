@@ -24,16 +24,17 @@ See `SOURCES.md` for source status and enablement requirements.
 
 ## Open bids
 
-The map dashboard links to a dedicated Bid Intelligence page containing the
-full published City of Cincinnati Business Opportunities history. It defaults
-to records explicitly marked `Accepting Bids` with a future Cincinnati-local
-deadline, while filters expose historical statuses, departments, procurement
-types, inclusion requirements, buyers, and published award recipients. No
-missing values are inferred. Title-level electrical and construction matches
-are labeled as matches rather than guaranteed scope; contractors should confirm
-the complete solicitation on the official source before bidding. The daily
-workflow refreshes `bids.json` independently so a bid-source outage cannot
-block permit updates or erase the last successful bid file.
+The map dashboard links to a dedicated Bid Intelligence page combining official
+procurement publications from Cincinnati, SD1, Florence, Newport, Kenton
+County, Campbell County, Covington, CVG Airport, and Northern Kentucky
+University. It defaults to opportunities whose published status and deadline
+show that they remain open. Agency, status, trade, department, procurement type,
+and inclusion filters expose both current work and available history. Sources
+with no current postings remain visible as connected monitors. No missing
+values are inferred. Title-level electrical and construction matches are
+labeled as matches rather than guaranteed scope; contractors should confirm the
+complete solicitation on the linked official source before bidding. Each source
+refresh is isolated so one outage cannot erase or block records from another.
 
 ## Lead tools
 

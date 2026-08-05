@@ -8,6 +8,14 @@ application portal is not treated as permission for automated extraction.
 | Source ID | Jurisdiction | Status | Authority / access note |
 | --- | --- | --- | --- |
 | `cincinnati-business-opportunities` | City of Cincinnati, OH | Enabled / daily | City of Cincinnati Office of Procurement Business Opportunities portal. Ingestion preserves the portal's published current and historical records, statuses, deadlines, departments, buyers, procurement types, inclusion requirements, and award recipients without inferring missing values. The Bid Intelligence page defaults to future `Accepting Bids` records and links every entry back to the official portal. Trade matching is based only on published title and department text and is labeled accordingly. |
+| `nky-sd1-bids` | Sanitation District No. 1, KY | Enabled / daily | Official CivicPlus bid board, including its public current and historical views. |
+| `florence-ky-bids` | City of Florence, KY | Enabled / daily | Official legally published current and prior bid-solicitation tables. Factual metadata is indexed; official advertisements and specifications remain linked at the source. |
+| `newport-ky-bids` | City of Newport, KY | Enabled / daily | Official CivicPlus bid board, including its public current and historical views. |
+| `kenton-county-ky-bids` | Kenton County, KY | Enabled / daily | Official public OpenGov procurement portal. Only server-published public project metadata is indexed. |
+| `campbell-county-ky-bids` | Campbell County, KY | Enabled monitor / daily | Official Opportunities & Bids page. The source remains connected even when it publishes no structured current rows; no records are invented from unrelated documents. |
+| `covington-ky-bids` | City of Covington, KY | Enabled / daily | Official Bonfire public-portal open-opportunities endpoint. Only unauthenticated public projects are indexed. |
+| `cvg-airport-bids` | CVG Airport / Kenton County Airport Board, KY | Enabled / daily | Official public OpenGov procurement portal. Only server-published public project metadata is indexed. |
+| `nku-bids` | Northern Kentucky University, KY | Enabled monitor / daily | Official public NKU plan room. The source remains connected when the plan room reports that no projects are posted. |
 
 ## Permits
 

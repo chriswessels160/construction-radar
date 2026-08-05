@@ -1,4 +1,5 @@
 let allBids = [];
+let bidSources = [];
 
 function escapeBidHtml(value) {
     return String(value ?? "")
@@ -33,6 +34,7 @@ function daysUntil(bid) {
 function filteredBids() {
     const search = document.getElementById("bidSearch").value.trim().toLowerCase();
     const status = document.getElementById("statusFilter").value;
+    const source = document.getElementById("sourceFilter").value;
     const match = document.getElementById("matchFilter").value;
     const department = document.getElementById("departmentFilter").value;
     const type = document.getElementById("typeFilter").value;
@@ -40,11 +42,12 @@ function filteredBids() {
     const sort = document.getElementById("sortFilter").value;
 
     const results = allBids.filter(bid => {
-        const text = [bid.bid_number, bid.project_name, bid.department, bid.buyer,
+        const text = [bid.bid_number, bid.project_name, bid.department, bid.buyer, bid.source,
             bid.procurement_type, bid.inclusion, bid.awarded_contractor]
             .join(" ").toLowerCase();
         return (!search || text.includes(search))
             && (!status || (status === "__open__" ? bid.is_open : bid.status === status))
+            && (!source || bid.source_id === source)
             && (!match || bid.match_type === match)
             && (!department || bid.department === department)
             && (!type || bid.procurement_type === type)
@@ -80,7 +83,7 @@ function renderBids() {
             <td><strong>${escapeBidHtml(bid.due_display)}</strong><span class="secondary">${escapeBidHtml(deadlineNote)}</span></td>
             <td>${escapeBidHtml(bid.buyer)}</td>
             <td>${escapeBidHtml(bid.awarded_contractor)}</td>
-            <td><a class="source-link" href="${escapeBidHtml(bid.source_url)}" target="_blank" rel="noopener">Official record</a></td>
+            <td><a class="source-link" href="${escapeBidHtml(bid.source_url)}" target="_blank" rel="noopener">${escapeBidHtml(bid.source)}</a></td>
         </tr>`;
     }).join("");
 }
@@ -93,17 +96,31 @@ function updateSummary() {
     document.getElementById("electricalCount").textContent = open.filter(bid => bid.match_type === "Electrical match").length.toLocaleString();
 }
 
+function renderSources() {
+    document.getElementById("sourceCards").innerHTML = bidSources.map(source => `
+        <a class="source-card" href="${escapeBidHtml(source.url)}" target="_blank" rel="noopener">
+            <strong>${escapeBidHtml(source.name)}</strong>
+            <span>${Number(source.open_count || 0).toLocaleString()} open · ${Number(source.count || 0).toLocaleString()} records</span>
+            <small>${source.status === "success" ? "Connected" : "Refresh unavailable"}</small>
+        </a>`).join("");
+}
+
 async function loadBidIntelligence() {
     const response = await fetch(`bids.json?ts=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Bid data returned ${response.status}`);
     const payload = await response.json();
     allBids = Array.isArray(payload.bids) ? payload.bids : [];
+    bidSources = Array.isArray(payload.sources) ? payload.sources : [];
     fillSelect("statusFilter", uniqueValues("status"));
+    document.getElementById("sourceFilter").innerHTML = '<option value="">All Agencies</option>' + bidSources.map(source =>
+        `<option value="${escapeBidHtml(source.source_id)}">${escapeBidHtml(source.name)}</option>`
+    ).join("");
     fillSelect("departmentFilter", uniqueValues("department"));
     fillSelect("typeFilter", uniqueValues("procurement_type"));
     document.getElementById("sourceStatus").textContent =
-        `City of Cincinnati procurement data · updated ${new Date(payload.generated_at).toLocaleString()}`;
+        `${bidSources.length.toLocaleString()} official public-agency sources · updated ${new Date(payload.generated_at).toLocaleString()}`;
     updateSummary();
+    renderSources();
     renderBids();
 }
 

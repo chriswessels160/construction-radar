@@ -24,7 +24,7 @@ jobs:
       - name: Run project updater
         run: python scraper.py
 
-      - name: Update Cincinnati open bids
+      - name: Update public-agency bids
         continue-on-error: true
         run: python bids.py
 
