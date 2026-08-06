@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-05T15:02:44.488329Z",
-  "count": 2117,
-  "open_count": 33,
+  "generated_at": "2026-08-06T14:04:42.380884Z",
+  "count": 2121,
+  "open_count": 37,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1774,
-      "open_count": 27
+      "count": 1775,
+      "open_count": 28
     },
     {
       "source_id": "nky-sd1-bids",
@@ -28,8 +28,8 @@
       "url": "https://florence-ky.gov/publication-of-bid-solicitations-enacted-ordinances/",
       "kind": "florence",
       "status": "success",
-      "count": 44,
-      "open_count": 1
+      "count": 46,
+      "open_count": 3
     },
     {
       "source_id": "newport-ky-bids",
@@ -76,8 +76,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/cvgairport/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 92,
-      "open_count": 1
+      "count": 93,
+      "open_count": 2
     },
     {
       "source_id": "nku-bids",
@@ -8091,6 +8091,26 @@
       "department_id": "107"
     },
     {
+      "record_id": "cincinnati-business-opportunities:261W926058",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "261W926058",
+      "status": "Accepting Bids",
+      "project_name": "Masonry Services - REBID",
+      "department": "Public Services",
+      "buyer": "Jennifer Sherman",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "MBE 7%",
+      "due_at": "2026-08-19T12:00:00-04:00",
+      "due_display": "08/19/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "107"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:262P901621",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "262P901621",
@@ -15994,7 +16014,7 @@
       "record_id": "cincinnati-business-opportunities:265X901167",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "265X901167",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "2026-27 Preventive Forest Maintenance Tree Pruning",
       "department": "PARKS",
       "buyer": "Margaret Elkanick",
@@ -37875,6 +37895,42 @@
       "source_url": "https://florence-ky.gov/wp-content/uploads/2026/07/NOTICE-TO-BIDDERS.RFP-Sculpture.pdf"
     },
     {
+      "record_id": "florence-ky-bids:8-20-26-world-of-golf-maintenance-parking-lot-improvements",
+      "source_id": "florence-ky-bids",
+      "bid_number": "Not published",
+      "status": "Accepting Bids",
+      "project_name": "World of Golf Maintenance Parking Lot Improvements",
+      "department": "City of Florence",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-08-20T00:00:00-04:00",
+      "due_display": "8-20-26",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Florence",
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/08/LEGAL-NOTICE-FOR-COF-WOG-MAINTENANCE-PL-IMPROVS-2026-0730.web_.pdf"
+    },
+    {
+      "record_id": "florence-ky-bids:8-20-26-stadium-south-parking-lot-resurface",
+      "source_id": "florence-ky-bids",
+      "bid_number": "Not published",
+      "status": "Accepting Bids",
+      "project_name": "Stadium South Parking Lot Resurface",
+      "department": "City of Florence",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-08-20T00:00:00-04:00",
+      "due_display": "8-20-26",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Florence",
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/08/LEGAL-NOTICE-FOR-COF-STADIUM-SOUTH-PARKING-LOT-RESURF-2026-0730.web_.pdf"
+    },
+    {
       "record_id": "florence-ky-bids:8-14-25-world-of-golf-bridge-renovations",
       "source_id": "florence-ky-bids",
       "bid_number": "Not published",
@@ -39480,7 +39536,7 @@
       "record_id": "kenton-county-ky-bids:277746",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-03",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Floor Mat Service",
       "department": "Procurement",
       "buyer": "Unknown",
@@ -40087,6 +40143,24 @@
       "match_type": "Construction match",
       "source": "City of Covington",
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/e294059e8b577357464cc89b14302002"
+    },
+    {
+      "record_id": "cvg-airport-bids:281110",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-044-RFP",
+      "status": "Open",
+      "project_name": "Ramp Tower Services",
+      "department": "Airport Operations",
+      "buyer": "Unknown",
+      "procurement_type": "Request For Proposal (Not Professional Services)",
+      "inclusion": "None published",
+      "due_at": "2026-09-03T18:00:00+00:00",
+      "due_display": "09/03/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/281110"
     },
     {
       "record_id": "cvg-airport-bids:284774",
