@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-13T13:08:26.625572Z",
-  "count": 2126,
+  "generated_at": "2026-08-14T13:03:21.063825Z",
+  "count": 2127,
   "open_count": 32,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1778,
+      "count": 1779,
       "open_count": 22
     },
     {
@@ -47,8 +47,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/kentoncounty/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 34,
-      "open_count": 2
+      "count": 35,
+      "open_count": 3
     },
     {
       "source_id": "campbell-county-ky-bids",
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 3,
-      "open_count": 3
+      "count": 2,
+      "open_count": 2
     },
     {
       "source_id": "cvg-airport-bids",
@@ -9654,7 +9654,7 @@
       "record_id": "cincinnati-business-opportunities:273C909338",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909338",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Fire Station 9 RTU Replacement",
       "department": "Public Services",
       "buyer": "Jennifer Sherman",
@@ -9662,7 +9662,7 @@
       "inclusion": "MBE 3%",
       "due_at": "2026-08-13T12:00:00-04:00",
       "due_display": "08/13/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Electrical match",
       "source": "City of Cincinnati",
@@ -9694,7 +9694,7 @@
       "record_id": "cincinnati-business-opportunities:273C909340",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909340",
-      "status": "Accepting Bids",
+      "status": "Award Pending",
       "project_name": "Central to McMicken at Stark Sewer (10240795)",
       "department": "Sewers",
       "buyer": "Sarah Dolly",
@@ -12674,7 +12674,7 @@
       "record_id": "cincinnati-business-opportunities:261R915531",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "261R915531",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "On Location Sound System Setup & Operations - REBID",
       "department": "CLERK OF COUNCIL",
       "buyer": "Margaret Elkanick",
@@ -19968,6 +19968,26 @@
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFP",
+      "department_id": "107"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:271R905200",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "271R905200",
+      "status": "Accepting Bids",
+      "project_name": "Contraceptives Inventory for OB-GYN Clinics",
+      "department": "CENTRAL PURCHASING",
+      "buyer": "LaShaun Marshall",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-08-27T12:00:00-04:00",
+      "due_display": "08/27/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
       "department_id": "107"
     },
     {
@@ -39557,6 +39577,24 @@
       "source_url": "https://www.newportky.gov/bids.aspx?bidID=4"
     },
     {
+      "record_id": "kenton-county-ky-bids:289985",
+      "source_id": "kenton-county-ky-bids",
+      "bid_number": "27-06",
+      "status": "Open",
+      "project_name": "Alexander and Mullins Road Resurfacing",
+      "department": "Public Works",
+      "buyer": "Unknown",
+      "procurement_type": "Request for Proposal",
+      "inclusion": "None published",
+      "due_at": "2026-09-04T20:00:00+00:00",
+      "due_display": "09/04/2026 04:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Kenton County",
+      "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/289985"
+    },
+    {
       "record_id": "kenton-county-ky-bids:284911",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-04",
@@ -40167,24 +40205,6 @@
       "match_type": "Other public bid",
       "source": "Kenton County",
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/196770"
-    },
-    {
-      "record_id": "covington-ky-bids:244395",
-      "source_id": "covington-ky-bids",
-      "bid_number": "RFSQ260701",
-      "status": "Open",
-      "project_name": "Professional Design, Engineering, and Construction Management Services; Euclid and Highland Avenues",
-      "department": "City of Covington",
-      "buyer": "Unknown",
-      "procurement_type": "Public solicitation",
-      "inclusion": "None published",
-      "due_at": "2026-08-13T14:30:00-04:00",
-      "due_display": "08/13/2026 02:30 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Covington",
-      "source_url": "https://covingtonky.bonfirehub.com/opportunities/84d9d86314a964c2be2ed12c94e087cb"
     },
     {
       "record_id": "covington-ky-bids:245853",
