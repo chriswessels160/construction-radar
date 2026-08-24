@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-23T12:36:31.119505Z",
-  "count": 2120,
-  "open_count": 26,
+  "generated_at": "2026-08-24T12:46:17.612602Z",
+  "count": 2119,
+  "open_count": 27,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1772,
+      "count": 1770,
       "open_count": 19
     },
     {
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 2,
-      "open_count": 2
+      "count": 3,
+      "open_count": 3
     },
     {
       "source_id": "cvg-airport-bids",
@@ -11269,26 +11269,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "255"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:221A901058",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221A901058",
-      "status": "Awarded",
-      "project_name": "AUTOMOTIVE WINDSHIELD REPAIR",
-      "department": "Various Agencies",
-      "buyer": "Lashaun Marshall",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-08-24T12:00:00-04:00",
-      "due_display": "08/24/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
     },
     {
       "record_id": "cincinnati-business-opportunities:RFP255X901014",
@@ -28171,26 +28151,6 @@
       "department_id": "300"
     },
     {
-      "record_id": "cincinnati-business-opportunities:221W906043",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221W906043",
-      "status": "All Bids Rejected",
-      "project_name": "TERM CONTRACT FOR SPORTS COURT SURFACE REPAIRS & RESURFACING",
-      "department": "Recreation",
-      "buyer": "Alexa Kafury",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-08-24T12:00:00-04:00",
-      "due_display": "08/24/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:RFP1045ETSTELECOM",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFP1045ETSTELECOM",
@@ -40101,6 +40061,24 @@
       "match_type": "Construction match",
       "source": "City of Covington",
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/589b375c0261cb686234c8c3e2f2c0bf"
+    },
+    {
+      "record_id": "covington-ky-bids:250501",
+      "source_id": "covington-ky-bids",
+      "bid_number": "RFP260803",
+      "status": "Open",
+      "project_name": "Professional Federal Advocacy and Grant Development Services",
+      "department": "City of Covington",
+      "buyer": "Unknown",
+      "procurement_type": "Public solicitation",
+      "inclusion": "None published",
+      "due_at": "2026-09-11T14:30:00-04:00",
+      "due_display": "09/11/2026 02:30 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Covington",
+      "source_url": "https://covingtonky.bonfirehub.com/opportunities/6baff2c0bbbea723b34c33e1c1ec5798"
     },
     {
       "record_id": "cvg-airport-bids:291275",
