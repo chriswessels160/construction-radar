@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-25T12:45:43.635192Z",
-  "count": 2119,
+  "generated_at": "2026-08-26T12:49:02.001473Z",
+  "count": 2120,
   "open_count": 29,
   "sources": [
     {
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1770,
-      "open_count": 21
+      "open_count": 20
     },
     {
       "source_id": "nky-sd1-bids",
@@ -28,8 +28,8 @@
       "url": "https://florence-ky.gov/publication-of-bid-solicitations-enacted-ordinances/",
       "kind": "florence",
       "status": "success",
-      "count": 46,
-      "open_count": 2
+      "count": 47,
+      "open_count": 3
     },
     {
       "source_id": "newport-ky-bids",
@@ -25402,7 +25402,7 @@
       "inclusion": "None published",
       "due_at": "2026-08-25T12:00:00-04:00",
       "due_display": "08/25/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
@@ -37811,6 +37811,24 @@
       "match_type": "Other public bid",
       "source": "City of Florence",
       "source_url": "https://florence-ky.gov/wp-content/uploads/2026/08/Fleet-Equipment-Bid-Advertisement.web_.pdf"
+    },
+    {
+      "record_id": "florence-ky-bids:9-18-26-payroll-human-resources-information-system-hris-rfp",
+      "source_id": "florence-ky-bids",
+      "bid_number": "Not published",
+      "status": "Accepting Bids",
+      "project_name": "Payroll & Human Resources Information System (HRIS) RFP",
+      "department": "City of Florence",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-09-18T00:00:00-04:00",
+      "due_display": "9-18-26",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Florence",
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/08/NOTICE-TO-BIDDERS.RFP-Payroll.pdf"
     },
     {
       "record_id": "florence-ky-bids:8-21-25-2025-26-storm-water-improvements-group-1",
