@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-29T16:14:28.172896Z",
-  "count": 2121,
+  "generated_at": "2026-08-30T16:15:24.387718Z",
+  "count": 2120,
   "open_count": 26,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1770,
+      "count": 1769,
       "open_count": 16
     },
     {
@@ -984,26 +984,6 @@
       "due_display": "10/12/2021 12:00 PM",
       "is_open": false,
       "awarded_contractor": "Prus Construction Co.",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:211C909091",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "211C909091",
-      "status": "Awarded",
-      "project_name": "WWT Roofing Replacements & Restorations 2021",
-      "department": "Sewers",
-      "buyer": "Joshua Tucker",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "SBE 3%",
-      "due_at": "2021-08-30T12:00:00-04:00",
-      "due_display": "08/30/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Imbus Roofing Co., Inc.",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -25394,7 +25374,7 @@
       "record_id": "cincinnati-business-opportunities:271R905601",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905601",
-      "status": "Accepting Bids",
+      "status": "Award Pending",
       "project_name": "Boiler & Cooler Water Conditioning Chemicals",
       "department": "Water Works",
       "buyer": "Melanie Allen",
