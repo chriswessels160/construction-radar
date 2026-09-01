@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-31T18:47:49.390499Z",
-  "count": 2118,
-  "open_count": 26,
+  "generated_at": "2026-09-01T16:05:14.829230Z",
+  "count": 2116,
+  "open_count": 24,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1767,
-      "open_count": 16
+      "count": 1766,
+      "open_count": 15
     },
     {
       "source_id": "nky-sd1-bids",
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 3,
-      "open_count": 3
+      "count": 2,
+      "open_count": 2
     },
     {
       "source_id": "cvg-airport-bids",
@@ -9731,6 +9731,26 @@
       "department_id": "400"
     },
     {
+      "record_id": "cincinnati-business-opportunities:273C909375",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909375",
+      "status": "Accepting Bids",
+      "project_name": "HAM-Cincy Eggleston RPP PID 124949",
+      "department": "TRANSPORTATION & ENGINEERING",
+      "buyer": "Maria Gadomski",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "SBE 7%",
+      "due_at": "2026-09-14T12:00:00-04:00",
+      "due_display": "09/14/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "233"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:273C919338",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C919338",
@@ -13902,7 +13922,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-01T12:00:00-04:00",
       "due_display": "09/01/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -17729,26 +17749,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:273C909375",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "273C909375",
-      "status": "Accepting Bids",
-      "project_name": "HAM-Cincy Eggleston RPP PID 124949",
-      "department": "TRANSPORTATION & ENGINEERING",
-      "buyer": "Maria Gadomski",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2026-09-14T12:00:00-04:00",
-      "due_display": "09/14/2026 12:00 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "233"
     },
     {
       "record_id": "cincinnati-business-opportunities:RFP054_2024_2",
@@ -22229,26 +22229,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFP",
       "department_id": "160"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:221A901009",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221A901009",
-      "status": "Awarded",
-      "project_name": "Programmable Traffic Controllers",
-      "department": "CENTRAL PURCHASING",
-      "buyer": "Chante Randolph",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-01T12:00:00-04:00",
-      "due_display": "09/01/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Traffic Control Products, Inc",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
     },
     {
       "record_id": "cincinnati-business-opportunities:242P911139",
@@ -40003,24 +39983,6 @@
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/196770"
     },
     {
-      "record_id": "covington-ky-bids:248206",
-      "source_id": "covington-ky-bids",
-      "bid_number": "ITB260801",
-      "status": "Open",
-      "project_name": "LCpl Justin Sims Memorial Park Playground Redevelopment",
-      "department": "City of Covington",
-      "buyer": "Unknown",
-      "procurement_type": "Public solicitation",
-      "inclusion": "None published",
-      "due_at": "2026-09-01T14:00:00-04:00",
-      "due_display": "09/01/2026 02:00 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "City of Covington",
-      "source_url": "https://covingtonky.bonfirehub.com/opportunities/331de203717977e6a243286c0b52a7d7"
-    },
-    {
       "record_id": "covington-ky-bids:249847",
       "source_id": "covington-ky-bids",
       "bid_number": "RFP260802",
@@ -40294,7 +40256,7 @@
       "record_id": "cvg-airport-bids:264962",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-036-ITB -Commodities",
-      "status": "Award Pending",
+      "status": "Closed",
       "project_name": "Information Technology Equipment & Commodity Software",
       "department": "Information Technology",
       "buyer": "Unknown",
@@ -40312,7 +40274,7 @@
       "record_id": "cvg-airport-bids:260585",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-029-RFP",
-      "status": "Under Review",
+      "status": "Closed",
       "project_name": "Interior Landscaping and Seasonal Decoration",
       "department": "Customer Experience",
       "buyer": "Unknown",
