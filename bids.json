@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-09T15:58:19.520979Z",
+  "generated_at": "2026-09-10T15:52:48.066029Z",
   "count": 2120,
-  "open_count": 26,
+  "open_count": 24,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1768,
+      "count": 1769,
       "open_count": 17
     },
     {
@@ -29,7 +29,7 @@
       "kind": "florence",
       "status": "success",
       "count": 46,
-      "open_count": 2
+      "open_count": 1
     },
     {
       "source_id": "newport-ky-bids",
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 3,
-      "open_count": 3
+      "count": 2,
+      "open_count": 2
     },
     {
       "source_id": "cvg-airport-bids",
@@ -9794,7 +9794,7 @@
       "record_id": "cincinnati-business-opportunities:275X901178",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "275X901178",
-      "status": "Accepting Bids",
+      "status": "Cancelled",
       "project_name": "Recycling Program Sponsorship Planning & Management Services",
       "department": "City Manager's Office",
       "buyer": "Jennifer Sherman",
@@ -9829,6 +9829,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFQ",
       "department_id": "400"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:275X911178",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "275X911178",
+      "status": "Accepting Bids",
+      "project_name": "Recycling Sponsorship & Management Services RE-SOLICITATION",
+      "department": "City Manager's Office",
+      "buyer": "Jennifer Sherman",
+      "procurement_type": "Request for Proposals",
+      "inclusion": "MBE 3%, WBE 4%",
+      "due_at": "2026-10-09T12:00:00-04:00",
+      "due_display": "10/09/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "RFP",
+      "department_id": "104"
     },
     {
       "record_id": "cincinnati-business-opportunities:223C909029A",
@@ -12994,7 +13014,7 @@
       "record_id": "cincinnati-business-opportunities:271R905059",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905059",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "Street Castings",
       "department": "Various Agencies",
       "buyer": "Santandris Bonner",
@@ -16034,7 +16054,7 @@
       "record_id": "cincinnati-business-opportunities:273C919355",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C919355",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Town Center Garage - Metal Deck Installation Phase II REBID",
       "department": "Public Services",
       "buyer": "Jennifer Sherman",
@@ -16042,7 +16062,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-09T12:00:00-04:00",
       "due_display": "09/09/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -37755,24 +37775,6 @@
       "source_url": "https://www.sd1.org/bids.aspx?bidID=219"
     },
     {
-      "record_id": "florence-ky-bids:9-10-26-stringtown-park-phase-1-project",
-      "source_id": "florence-ky-bids",
-      "bid_number": "Not published",
-      "status": "Accepting Bids",
-      "project_name": "Stringtown Park - Phase 1 Project",
-      "department": "City of Florence",
-      "buyer": "Unknown",
-      "procurement_type": "Unknown",
-      "inclusion": "None published",
-      "due_at": "2026-09-10T00:00:00-04:00",
-      "due_display": "9-10-26",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "City of Florence",
-      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/09/LEGAL-NOTICE-COF-STRINGTOWN-PARK-PH-1-2026-0806.9.10web.pdf"
-    },
-    {
       "record_id": "florence-ky-bids:9-18-26-payroll-human-resources-information-system-hris-rfp",
       "source_id": "florence-ky-bids",
       "bid_number": "Not published",
@@ -38576,6 +38578,24 @@
       "inclusion": "None published",
       "due_at": "2026-09-03T00:00:00-04:00",
       "due_display": "9-3-26",
+      "is_open": false,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Florence",
+      "source_url": "https://florence-ky.gov/publication-of-bid-solicitations-enacted-ordinances/"
+    },
+    {
+      "record_id": "florence-ky-bids:9-10-26-stringtown-park-phase-1-project",
+      "source_id": "florence-ky-bids",
+      "bid_number": "Not published",
+      "status": "Closed",
+      "project_name": "Stringtown Park - Phase 1 Project",
+      "department": "City of Florence",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-09-10T00:00:00-04:00",
+      "due_display": "9-10-26",
       "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
@@ -40039,24 +40059,6 @@
       "match_type": "Other public bid",
       "source": "Kenton County",
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/196770"
-    },
-    {
-      "record_id": "covington-ky-bids:249847",
-      "source_id": "covington-ky-bids",
-      "bid_number": "RFP260802",
-      "status": "Open",
-      "project_name": "Building Automation System Replacement",
-      "department": "City of Covington",
-      "buyer": "Unknown",
-      "procurement_type": "Public solicitation",
-      "inclusion": "None published",
-      "due_at": "2026-09-10T14:30:00-04:00",
-      "due_display": "09/10/2026 02:30 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Covington",
-      "source_url": "https://covingtonky.bonfirehub.com/opportunities/589b375c0261cb686234c8c3e2f2c0bf"
     },
     {
       "record_id": "covington-ky-bids:250501",
