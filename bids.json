@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-10T15:52:48.066029Z",
+  "generated_at": "2026-09-11T15:54:42.342721Z",
   "count": 2120,
-  "open_count": 24,
+  "open_count": 23,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1769,
+      "count": 1770,
       "open_count": 17
     },
     {
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 2,
-      "open_count": 2
+      "count": 1,
+      "open_count": 1
     },
     {
       "source_id": "cvg-airport-bids",
@@ -9740,8 +9740,8 @@
       "buyer": "Margaret Elkanick",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 4%, WBE 7%",
-      "due_at": "2026-09-15T12:00:00-04:00",
-      "due_display": "09/15/2026 12:00 PM",
+      "due_at": "2026-09-17T12:00:00-04:00",
+      "due_display": "09/17/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Electrical match",
@@ -11169,6 +11169,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "101"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:271R905051",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "271R905051",
+      "status": "Accepting Bids",
+      "project_name": "Sodium Hexametaphosphate",
+      "department": "CITY MANAGER",
+      "buyer": "Tammy Kaser",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-01T12:00:00-04:00",
+      "due_display": "10/01/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "282"
     },
     {
       "record_id": "cincinnati-business-opportunities:2018-018 PRERELEASE",
@@ -28182,7 +28202,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-10T12:00:00-04:00",
       "due_display": "09/10/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
@@ -34034,7 +34054,7 @@
       "record_id": "cincinnati-business-opportunities:272P902537",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "272P902537",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "(3) 2026 or Newer Thompson 6'' Self Priming Cast Iron Trash",
       "department": "Water Works",
       "buyer": "Alexa Kafury",
@@ -40059,24 +40079,6 @@
       "match_type": "Other public bid",
       "source": "Kenton County",
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/196770"
-    },
-    {
-      "record_id": "covington-ky-bids:250501",
-      "source_id": "covington-ky-bids",
-      "bid_number": "RFP260803",
-      "status": "Open",
-      "project_name": "Professional Federal Advocacy and Grant Development Services",
-      "department": "City of Covington",
-      "buyer": "Unknown",
-      "procurement_type": "Public solicitation",
-      "inclusion": "None published",
-      "due_at": "2026-09-11T14:30:00-04:00",
-      "due_display": "09/11/2026 02:30 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "City of Covington",
-      "source_url": "https://covingtonky.bonfirehub.com/opportunities/6baff2c0bbbea723b34c33e1c1ec5798"
     },
     {
       "record_id": "covington-ky-bids:252058",
