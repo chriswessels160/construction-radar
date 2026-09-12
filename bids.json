@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-11T15:54:42.342721Z",
+  "generated_at": "2026-09-12T15:01:29.128705Z",
   "count": 2120,
   "open_count": 23,
   "sources": [
@@ -9680,8 +9680,8 @@
       "buyer": "Josh Tucker",
       "procurement_type": "Invitation to Bid",
       "inclusion": "DBE 5.4%",
-      "due_at": "2026-09-16T12:00:00-04:00",
-      "due_display": "09/16/2026 12:00 PM",
+      "due_at": "2026-09-24T12:00:00-04:00",
+      "due_display": "09/24/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
@@ -11176,7 +11176,7 @@
       "bid_number": "271R905051",
       "status": "Accepting Bids",
       "project_name": "Sodium Hexametaphosphate",
-      "department": "CITY MANAGER",
+      "department": "Water Works",
       "buyer": "Tammy Kaser",
       "procurement_type": "Invitation to Bid",
       "inclusion": "None published",
@@ -28194,7 +28194,7 @@
       "record_id": "cincinnati-business-opportunities:271R905534",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905534",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Utility Golf Cart Rental for Cincinnati Parks",
       "department": "CENTRAL PURCHASING",
       "buyer": "Margaret Elkanick",
@@ -37795,7 +37795,7 @@
       "source_url": "https://www.sd1.org/bids.aspx?bidID=219"
     },
     {
-      "record_id": "florence-ky-bids:9-18-26-payroll-human-resources-information-system-hris-rfp",
+      "record_id": "florence-ky-bids:9-24-26-payroll-human-resources-information-system-hris-rfp",
       "source_id": "florence-ky-bids",
       "bid_number": "Not published",
       "status": "Accepting Bids",
@@ -37804,13 +37804,13 @@
       "buyer": "Unknown",
       "procurement_type": "Unknown",
       "inclusion": "None published",
-      "due_at": "2026-09-18T00:00:00-04:00",
-      "due_display": "9-18-26",
+      "due_at": "2026-09-24T00:00:00-04:00",
+      "due_display": "9-24-26",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Florence",
-      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/08/NOTICE-TO-BIDDERS.RFP-Payroll.pdf"
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/09/NOTICE-TO-BIDDERS.RFP-Payroll.-9.18.26-web.pdf"
     },
     {
       "record_id": "florence-ky-bids:9-8-26-auction-surplus",
