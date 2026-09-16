@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-15T16:18:05.228489Z",
-  "count": 2122,
+  "generated_at": "2026-09-16T16:10:40.213682Z",
+  "count": 2124,
   "open_count": 24,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1772,
+      "count": 1773,
       "open_count": 18
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
       "status": "success",
-      "count": 128,
+      "count": 129,
       "open_count": 1
     },
     {
@@ -7594,7 +7594,7 @@
       "record_id": "cincinnati-business-opportunities:261R925538",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "261R925538",
-      "status": "Under Review",
+      "status": "Award Pending",
       "project_name": "Bulk and Bagged Mulch and Soil Conditioners",
       "department": "PROCUREMENT",
       "buyer": "Shannon Brower",
@@ -9700,9 +9700,9 @@
       "buyer": "Josh Tucker",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MSD SBE 15%",
-      "due_at": "2026-09-24T12:00:00-04:00",
-      "due_display": "09/24/2026 12:00 PM",
-      "is_open": true,
+      "due_at": "2026-09-16T07:00:00-04:00",
+      "due_display": "09/16/2026 7:00 AM",
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -9809,6 +9809,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFP",
       "department_id": "104"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:275X901186",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "275X901186",
+      "status": "Accepting Bids",
+      "project_name": "Barrier Dam Trash Rack Replacement Design",
+      "department": "Water Works",
+      "buyer": "Tammy Kaser",
+      "procurement_type": "Request for Proposals",
+      "inclusion": "WBE 4%",
+      "due_at": "2026-10-13T03:00:00-04:00",
+      "due_display": "10/13/2026 3:00 AM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "RFP",
+      "department_id": "311"
     },
     {
       "record_id": "cincinnati-business-opportunities:275X901189",
@@ -13937,7 +13957,7 @@
       "status": "Accepting Bids",
       "project_name": "Contraceptives Inventory for OB-GYN Clinics",
       "department": "CENTRAL PURCHASING",
-      "buyer": "Shannon Brower",
+      "buyer": "Lashaun Marshall",
       "procurement_type": "Invitation to Bid",
       "inclusion": "None published",
       "due_at": "2026-09-22T12:00:00-04:00",
@@ -22474,7 +22494,7 @@
       "record_id": "cincinnati-business-opportunities:271R905094",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905094",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "Chlorinating & Oxidizing Agents",
       "department": "PROCUREMENT",
       "buyer": "Shannon Brower",
@@ -22483,7 +22503,7 @@
       "due_at": "2026-08-12T12:00:00-04:00",
       "due_display": "08/12/2026 12:00 PM",
       "is_open": false,
-      "awarded_contractor": "None published",
+      "awarded_contractor": "Chemicals, Inc.",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -37437,6 +37457,24 @@
       "match_type": "Other public bid",
       "source": "Sanitation District No. 1",
       "source_url": "https://www.sd1.org/bids.aspx?bidID=143"
+    },
+    {
+      "record_id": "nky-sd1-bids:244",
+      "source_id": "nky-sd1-bids",
+      "bid_number": "27-001",
+      "status": "Awarded",
+      "project_name": "15-16% Peracetic Acid Solution",
+      "department": "Sanitation District No. 1",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "",
+      "due_display": "Upon Contract",
+      "is_open": false,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Sanitation District No. 1",
+      "source_url": "https://www.sd1.org/bids.aspx?bidID=244"
     },
     {
       "record_id": "nky-sd1-bids:157",
