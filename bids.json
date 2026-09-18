@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-17T16:18:29.673224Z",
-  "count": 2126,
-  "open_count": 25,
+  "generated_at": "2026-09-18T15:52:19.652950Z",
+  "count": 2128,
+  "open_count": 26,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1774,
-      "open_count": 19
+      "count": 1776,
+      "open_count": 21
     },
     {
       "source_id": "nky-sd1-bids",
@@ -77,7 +77,7 @@
       "kind": "opengov",
       "status": "success",
       "count": 94,
-      "open_count": 1
+      "open_count": 0
     },
     {
       "source_id": "nku-bids",
@@ -14054,7 +14054,7 @@
       "record_id": "cincinnati-business-opportunities:271R915557",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R915557",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "Purchase & Installation of Replacement Centrifugal Pumps",
       "department": "Sewers",
       "buyer": "Santandris Bonner",
@@ -19954,7 +19954,7 @@
       "record_id": "cincinnati-business-opportunities:271R905200",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905200",
-      "status": "Accepting Bids",
+      "status": "No Responses Received",
       "project_name": "Contraceptives Inventory for OB-GYN Clinics",
       "department": "CENTRAL PURCHASING",
       "buyer": "LaShaun Marshall",
@@ -21414,7 +21414,7 @@
       "record_id": "cincinnati-business-opportunities:272P902424",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "272P902424",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "Purchase of Two (2) Solid Phase Extraction (SPE)",
       "department": "Sewers",
       "buyer": "Santandris Bonner",
@@ -23831,6 +23831,26 @@
       "department_id": "233"
     },
     {
+      "record_id": "cincinnati-business-opportunities:272P902426",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "272P902426",
+      "status": "Accepting Bids",
+      "project_name": "DISTRIBUTION VALVE SECTION - VALVE TURNING TRUCK",
+      "department": "Water Works",
+      "buyer": "Tammy Kaser",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-01T12:00:00-04:00",
+      "due_display": "10/01/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "304"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:232P901272",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "232P901272",
@@ -25011,6 +25031,26 @@
       "department_id": "400"
     },
     {
+      "record_id": "cincinnati-business-opportunities:275X901183",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "275X901183",
+      "status": "Accepting Bids",
+      "project_name": "Inwood Park Renovation Plan",
+      "department": "PARKS",
+      "buyer": "Margaret Elkanick",
+      "procurement_type": "Request for Proposals",
+      "inclusion": "None published",
+      "due_at": "2026-10-15T15:00:00-04:00",
+      "due_display": "10/15/2026 3:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "RFP",
+      "department_id": "200"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:RFQ022_2024",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFQ022_2024",
@@ -26174,7 +26214,7 @@
       "record_id": "cincinnati-business-opportunities:S-RFP255X901185",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "S-RFP255X901185",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "BWC Research Partner for CPD Records",
       "department": "CENTRAL PURCHASING",
       "buyer": "LaShaun Marshall",
@@ -40218,7 +40258,7 @@
       "record_id": "cvg-airport-bids:291275",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-045-ITB",
-      "status": "Open",
+      "status": "Under Review",
       "project_name": "Runway 18L/36R Tunnel Rehabilitation & Safety Improvements",
       "department": "Planning & Development",
       "buyer": "Unknown",
@@ -40226,7 +40266,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-17T18:00:00+00:00",
       "due_display": "09/17/2026 02:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "CVG Airport",
