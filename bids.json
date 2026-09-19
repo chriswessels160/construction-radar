@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-18T15:52:19.652950Z",
-  "count": 2128,
+  "generated_at": "2026-09-19T15:24:38.428333Z",
+  "count": 2129,
   "open_count": 26,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1776,
+      "count": 1777,
       "open_count": 21
     },
     {
@@ -9722,7 +9722,7 @@
       "inclusion": "SBE 7%",
       "due_at": "2026-09-18T12:00:00-04:00",
       "due_display": "09/18/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -28471,6 +28471,26 @@
       "department_id": "107"
     },
     {
+      "record_id": "cincinnati-business-opportunities:RFP275X901191",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "RFP275X901191",
+      "status": "Accepting Bids",
+      "project_name": "Columbia Pkwy & Riverside Dr Landslide Correction Dsgn/Build",
+      "department": "TRANSPORTATION & ENGINEERING",
+      "buyer": "Maria Gadomski",
+      "procurement_type": "Request for Proposals",
+      "inclusion": "None published",
+      "due_at": "2026-10-23T16:00:00-04:00",
+      "due_display": "10/23/2026 4:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "RFP",
+      "department_id": "233"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:222P901098",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "222P901098",
@@ -31794,7 +31814,7 @@
       "record_id": "cincinnati-business-opportunities:RFI275X901187",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFI275X901187",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Lunken Integrated Management Software Software Solutions",
       "department": "TRANSPORTATION & ENGINEERING",
       "buyer": "Maria Gadomski",
@@ -39574,7 +39594,7 @@
       "record_id": "kenton-county-ky-bids:295340",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-07",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Pioneer Park - Cordero Fence Replacement",
       "department": "Parks and Recreation",
       "buyer": "Unknown",
