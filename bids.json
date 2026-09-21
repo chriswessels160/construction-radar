@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-20T15:29:52.086574Z",
-  "count": 2129,
+  "generated_at": "2026-09-21T17:55:21.233738Z",
+  "count": 2127,
   "open_count": 26,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1777,
+      "count": 1775,
       "open_count": 21
     },
     {
@@ -1445,26 +1445,6 @@
       "is_open": false,
       "awarded_contractor": "ADLETA, INC.; Prus Construction Company; Queen City Mechanicals, Inc.; Rack & Ballauer Excavating Co., Inc.",
       "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:222P901004",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "222P901004",
-      "status": "Awarded",
-      "project_name": "DEMOLITION AND SITE RESTORATION OF 1400 HARRISON AVENUE",
-      "department": "CENTRAL PURCHASING",
-      "buyer": "Chante Randolph",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "MBE 9%, WBE 6%",
-      "due_at": "2021-09-21T12:00:00-04:00",
-      "due_display": "09/21/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Battle Axe Construction LLC",
-      "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
@@ -22531,26 +22511,6 @@
       "department_id": "107"
     },
     {
-      "record_id": "cincinnati-business-opportunities:224R905425",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "224R905425",
-      "status": "No Responses Received",
-      "project_name": "Specialty Bearings & Seals",
-      "department": "Sewers",
-      "buyer": "Joshua Tucker",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-21T12:00:00-04:00",
-      "due_display": "09/21/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:232P901242",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "232P901242",
@@ -40368,7 +40328,7 @@
       "record_id": "cvg-airport-bids:271153",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-041-RFP",
-      "status": "Under Review",
+      "status": "Award Pending",
       "project_name": "Commercial Vehicle Management Software System",
       "department": "Parking & Ground Transportation",
       "buyer": "Unknown",
