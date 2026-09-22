@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-21T17:55:21.233738Z",
+  "generated_at": "2026-09-22T16:19:23.458437Z",
   "count": 2127,
-  "open_count": 26,
+  "open_count": 25,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1775,
-      "open_count": 21
+      "count": 1774,
+      "open_count": 19
     },
     {
       "source_id": "nky-sd1-bids",
@@ -76,8 +76,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/cvgairport/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 94,
-      "open_count": 0
+      "count": 95,
+      "open_count": 1
     },
     {
       "source_id": "nku-bids",
@@ -13962,7 +13962,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-22T12:00:00-04:00",
       "due_display": "09/22/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
@@ -20722,7 +20722,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-22T12:00:00-04:00",
       "due_display": "09/22/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
@@ -28968,26 +28968,6 @@
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFQ",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:222P901041",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "222P901041",
-      "status": "Awarded",
-      "project_name": "FURNISH & INSTALL STAINLESS STEEL DUMP BODY ON CITY CHASSIS",
-      "department": "Water Works",
-      "buyer": "Melanie Roaden",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-22T12:00:00-04:00",
-      "due_display": "09/22/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Kaffenbarger Truck Equip Co.",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
       "department_id": "107"
     },
     {
@@ -40233,6 +40213,24 @@
       "match_type": "Other public bid",
       "source": "City of Covington",
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/41224a731714386363899484dae5c9ee"
+    },
+    {
+      "record_id": "cvg-airport-bids:304702",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-047-ITB - Equip AIP",
+      "status": "Open",
+      "project_name": "Conveyance Equipment",
+      "department": "Planning & Development",
+      "buyer": "Unknown",
+      "procurement_type": "Invitation to Bid (Equipment AIP Eligible)",
+      "inclusion": "None published",
+      "due_at": "2026-10-15T18:00:00+00:00",
+      "due_display": "10/15/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/304702"
     },
     {
       "record_id": "cvg-airport-bids:291275",
