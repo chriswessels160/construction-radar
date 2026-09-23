@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-22T16:19:23.458437Z",
-  "count": 2127,
+  "generated_at": "2026-09-23T16:09:12.071262Z",
+  "count": 2125,
   "open_count": 25,
   "sources": [
     {
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1774,
-      "open_count": 19
+      "count": 1772,
+      "open_count": 20
     },
     {
       "source_id": "nky-sd1-bids",
@@ -38,7 +38,7 @@
       "kind": "civicplus",
       "status": "success",
       "count": 45,
-      "open_count": 1
+      "open_count": 0
     },
     {
       "source_id": "kenton-county-ky-bids",
@@ -13911,6 +13911,26 @@
       "department_id": "107"
     },
     {
+      "record_id": "cincinnati-business-opportunities:272P902556",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "272P902556",
+      "status": "Accepting Bids",
+      "project_name": "SMU BOBCAT MINI EXCAVATOR",
+      "department": "Water Works",
+      "buyer": "Tammy Kaser",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-06T12:00:00-04:00",
+      "due_display": "10/06/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "311"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:232P901088",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "232P901088",
@@ -20714,7 +20734,7 @@
       "record_id": "cincinnati-business-opportunities:275X901180",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "275X901180",
-      "status": "Accepting Bids",
+      "status": "RFI Closed",
       "project_name": "Organic Waste Management Strategic Planning - Vendors & Cont",
       "department": "City Manager's Office",
       "buyer": "Jennifer Sherman",
@@ -24411,26 +24431,6 @@
       "department_id": "107"
     },
     {
-      "record_id": "cincinnati-business-opportunities:224A901642",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "224A901642",
-      "status": "No Responses Received",
-      "project_name": "Skim Bags",
-      "department": "Sewers",
-      "buyer": "Joshua Tucker",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-23T12:00:00-04:00",
-      "due_display": "09/23/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:241R905236",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "241R905236",
@@ -25824,26 +25824,6 @@
       "due_display": "12/29/2022 12:00 PM",
       "is_open": false,
       "awarded_contractor": "Planes Moving & Storage Inc",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:221R905264",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221R905264",
-      "status": "Awarded",
-      "project_name": "Training Services for CDL,Heavy Equipment and Crane Operator",
-      "department": "Various Agencies",
-      "buyer": "Melanie Roaden",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-23T12:00:00-04:00",
-      "due_display": "09/23/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Crane Training and Certification of the Midwest, Inc.",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -30349,26 +30329,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "256"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:222P911007",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "222P911007",
-      "status": "Awarded",
-      "project_name": "2021 or NEWER FORD F550 XL CAB & CHASSIS REBID",
-      "department": "Public Services",
-      "buyer": "Lashaun Marshall",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-09-23T12:00:00-04:00",
-      "due_display": "09/23/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Fuller Ford",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
     },
     {
       "record_id": "cincinnati-business-opportunities:242P901155",
@@ -38778,7 +38738,7 @@
       "record_id": "newport-ky-bids:47",
       "source_id": "newport-ky-bids",
       "bid_number": "47",
-      "status": "Open",
+      "status": "Closed",
       "project_name": "2026 Annual Supplies Bid",
       "department": "City of Newport",
       "buyer": "Unknown",
@@ -38786,7 +38746,7 @@
       "inclusion": "None published",
       "due_at": "2026-09-23T10:00:00-04:00",
       "due_display": "9/23/2026 10:00 AM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Newport",
@@ -39570,7 +39530,7 @@
       "record_id": "kenton-county-ky-bids:284911",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-04",
-      "status": "Under Review",
+      "status": "Closed",
       "project_name": "Cleaning & Laundry Services",
       "department": "Procurement",
       "buyer": "Unknown",
