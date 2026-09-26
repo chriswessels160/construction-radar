@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-25T16:35:33.841403Z",
+  "generated_at": "2026-09-26T15:49:31.352146Z",
   "count": 2128,
   "open_count": 25,
   "sources": [
@@ -9594,7 +9594,7 @@
       "record_id": "cincinnati-business-opportunities:273C909339",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909339",
-      "status": "Under Review",
+      "status": "All Bids Rejected",
       "project_name": "City Hall and Renaissance Building Roof Replacements",
       "department": "Public Services",
       "buyer": "Jennifer Sherman",
