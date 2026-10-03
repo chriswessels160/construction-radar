@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-02T17:30:22.664843Z",
-  "count": 2129,
-  "open_count": 27,
+  "generated_at": "2026-10-03T15:45:46.494301Z",
+  "count": 2130,
+  "open_count": 28,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1772,
-      "open_count": 18
+      "count": 1773,
+      "open_count": 19
     },
     {
       "source_id": "nky-sd1-bids",
@@ -19851,6 +19851,26 @@
       "department_id": "300"
     },
     {
+      "record_id": "cincinnati-business-opportunities:273C909405",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909405",
+      "status": "Accepting Bids",
+      "project_name": "Riverside Restroom Renovation",
+      "department": "RECREATION",
+      "buyer": "Shannon Brower",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-21T12:00:00-04:00",
+      "due_display": "10/21/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "190"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:RFP1042CEDBOYD",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFP1042CEDBOYD",
@@ -23434,7 +23454,7 @@
       "record_id": "cincinnati-business-opportunities:273C909370",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909370",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "2026 Lead Service Line Replacement Contract 1",
       "department": "Water Works",
       "buyer": "Alexa Kafury",
