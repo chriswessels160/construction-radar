@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-05T20:16:20.711895Z",
+  "generated_at": "2026-10-06T17:59:06.232087Z",
   "count": 2130,
-  "open_count": 30,
+  "open_count": 31,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1772,
-      "open_count": 20
+      "open_count": 21
     },
     {
       "source_id": "nky-sd1-bids",
@@ -9431,6 +9431,26 @@
       "department_id": "400"
     },
     {
+      "record_id": "cincinnati-business-opportunities:271W906032",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "271W906032",
+      "status": "Accepting Bids",
+      "project_name": "Term Contract for Remedial Maintenance Work on Stormwater Dr",
+      "department": "Water Works",
+      "buyer": "Melanie Allen",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "MBE 4%, WBE 6%, Responsible Bidder",
+      "due_at": "2026-10-23T12:00:00-04:00",
+      "due_display": "10/23/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "282"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:271W906036",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271W906036",
@@ -9469,6 +9489,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "107"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:271W906079",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "271W906079",
+      "status": "Accepting Bids",
+      "project_name": "Painting Services",
+      "department": "Public Services",
+      "buyer": "Jennifer Sherman",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "MBE 6%, WBE 1%",
+      "due_at": "2026-10-27T12:00:00-04:00",
+      "due_display": "10/27/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "282"
     },
     {
       "record_id": "cincinnati-business-opportunities:273C909285",
@@ -9669,6 +9709,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "400"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:273C909388",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909388",
+      "status": "Accepting Bids",
+      "project_name": "Geier Esplanade Fence Repair",
+      "department": "PARKS",
+      "buyer": "Margaret Elkanick",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "MBE 5%, WBE 7%",
+      "due_at": "2026-10-13T12:00:00-04:00",
+      "due_display": "10/13/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "200"
     },
     {
       "record_id": "cincinnati-business-opportunities:273C909391",
@@ -15671,26 +15731,6 @@
       "department_id": "256"
     },
     {
-      "record_id": "cincinnati-business-opportunities:273C909388",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "273C909388",
-      "status": "Accepting Bids",
-      "project_name": "Geier Esplanade Fence Repair",
-      "department": "PARKS",
-      "buyer": "Margaret Elkanick",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2026-10-13T12:00:00-04:00",
-      "due_display": "10/13/2026 12:00 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "200"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:231A901082",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "231A901082",
@@ -15969,26 +16009,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFP",
       "department_id": "200"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:271W906032",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "271W906032",
-      "status": "Accepting Bids",
-      "project_name": "Term Contract for Remedial Maintenance Work on Stormwater Dr",
-      "department": "DEPT.OF ECON INC AND PROC",
-      "buyer": "Shannon Brower",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2026-10-23T12:00:00-04:00",
-      "due_display": "10/23/2026 12:00 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "282"
     },
     {
       "record_id": "cincinnati-business-opportunities:RFP889PARKPARKING",
@@ -33565,26 +33585,6 @@
       "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:222P901052",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "222P901052",
-      "status": "Awarded",
-      "project_name": "FURNISH & INSTALL UTILITY BODIES WITH VALVE TURNING MACHINES",
-      "department": "Water Works",
-      "buyer": "Melanie Roaden",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-10-06T12:00:00-04:00",
-      "due_display": "10/06/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Kaffenbarger Truck Equip Co",
-      "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
