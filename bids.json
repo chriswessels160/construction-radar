@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-08T18:28:41.223026Z",
-  "count": 2134,
-  "open_count": 37,
+  "generated_at": "2026-10-09T17:59:40.119632Z",
+  "count": 2136,
+  "open_count": 38,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1775,
-      "open_count": 27
+      "count": 1777,
+      "open_count": 29
     },
     {
       "source_id": "nky-sd1-bids",
@@ -29,7 +29,7 @@
       "kind": "florence",
       "status": "success",
       "count": 46,
-      "open_count": 1
+      "open_count": 0
     },
     {
       "source_id": "newport-ky-bids",
@@ -9816,7 +9816,7 @@
       "bid_number": "273C909397",
       "status": "Accepting Bids",
       "project_name": "Bramble Park Trail",
-      "department": "RECREATION",
+      "department": "Parks",
       "buyer": "Shannon Brower",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 8%, WBE 10%",
@@ -16611,6 +16611,26 @@
       "department_id": "107"
     },
     {
+      "record_id": "cincinnati-business-opportunities:273C909412",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909412",
+      "status": "Accepting Bids",
+      "project_name": "Sycamore Street Retaining Wall PID 122597",
+      "department": "TRANSPORTATION & ENGINEERING",
+      "buyer": "Maria Gadomski",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-11-06T12:00:00-05:00",
+      "due_display": "11/06/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "233"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:242P911035",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "242P911035",
@@ -20671,6 +20691,26 @@
       "department_id": "107"
     },
     {
+      "record_id": "cincinnati-business-opportunities:273C909409",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909409",
+      "status": "Accepting Bids",
+      "project_name": "Hopple Street HAM CR 163 5.5 - PID 121735",
+      "department": "TRANSPORTATION & ENGINEERING",
+      "buyer": "Maria Gadomski",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-11-06T12:00:00-05:00",
+      "due_display": "11/06/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "233"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:241A901304",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "241A901304",
@@ -23614,7 +23654,7 @@
       "record_id": "cincinnati-business-opportunities:273C909393",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909393",
-      "status": "Under Review",
+      "status": "No Award Made",
       "project_name": "Town Center Garage - Exterior Lighting Addition",
       "department": "Public Services",
       "buyer": "Jennifer Sherman",
@@ -34014,7 +34054,7 @@
       "record_id": "cincinnati-business-opportunities:273C909392",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909392",
-      "status": "Under Review",
+      "status": "No Award Made",
       "project_name": "L&N Loop Parking Lot - Exterior Lighting Addition",
       "department": "Public Services",
       "buyer": "Jennifer Sherman",
@@ -35666,7 +35706,7 @@
       "record_id": "nky-sd1-bids:243",
       "source_id": "nky-sd1-bids",
       "bid_number": "C600-13",
-      "status": "Closed",
+      "status": "Cancelled",
       "project_name": "6th Avenue Sanitary Sewer Relocation",
       "department": "Sanitation District No. 1",
       "buyer": "Unknown",
@@ -37942,7 +37982,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-09T00:00:00-04:00",
       "due_display": "10-9-26",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Florence",
