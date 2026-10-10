@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-09T17:59:40.119632Z",
+  "generated_at": "2026-10-10T17:00:29.116553Z",
   "count": 2136,
-  "open_count": 38,
+  "open_count": 37,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1777,
-      "open_count": 29
+      "open_count": 28
     },
     {
       "source_id": "nky-sd1-bids",
@@ -9780,8 +9780,8 @@
       "buyer": "Margaret Elkanick",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 5%, WBE 7%",
-      "due_at": "2026-10-13T12:00:00-04:00",
-      "due_display": "10/13/2026 12:00 PM",
+      "due_at": "2026-10-15T12:00:00-04:00",
+      "due_display": "10/15/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
@@ -21322,7 +21322,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-09T16:00:00-04:00",
       "due_display": "10/09/2026 4:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
