@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-14T16:35:37.422698Z",
-  "count": 2128,
-  "open_count": 41,
+  "generated_at": "2026-10-15T16:22:01.610846Z",
+  "count": 2133,
+  "open_count": 46,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1766,
-      "open_count": 29
+      "count": 1768,
+      "open_count": 31
     },
     {
       "source_id": "nky-sd1-bids",
@@ -29,7 +29,7 @@
       "kind": "florence",
       "status": "success",
       "count": 46,
-      "open_count": 0
+      "open_count": 1
     },
     {
       "source_id": "newport-ky-bids",
@@ -38,7 +38,7 @@
       "kind": "civicplus",
       "status": "success",
       "count": 50,
-      "open_count": 5
+      "open_count": 4
     },
     {
       "source_id": "kenton-county-ky-bids",
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 1,
-      "open_count": 1
+      "count": 3,
+      "open_count": 3
     },
     {
       "source_id": "cvg-airport-bids",
@@ -76,8 +76,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/cvgairport/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 97,
-      "open_count": 3
+      "count": 98,
+      "open_count": 4
     },
     {
       "source_id": "nku-bids",
@@ -9740,8 +9740,8 @@
       "buyer": "Margaret Elkanick",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 5%, WBE 7%",
-      "due_at": "2026-10-15T12:00:00-04:00",
-      "due_display": "10/15/2026 12:00 PM",
+      "due_at": "2026-10-15T16:00:00-04:00",
+      "due_display": "10/15/2026 4:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
@@ -10389,26 +10389,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "RFP",
       "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:RFP810OESWARMUP",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "RFP810OESWARMUP",
-      "status": "No Award Made",
-      "project_name": "Warmup Cincy Tenant Energy Efficiency Program - OES",
-      "department": "City Manager's Office",
-      "buyer": "Isabel Harney",
-      "procurement_type": "Request for Proposals",
-      "inclusion": "MBE 4%, WBE 0%",
-      "due_at": "2021-10-15T16:00:00-04:00",
-      "due_display": "10/15/2021 4:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "RFP",
-      "department_id": "137"
     },
     {
       "record_id": "cincinnati-business-opportunities:RFP870OESMEECUP",
@@ -22334,7 +22314,7 @@
       "record_id": "cincinnati-business-opportunities:272P902462",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "272P902462",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "(1) 2026 or Newer Full Size Window Van",
       "department": "Sewers",
       "buyer": "Jamaiyla Cloud-Reed",
@@ -22343,7 +22323,7 @@
       "due_at": "2026-09-03T12:00:00-04:00",
       "due_display": "09/03/2026 12:00 PM",
       "is_open": false,
-      "awarded_contractor": "None published",
+      "awarded_contractor": "WALT SWEENEY FORD INC",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -25649,6 +25629,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "256"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:272P902596",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "272P902596",
+      "status": "Accepting Bids",
+      "project_name": "Mobile ALPR(Automated License Plate Recognition)",
+      "department": "CENTRAL PURCHASING",
+      "buyer": "Lashaun Marshall",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-28T12:00:00-04:00",
+      "due_display": "10/28/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "282"
     },
     {
       "record_id": "cincinnati-business-opportunities:242P901209",
@@ -29851,6 +29851,26 @@
       "department_id": "256"
     },
     {
+      "record_id": "cincinnati-business-opportunities:261R925540",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "261R925540",
+      "status": "Accepting Bids",
+      "project_name": "Warehouse Steel & Aluminum - 2nd Rebid",
+      "department": "Various Agencies",
+      "buyer": "Jamaiyla Cloud-Reed",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-10-29T12:00:00-04:00",
+      "due_display": "10/29/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "107"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:RFQ992GCWWMTAIRY",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFQ992GCWWMTAIRY",
@@ -30662,7 +30682,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-15T12:00:00-04:00",
       "due_display": "10/15/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -32371,6 +32391,26 @@
       "department_id": "232"
     },
     {
+      "record_id": "cincinnati-business-opportunities:271R905544",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "271R905544",
+      "status": "Accepting Bids",
+      "project_name": "Janitorial Services",
+      "department": "CENTRAL PURCHASING",
+      "buyer": "Shannon Brower",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "None published",
+      "due_at": "2026-11-04T12:00:00-05:00",
+      "due_display": "11/04/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "282"
+    },
+    {
       "record_id": "cincinnati-business-opportunities:232P901163",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "232P901163",
@@ -32514,7 +32554,7 @@
       "record_id": "cincinnati-business-opportunities:271R905537",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905537",
-      "status": "Under Review",
+      "status": "Awarded",
       "project_name": "Inspection & Maintenance of Fire Extinguishers",
       "department": "Various Agencies",
       "buyer": "Jamaiyla Cloud-Reed",
@@ -32523,7 +32563,7 @@
       "due_at": "2026-09-03T12:00:00-04:00",
       "due_display": "09/03/2026 12:00 PM",
       "is_open": false,
-      "awarded_contractor": "None published",
+      "awarded_contractor": "Nelbud Services LLC",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -37751,22 +37791,22 @@
       "source_url": "https://www.sd1.org/bids.aspx?bidID=219"
     },
     {
-      "record_id": "florence-ky-bids:10-9-26-electronic-auction-of-surplus-property",
+      "record_id": "florence-ky-bids:10-29-26-sanitary-sewer-relining-by-cipp-group-2",
       "source_id": "florence-ky-bids",
       "bid_number": "Not published",
       "status": "Accepting Bids",
-      "project_name": "ELECTRONIC AUCTION OF SURPLUS PROPERTY",
+      "project_name": "Sanitary Sewer Relining by CIPP - Group 2",
       "department": "City of Florence",
       "buyer": "Unknown",
       "procurement_type": "Unknown",
       "inclusion": "None published",
-      "due_at": "2026-10-09T00:00:00-04:00",
-      "due_display": "10-9-26",
-      "is_open": false,
+      "due_at": "2026-10-29T00:00:00-04:00",
+      "due_display": "10-29-26",
+      "is_open": true,
       "awarded_contractor": "None published",
-      "match_type": "Other public bid",
+      "match_type": "Construction match",
       "source": "City of Florence",
-      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/09/Gov-Deals-Bid-Advertisement-October-A.webd_.pdf"
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/10/LEGAL-NOTICE-COF-SANITARY-SEWER-RELINING-BY-CIPP-2026-2027-GROUP-2-2026-1007.web_.pdf"
     },
     {
       "record_id": "florence-ky-bids:9-18-25-operation-of-the-city-of-florence-s-recreational-tennis-program-rfp",
@@ -39374,7 +39414,7 @@
       "record_id": "newport-ky-bids:49",
       "source_id": "newport-ky-bids",
       "bid_number": "49",
-      "status": "Open",
+      "status": "Closed",
       "project_name": "Turnkey Installation of EV Charging Stations",
       "department": "City of Newport",
       "buyer": "Unknown",
@@ -39382,7 +39422,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-15T10:00:00-04:00",
       "due_display": "10/15/2026 10:00 AM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Newport",
@@ -40179,6 +40219,60 @@
       "match_type": "Other public bid",
       "source": "City of Covington",
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/41224a731714386363899484dae5c9ee"
+    },
+    {
+      "record_id": "covington-ky-bids:258565",
+      "source_id": "covington-ky-bids",
+      "bid_number": "RFP261002",
+      "status": "Open",
+      "project_name": "Building Automation System Replacement; Kentucky Career Center",
+      "department": "City of Covington",
+      "buyer": "Unknown",
+      "procurement_type": "Public solicitation",
+      "inclusion": "None published",
+      "due_at": "2026-11-12T15:30:00-05:00",
+      "due_display": "11/12/2026 03:30 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Covington",
+      "source_url": "https://covingtonky.bonfirehub.com/opportunities/557980bd45dc177729c4e4895e080d7c"
+    },
+    {
+      "record_id": "covington-ky-bids:258572",
+      "source_id": "covington-ky-bids",
+      "bid_number": "RFP261003",
+      "status": "Open",
+      "project_name": "Surplus Real Property Sale; 1515 Madison Ave",
+      "department": "City of Covington",
+      "buyer": "Unknown",
+      "procurement_type": "Public solicitation",
+      "inclusion": "None published",
+      "due_at": "2026-12-10T15:30:00-05:00",
+      "due_display": "12/10/2026 03:30 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Covington",
+      "source_url": "https://covingtonky.bonfirehub.com/opportunities/2efbc890a17753d9aea234b2ee89bb8b"
+    },
+    {
+      "record_id": "cvg-airport-bids:314786",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-051-ITB",
+      "status": "Open",
+      "project_name": "Ice Melt",
+      "department": "Airfield Maintenance",
+      "buyer": "Unknown",
+      "procurement_type": "Invitation to Bid (Commodities)",
+      "inclusion": "None published",
+      "due_at": "2026-11-05T19:00:00+00:00",
+      "due_display": "11/05/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/314786"
     },
     {
       "record_id": "cvg-airport-bids:309737",
