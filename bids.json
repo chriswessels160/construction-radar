@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-15T16:22:01.610846Z",
-  "count": 2133,
-  "open_count": 46,
+  "generated_at": "2026-10-16T16:09:15.006938Z",
+  "count": 2135,
+  "open_count": 45,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1768,
-      "open_count": 31
+      "open_count": 30
     },
     {
       "source_id": "nky-sd1-bids",
@@ -28,8 +28,8 @@
       "url": "https://florence-ky.gov/publication-of-bid-solicitations-enacted-ordinances/",
       "kind": "florence",
       "status": "success",
-      "count": 46,
-      "open_count": 1
+      "count": 47,
+      "open_count": 2
     },
     {
       "source_id": "newport-ky-bids",
@@ -38,7 +38,7 @@
       "kind": "civicplus",
       "status": "success",
       "count": 50,
-      "open_count": 4
+      "open_count": 3
     },
     {
       "source_id": "kenton-county-ky-bids",
@@ -47,8 +47,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/kentoncounty/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 38,
-      "open_count": 2
+      "count": 39,
+      "open_count": 3
     },
     {
       "source_id": "campbell-county-ky-bids",
@@ -77,7 +77,7 @@
       "kind": "opengov",
       "status": "success",
       "count": 98,
-      "open_count": 4
+      "open_count": 3
     },
     {
       "source_id": "nku-bids",
@@ -9740,8 +9740,8 @@
       "buyer": "Margaret Elkanick",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 5%, WBE 7%",
-      "due_at": "2026-10-15T16:00:00-04:00",
-      "due_display": "10/15/2026 4:00 PM",
+      "due_at": "2026-10-28T12:00:00-04:00",
+      "due_display": "10/28/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
@@ -10020,8 +10020,8 @@
       "buyer": "Jennifer Sherman",
       "procurement_type": "Request for Proposals",
       "inclusion": "MBE 3%, WBE 4%",
-      "due_at": "2026-10-21T12:00:00-04:00",
-      "due_display": "10/21/2026 12:00 PM",
+      "due_at": "2026-10-28T12:00:00-04:00",
+      "due_display": "10/28/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
@@ -25062,7 +25062,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-15T15:00:00-04:00",
       "due_display": "10/15/2026 3:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -30674,7 +30674,7 @@
       "record_id": "cincinnati-business-opportunities:271R905543",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "271R905543",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "PORTABLE TOILET BUILDING RENTAL AND SERVICE",
       "department": "DEPT.OF ECON INC AND PROC",
       "buyer": "Shannon Brower",
@@ -37809,6 +37809,24 @@
       "source_url": "https://florence-ky.gov/wp-content/uploads/2026/10/LEGAL-NOTICE-COF-SANITARY-SEWER-RELINING-BY-CIPP-2026-2027-GROUP-2-2026-1007.web_.pdf"
     },
     {
+      "record_id": "florence-ky-bids:11-5-26-florence-aquatic-center-renovations-phase-1",
+      "source_id": "florence-ky-bids",
+      "bid_number": "Not published",
+      "status": "Accepting Bids",
+      "project_name": "Florence Aquatic Center Renovations - Phase 1",
+      "department": "City of Florence",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-11-05T00:00:00-05:00",
+      "due_display": "11-5-26",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Florence",
+      "source_url": "https://florence-ky.gov/wp-content/uploads/2026/10/Legal-Notice-INVITATION-TO-BID.pdf"
+    },
+    {
       "record_id": "florence-ky-bids:9-18-25-operation-of-the-city-of-florence-s-recreational-tennis-program-rfp",
       "source_id": "florence-ky-bids",
       "bid_number": "Not published",
@@ -38694,7 +38712,7 @@
       "record_id": "newport-ky-bids:48",
       "source_id": "newport-ky-bids",
       "bid_number": "48",
-      "status": "Open",
+      "status": "Closed",
       "project_name": "Annual Supplies 2026",
       "department": "City of Newport",
       "buyer": "Unknown",
@@ -38702,7 +38720,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-16T10:00:00-04:00",
       "due_display": "10/16/2026 10:00 AM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Newport",
@@ -39519,6 +39537,24 @@
       "source_url": "https://www.newportky.gov/bids.aspx?bidID=51"
     },
     {
+      "record_id": "kenton-county-ky-bids:310817",
+      "source_id": "kenton-county-ky-bids",
+      "bid_number": "27-11",
+      "status": "Open",
+      "project_name": "Animal Control Truck Upfits",
+      "department": "Public Works",
+      "buyer": "Unknown",
+      "procurement_type": "Request for Proposal",
+      "inclusion": "None published",
+      "due_at": "2026-10-30T17:00:00+00:00",
+      "due_display": "10/30/2026 01:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Kenton County",
+      "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/310817"
+    },
+    {
       "record_id": "kenton-county-ky-bids:307191",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-10",
@@ -40314,7 +40350,7 @@
       "record_id": "cvg-airport-bids:304702",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-047-ITB - Equip AIP",
-      "status": "Open",
+      "status": "Under Review",
       "project_name": "Conveyance Equipment",
       "department": "Planning & Development",
       "buyer": "Unknown",
@@ -40322,7 +40358,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-15T18:00:00+00:00",
       "due_display": "10/15/2026 02:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "CVG Airport",
