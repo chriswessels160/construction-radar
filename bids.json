@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-19T18:22:35.673331Z",
-  "count": 2136,
-  "open_count": 47,
+  "generated_at": "2026-10-20T16:24:46.566552Z",
+  "count": 2135,
+  "open_count": 44,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -10,8 +10,8 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1769,
-      "open_count": 33
+      "count": 1768,
+      "open_count": 30
     },
     {
       "source_id": "nky-sd1-bids",
@@ -9480,8 +9480,8 @@
       "buyer": "Margaret Elkanick",
       "procurement_type": "Invitation to Bid",
       "inclusion": "MBE 5%, WBE 5%",
-      "due_at": "2026-10-22T12:00:00-04:00",
-      "due_display": "10/22/2026 12:00 PM",
+      "due_at": "2026-10-27T12:00:00-04:00",
+      "due_display": "10/27/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
@@ -9702,7 +9702,7 @@
       "inclusion": "DBE 5.4%",
       "due_at": "2026-10-20T12:00:00-04:00",
       "due_display": "10/20/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -15382,7 +15382,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-20T12:00:00-04:00",
       "due_display": "10/20/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -19982,7 +19982,7 @@
       "inclusion": ", Responsible Bidder",
       "due_at": "2026-10-20T12:00:00-04:00",
       "due_display": "10/20/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -28349,26 +28349,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "282"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:224R905108",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "224R905108",
-      "status": "Awarded",
-      "project_name": "Dewatering Polymer for Wastewater Treatment",
-      "department": "Sewers",
-      "buyer": "Joshua Tucker",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-10-20T12:00:00-04:00",
-      "due_display": "10/20/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Polydyne, Inc.",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
     },
     {
       "record_id": "cincinnati-business-opportunities:252P901400",
