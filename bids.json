@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-10-29T18:05:00.968777Z",
+  "generated_at": "2026-10-30T17:47:16.731421Z",
   "count": 2144,
-  "open_count": 44,
+  "open_count": 43,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -48,7 +48,7 @@
       "kind": "opengov",
       "status": "success",
       "count": 41,
-      "open_count": 3
+      "open_count": 2
     },
     {
       "source_id": "campbell-county-ky-bids",
@@ -29894,7 +29894,7 @@
       "record_id": "cincinnati-business-opportunities:261R925540",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "261R925540",
-      "status": "Under Review",
+      "status": "No Responses Received",
       "project_name": "Warehouse Steel & Aluminum - 2nd Rebid",
       "department": "Various Agencies",
       "buyer": "Jamaiyla Cloud-Reed",
@@ -39686,7 +39686,7 @@
       "record_id": "kenton-county-ky-bids:310817",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-11",
-      "status": "Open",
+      "status": "Pending",
       "project_name": "Animal Control Truck Upfits",
       "department": "Public Works",
       "buyer": "Unknown",
@@ -39694,7 +39694,7 @@
       "inclusion": "None published",
       "due_at": "2026-10-30T17:00:00+00:00",
       "due_display": "10/30/2026 01:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "Kenton County",
@@ -40496,7 +40496,7 @@
       "record_id": "cvg-airport-bids:309737",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-049-RFP",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Financial Statement Auditing Services",
       "department": "Finance",
       "buyer": "Unknown",
