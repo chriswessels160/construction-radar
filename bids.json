@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-01T17:42:14.090868Z",
-  "count": 2144,
+  "generated_at": "2026-11-02T21:27:44.157940Z",
+  "count": 2141,
   "open_count": 43,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1769,
+      "count": 1766,
       "open_count": 27
     },
     {
@@ -891,26 +891,6 @@
       "department_id": "400"
     },
     {
-      "record_id": "cincinnati-business-opportunities:211C909009",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "211C909009",
-      "status": "Awarded",
-      "project_name": "South Ash Lagoon Cleanout",
-      "department": "Sewers",
-      "buyer": "Kelvin Huseman",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "SBE 22%",
-      "due_at": "2021-11-02T12:00:00-04:00",
-      "due_display": "11/02/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Perdue Environmental Contracting Company Inc.",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:211C909059",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "211C909059",
@@ -1064,26 +1044,6 @@
       "due_display": "11/16/2021 12:00 PM",
       "is_open": false,
       "awarded_contractor": "Ford Development Corp",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:221C909020",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221C909020",
-      "status": "Awarded",
-      "project_name": "HERBERT, FLORENCE, ALTA VISTA, MAYFAIR WATER MAIN REPLACEMEN",
-      "department": "Water Works",
-      "buyer": "Greg Algie",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "MBE 10%, WBE 6%",
-      "due_at": "2021-11-02T12:00:00-04:00",
-      "due_display": "11/02/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "ADLETA EXCAVATING, LLC",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
@@ -9694,7 +9654,7 @@
       "record_id": "cincinnati-business-opportunities:273C909388",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909388",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Geier Esplanade Fence Repair",
       "department": "PARKS",
       "buyer": "Margaret Elkanick",
@@ -26969,26 +26929,6 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "260"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:221A911431",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "221A911431",
-      "status": "Awarded",
-      "project_name": "Term Contract for Industrial Lubricants - REBID",
-      "department": "Water Works",
-      "buyer": "MELANIE ROADEN",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-11-02T12:00:00-04:00",
-      "due_display": "11/02/2021 12:00 PM",
-      "is_open": false,
-      "awarded_contractor": "Rely Supply",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
     },
     {
       "record_id": "cincinnati-business-opportunities:224R915514",
