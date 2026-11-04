@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-03T19:05:42.702267Z",
-  "count": 2139,
-  "open_count": 44,
+  "generated_at": "2026-11-04T19:27:48.442517Z",
+  "count": 2140,
+  "open_count": 46,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -76,8 +76,8 @@
       "fetch_url": "https://procurement.opengov.com/portal/embed/cvgairport/project-list?departmentId=all&status=all&limit=100",
       "kind": "opengov",
       "status": "success",
-      "count": 99,
-      "open_count": 3
+      "count": 100,
+      "open_count": 5
     },
     {
       "source_id": "nku-bids",
@@ -9694,7 +9694,7 @@
       "record_id": "cincinnati-business-opportunities:273C909397",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "273C909397",
-      "status": "Under Review",
+      "status": "Award Pending",
       "project_name": "Bramble Park Trail",
       "department": "Parks",
       "buyer": "Shannon Brower",
@@ -9749,6 +9749,26 @@
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "document_code": "ITB",
       "department_id": "190"
+    },
+    {
+      "record_id": "cincinnati-business-opportunities:273C909408",
+      "source_id": "cincinnati-business-opportunities",
+      "bid_number": "273C909408",
+      "status": "Accepting Bids",
+      "project_name": "Sinton Campus Renovation",
+      "department": "PARKS",
+      "buyer": "Margaret Elkanick",
+      "procurement_type": "Invitation to Bid",
+      "inclusion": "MBE 8%, WBE 6%",
+      "due_at": "2026-12-15T12:00:00-05:00",
+      "due_display": "12/15/2026 12:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "City of Cincinnati",
+      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
+      "document_code": "ITB",
+      "department_id": "200"
     },
     {
       "record_id": "cincinnati-business-opportunities:273C909409",
@@ -25851,26 +25871,6 @@
       "department_id": "107"
     },
     {
-      "record_id": "cincinnati-business-opportunities:273C909408",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "273C909408",
-      "status": "Accepting Bids",
-      "project_name": "Sinton Campus Renovation",
-      "department": "PARKS",
-      "buyer": "Margaret Elkanick",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2026-12-15T12:00:00-05:00",
-      "due_display": "12/15/2026 12:00 PM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "200"
-    },
-    {
       "record_id": "cincinnati-business-opportunities:RFP1005HREXESEARCH",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "RFP1005HREXESEARCH",
@@ -40337,6 +40337,42 @@
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/2efbc890a17753d9aea234b2ee89bb8b"
     },
     {
+      "record_id": "cvg-airport-bids:304102",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-054-RFQ",
+      "status": "Open",
+      "project_name": "Airfield Pavement Management Program",
+      "department": "Planning & Development",
+      "buyer": "Unknown",
+      "procurement_type": "Request For Qualifications",
+      "inclusion": "None published",
+      "due_at": "2026-12-03T19:00:00+00:00",
+      "due_display": "12/03/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/304102"
+    },
+    {
+      "record_id": "cvg-airport-bids:304065",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-053-RFQ",
+      "status": "Open",
+      "project_name": "Airside and Landside On-Call Engineering Services",
+      "department": "Planning & Development",
+      "buyer": "Unknown",
+      "procurement_type": "Request For Qualifications",
+      "inclusion": "None published",
+      "due_at": "2026-12-03T19:00:00+00:00",
+      "due_display": "12/03/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Construction match",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/304065"
+    },
+    {
       "record_id": "cvg-airport-bids:318562",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-052-ITB",
@@ -40412,7 +40448,7 @@
       "record_id": "cvg-airport-bids:304702",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-047-ITB - Equip AIP",
-      "status": "Under Review",
+      "status": "Award Pending",
       "project_name": "Conveyance Equipment",
       "department": "Planning & Development",
       "buyer": "Unknown",
@@ -42099,24 +42135,6 @@
       "match_type": "Other public bid",
       "source": "CVG Airport",
       "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/140080"
-    },
-    {
-      "record_id": "cvg-airport-bids:138476",
-      "source_id": "cvg-airport-bids",
-      "bid_number": "25-001-GEN",
-      "status": "Closed",
-      "project_name": "Shuttle Buses",
-      "department": "Contract & Procurement Administration",
-      "buyer": "Unknown",
-      "procurement_type": "General Solicitation",
-      "inclusion": "None published",
-      "due_at": "2025-01-30T19:00:00.689000+00:00",
-      "due_display": "01/30/2025 02:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "CVG Airport",
-      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/138476"
     }
   ]
 }
