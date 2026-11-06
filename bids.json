@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-05T19:34:26.152678Z",
-  "count": 2129,
-  "open_count": 44,
+  "generated_at": "2026-11-06T18:58:42.488779Z",
+  "count": 2131,
+  "open_count": 46,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -19,8 +19,8 @@
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
       "status": "success",
-      "count": 133,
-      "open_count": 2
+      "count": 134,
+      "open_count": 3
     },
     {
       "source_id": "florence-ky-bids",
@@ -66,8 +66,8 @@
       "fetch_url": "https://covingtonky.bonfirehub.com/PublicPortal/getOpenPublicOpportunitiesSectionData",
       "kind": "bonfire",
       "status": "success",
-      "count": 3,
-      "open_count": 3
+      "count": 4,
+      "open_count": 4
     },
     {
       "source_id": "cvg-airport-bids",
@@ -12560,8 +12560,8 @@
       "buyer": "Maria Gadomski",
       "procurement_type": "Invitation to Bid",
       "inclusion": "None published",
-      "due_at": "2026-11-06T12:00:00-05:00",
-      "due_display": "11/06/2026 12:00 PM",
+      "due_at": "2026-11-10T12:00:00-05:00",
+      "due_display": "11/10/2026 12:00 PM",
       "is_open": true,
       "awarded_contractor": "None published",
       "match_type": "Electrical match",
@@ -35761,6 +35761,24 @@
       "source_url": "https://www.sd1.org/bids.aspx?bidID=121"
     },
     {
+      "record_id": "nky-sd1-bids:249",
+      "source_id": "nky-sd1-bids",
+      "bid_number": "S579-ENG-088",
+      "status": "Open",
+      "project_name": "Kimberly Drive Storm Water Improvements",
+      "department": "Sanitation District No. 1",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-12-03T14:00:00-05:00",
+      "due_display": "12/3/2026 2:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Sanitation District No. 1",
+      "source_url": "https://www.sd1.org/bids.aspx?bidID=249"
+    },
+    {
       "record_id": "nky-sd1-bids:229",
       "source_id": "nky-sd1-bids",
       "bid_number": "C705-ENG-073",
@@ -40117,6 +40135,24 @@
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/ed01e57485d0de8e85e8a1e9d762336b"
     },
     {
+      "record_id": "covington-ky-bids:261732",
+      "source_id": "covington-ky-bids",
+      "bid_number": "RFP261101",
+      "status": "Open",
+      "project_name": "Professional Operations Management Services; Covington Central Riverfront Plaza",
+      "department": "City of Covington",
+      "buyer": "Unknown",
+      "procurement_type": "Public solicitation",
+      "inclusion": "None published",
+      "due_at": "2026-11-30T15:30:00-05:00",
+      "due_display": "11/30/2026 03:30 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "City of Covington",
+      "source_url": "https://covingtonky.bonfirehub.com/opportunities/8995a7a1575a465aa19f0a904cc53fba"
+    },
+    {
       "record_id": "covington-ky-bids:258572",
       "source_id": "covington-ky-bids",
       "bid_number": "RFP261003",
@@ -40192,7 +40228,7 @@
       "record_id": "cvg-airport-bids:314786",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-051-ITB",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Ice Melt",
       "department": "Airfield Maintenance",
       "buyer": "Unknown",
@@ -40210,7 +40246,7 @@
       "record_id": "cvg-airport-bids:304586",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-048-ITB",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Vault 12 and South ARFF Generator Upgrades",
       "department": "Planning & Development",
       "buyer": "Unknown",
