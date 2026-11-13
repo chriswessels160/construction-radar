@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-12T19:37:23.015624Z",
-  "count": 2111,
-  "open_count": 34,
+  "generated_at": "2026-11-13T19:19:28.224473Z",
+  "count": 2112,
+  "open_count": 32,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1738,
-      "open_count": 14
+      "open_count": 11
     },
     {
       "source_id": "nky-sd1-bids",
@@ -19,8 +19,8 @@
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
       "status": "success",
-      "count": 134,
-      "open_count": 2
+      "count": 135,
+      "open_count": 3
     },
     {
       "source_id": "florence-ky-bids",
@@ -30302,7 +30302,7 @@
       "inclusion": "None published",
       "due_at": "2026-11-13T12:00:00-05:00",
       "due_display": "11/13/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -32582,7 +32582,7 @@
       "inclusion": "SBE 5%",
       "due_at": "2026-11-13T12:00:00-05:00",
       "due_display": "11/13/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -32762,7 +32762,7 @@
       "inclusion": "None published",
       "due_at": "2026-11-13T12:00:00-05:00",
       "due_display": "11/13/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
@@ -36271,6 +36271,24 @@
       "match_type": "Construction match",
       "source": "Sanitation District No. 1",
       "source_url": "https://www.sd1.org/bids.aspx?bidID=191"
+    },
+    {
+      "record_id": "nky-sd1-bids:250",
+      "source_id": "nky-sd1-bids",
+      "bid_number": "27-008",
+      "status": "Open",
+      "project_name": "Fiscal Year Audit in ACFR Format",
+      "department": "Sanitation District No. 1",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-12-09T14:00:00-05:00",
+      "due_display": "12/9/2026 2:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Sanitation District No. 1",
+      "source_url": "https://www.sd1.org/bids.aspx?bidID=250"
     },
     {
       "record_id": "nky-sd1-bids:247",
@@ -39822,7 +39840,7 @@
       "record_id": "cvg-airport-bids:318562",
       "source_id": "cvg-airport-bids",
       "bid_number": "26-052-ITB",
-      "status": "Pending",
+      "status": "Under Review",
       "project_name": "Phosphoric Acid",
       "department": "Environmental Operations",
       "buyer": "Unknown",
