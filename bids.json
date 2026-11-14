@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-13T19:19:28.224473Z",
+  "generated_at": "2026-11-14T17:43:58.260202Z",
   "count": 2112,
   "open_count": 32,
   "sources": [
@@ -34714,7 +34714,7 @@
       "record_id": "cincinnati-business-opportunities:272P902596",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "272P902596",
-      "status": "Accepting Bids",
+      "status": "Under Review",
       "project_name": "Mobile ALPR(Automated License Plate Recognition)",
       "department": "CENTRAL PURCHASING",
       "buyer": "Lashaun Marshall",
@@ -39009,6 +39009,24 @@
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/319381"
     },
     {
+      "record_id": "kenton-county-ky-bids:320300",
+      "source_id": "kenton-county-ky-bids",
+      "bid_number": "27-14",
+      "status": "Open",
+      "project_name": "Pioneer Park Shelters",
+      "department": "Parks and Recreation",
+      "buyer": "Unknown",
+      "procurement_type": "Solicitation (Attach a Document)",
+      "inclusion": "None published",
+      "due_at": "2026-11-19T19:00:00+00:00",
+      "due_display": "11/19/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Kenton County",
+      "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/320300"
+    },
+    {
       "record_id": "kenton-county-ky-bids:317506",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-12",
@@ -39025,24 +39043,6 @@
       "match_type": "Other public bid",
       "source": "Kenton County",
       "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/317506"
-    },
-    {
-      "record_id": "kenton-county-ky-bids:320300",
-      "source_id": "kenton-county-ky-bids",
-      "bid_number": "27-14",
-      "status": "Open",
-      "project_name": "Pioneer Park Shelters",
-      "department": "Parks and Recreation",
-      "buyer": "Unknown",
-      "procurement_type": "Solicitation (Attach a Document)",
-      "inclusion": "None published",
-      "due_at": "2026-11-17T15:00:00+00:00",
-      "due_display": "11/17/2026 10:00 AM",
-      "is_open": true,
-      "awarded_contractor": "None published",
-      "match_type": "Other public bid",
-      "source": "Kenton County",
-      "source_url": "https://procurement.opengov.com/portal/kentoncounty/projects/320300"
     },
     {
       "record_id": "kenton-county-ky-bids:310817",
