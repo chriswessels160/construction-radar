@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-14T17:43:58.260202Z",
-  "count": 2112,
+  "generated_at": "2026-11-15T18:36:01.848357Z",
+  "count": 2111,
   "open_count": 32,
   "sources": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
       "kind": "cincinnati",
       "status": "success",
-      "count": 1738,
+      "count": 1737,
       "open_count": 11
     },
     {
@@ -18,9 +18,10 @@
       "name": "Sanitation District No. 1",
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
-      "status": "success",
+      "status": "stale",
       "count": 135,
-      "open_count": 3
+      "open_count": 3,
+      "error": "<urlopen error timed out>"
     },
     {
       "source_id": "florence-ky-bids",
@@ -36,9 +37,10 @@
       "name": "City of Newport",
       "url": "https://www.newportky.gov/bids.aspx",
       "kind": "civicplus",
-      "status": "success",
+      "status": "stale",
       "count": 49,
-      "open_count": 2
+      "open_count": 2,
+      "error": "<urlopen error timed out>"
     },
     {
       "source_id": "kenton-county-ky-bids",
@@ -1204,26 +1206,6 @@
       "due_display": "01/12/2022 12:00 PM",
       "is_open": false,
       "awarded_contractor": "Univar Solutions",
-      "match_type": "Other public bid",
-      "source": "City of Cincinnati",
-      "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
-      "document_code": "ITB",
-      "department_id": "107"
-    },
-    {
-      "record_id": "cincinnati-business-opportunities:MEET & CONFER 111521",
-      "source_id": "cincinnati-business-opportunities",
-      "bid_number": "MEET & CONFER 111521",
-      "status": "Announcement Closed",
-      "project_name": "ONLINE Meet and Confer Meeting 11/15/21 @ 11:00 a.m.",
-      "department": "Community & Economic Development",
-      "buyer": "Chante Randolph",
-      "procurement_type": "Invitation to Bid",
-      "inclusion": "None published",
-      "due_at": "2021-11-15T11:00:00-05:00",
-      "due_display": "11/15/2021 11:00 AM",
-      "is_open": false,
-      "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Cincinnati",
       "source_url": "https://www.cincinnati-oh.gov/noncms/cmgr/business-opportunities/",
