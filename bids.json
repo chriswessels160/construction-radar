@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-20T19:41:36.402911Z",
+  "generated_at": "2026-11-21T18:45:51.506082Z",
   "count": 2095,
-  "open_count": 24,
+  "open_count": 22,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -38,7 +38,7 @@
       "kind": "civicplus",
       "status": "success",
       "count": 49,
-      "open_count": 2
+      "open_count": 0
     },
     {
       "source_id": "kenton-county-ky-bids",
@@ -38622,7 +38622,7 @@
       "record_id": "newport-ky-bids:50",
       "source_id": "newport-ky-bids",
       "bid_number": "RFP 2026-MON-1",
-      "status": "Open",
+      "status": "Closed",
       "project_name": "Monmouth property RFP #1",
       "department": "City of Newport",
       "buyer": "Unknown",
@@ -38630,7 +38630,7 @@
       "inclusion": "None published",
       "due_at": "2026-11-20T16:00:00-05:00",
       "due_display": "11/20/2026 4:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Newport",
@@ -38640,7 +38640,7 @@
       "record_id": "newport-ky-bids:51",
       "source_id": "newport-ky-bids",
       "bid_number": "RFP 2026-MON-2",
-      "status": "Open",
+      "status": "Closed",
       "project_name": "Monmouth Property RFP #2",
       "department": "City of Newport",
       "buyer": "Unknown",
@@ -38648,7 +38648,7 @@
       "inclusion": "None published",
       "due_at": "2026-11-20T16:00:00-05:00",
       "due_display": "11/20/2026 4:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Other public bid",
       "source": "City of Newport",
