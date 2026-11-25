@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-24T21:59:07.573445Z",
-  "count": 2093,
-  "open_count": 22,
+  "generated_at": "2026-11-25T21:07:28.765363Z",
+  "count": 2094,
+  "open_count": 23,
   "sources": [
     {
       "source_id": "cincinnati-business-opportunities",
@@ -11,7 +11,7 @@
       "kind": "cincinnati",
       "status": "success",
       "count": 1721,
-      "open_count": 5
+      "open_count": 4
     },
     {
       "source_id": "nky-sd1-bids",
@@ -19,8 +19,8 @@
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
       "status": "success",
-      "count": 135,
-      "open_count": 3
+      "count": 136,
+      "open_count": 4
     },
     {
       "source_id": "florence-ky-bids",
@@ -77,7 +77,7 @@
       "kind": "opengov",
       "status": "success",
       "count": 100,
-      "open_count": 4
+      "open_count": 5
     },
     {
       "source_id": "nku-bids",
@@ -30222,7 +30222,7 @@
       "inclusion": "MSD SBE 8%",
       "due_at": "2026-11-25T12:00:00-05:00",
       "due_display": "11/25/2026 12:00 PM",
-      "is_open": true,
+      "is_open": false,
       "awarded_contractor": "None published",
       "match_type": "Construction match",
       "source": "City of Cincinnati",
@@ -31254,7 +31254,7 @@
       "record_id": "cincinnati-business-opportunities:255X901089",
       "source_id": "cincinnati-business-opportunities",
       "bid_number": "255X901089",
-      "status": "Under Review",
+      "status": "Award Pending",
       "project_name": "Parks Facilities Rental & Event Management Services",
       "department": "PARKS",
       "buyer": "Margaret Elkanick",
@@ -34671,6 +34671,24 @@
       "match_type": "Construction match",
       "source": "Sanitation District No. 1",
       "source_url": "https://www.sd1.org/bids.aspx?bidID=158"
+    },
+    {
+      "record_id": "nky-sd1-bids:251",
+      "source_id": "nky-sd1-bids",
+      "bid_number": "27-009",
+      "status": "Open",
+      "project_name": "Bromley Crescent Springs Conveyance Piping Phase 1B - Bid Package 1 Downstream",
+      "department": "Sanitation District No. 1",
+      "buyer": "Unknown",
+      "procurement_type": "Unknown",
+      "inclusion": "None published",
+      "due_at": "2026-12-28T14:00:00-05:00",
+      "due_display": "12/28/2026 2:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "Sanitation District No. 1",
+      "source_url": "https://www.sd1.org/bids.aspx?bidID=251"
     },
     {
       "record_id": "nky-sd1-bids:187",
@@ -38654,7 +38672,7 @@
       "record_id": "kenton-county-ky-bids:317506",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-12",
-      "status": "Award Pending",
+      "status": "Closed",
       "project_name": "Detention Center Utility Body Truck",
       "department": "Public Works",
       "buyer": "Unknown",
@@ -38690,7 +38708,7 @@
       "record_id": "kenton-county-ky-bids:307191",
       "source_id": "kenton-county-ky-bids",
       "bid_number": "27-10",
-      "status": "Award Pending",
+      "status": "Closed",
       "project_name": "Kenton County Justice Center Courtroom Renovation",
       "department": "Administration",
       "buyer": "Unknown",
@@ -39405,6 +39423,24 @@
       "match_type": "Other public bid",
       "source": "City of Covington",
       "source_url": "https://covingtonky.bonfirehub.com/opportunities/2efbc890a17753d9aea234b2ee89bb8b"
+    },
+    {
+      "record_id": "cvg-airport-bids:324277",
+      "source_id": "cvg-airport-bids",
+      "bid_number": "26-058-ITB - Pavement Striping and Water Blasting Services",
+      "status": "Open",
+      "project_name": "Pavement Striping and Water Blasting Services",
+      "department": "Airfield Maintenance",
+      "buyer": "Unknown",
+      "procurement_type": "Invitation to Bid (Services)",
+      "inclusion": "None published",
+      "due_at": "2026-12-17T19:00:00+00:00",
+      "due_display": "12/17/2026 02:00 PM",
+      "is_open": true,
+      "awarded_contractor": "None published",
+      "match_type": "Other public bid",
+      "source": "CVG Airport",
+      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/324277"
     },
     {
       "record_id": "cvg-airport-bids:323567",
@@ -41187,24 +41223,6 @@
       "match_type": "Electrical match",
       "source": "CVG Airport",
       "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/140557"
-    },
-    {
-      "record_id": "cvg-airport-bids:140527",
-      "source_id": "cvg-airport-bids",
-      "bid_number": "25-002-GEN",
-      "status": "Closed",
-      "project_name": "Loomis Rd Sanitary Sewer Replacement & Relocation - Phase 2 - Rebid",
-      "department": "Contract & Procurement Administration",
-      "buyer": "Unknown",
-      "procurement_type": "General Solicitation",
-      "inclusion": "None published",
-      "due_at": "2025-02-20T19:00:52.536000+00:00",
-      "due_display": "02/20/2025 02:00 PM",
-      "is_open": false,
-      "awarded_contractor": "None published",
-      "match_type": "Construction match",
-      "source": "CVG Airport",
-      "source_url": "https://procurement.opengov.com/portal/cvgairport/projects/140527"
     }
   ]
 }
