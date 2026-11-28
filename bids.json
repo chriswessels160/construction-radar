@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-27T20:45:34.584671Z",
+  "generated_at": "2026-11-28T19:40:54.334513Z",
   "count": 2094,
   "open_count": 24,
   "sources": [
@@ -18,9 +18,10 @@
       "name": "Sanitation District No. 1",
       "url": "https://www.sd1.org/bids.aspx",
       "kind": "civicplus",
-      "status": "success",
+      "status": "stale",
       "count": 136,
-      "open_count": 4
+      "open_count": 4,
+      "error": "<urlopen error timed out>"
     },
     {
       "source_id": "florence-ky-bids",
@@ -36,9 +37,10 @@
       "name": "City of Newport",
       "url": "https://www.newportky.gov/bids.aspx",
       "kind": "civicplus",
-      "status": "success",
+      "status": "stale",
       "count": 49,
-      "open_count": 0
+      "open_count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "source_id": "kenton-county-ky-bids",
